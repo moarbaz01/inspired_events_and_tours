@@ -29,33 +29,36 @@ const Sidebar = ({
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="bg-blue-400/80 fixed left-0 top-0 w-full h-full z-[9999]"
-          initial={{ y: "-100%" }} // Sidebar starts off-screen
-          animate={{ y: 0 }} // Slide into view
-          exit={{ x: "-100%" }} // Slide out of view
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          className=" bg-primary/80 fixed left-0 top-0 w-full h-full z-[9999] shadow-2xl"
+          initial={{
+            y: "-100%",
+            // borderBottomLeftRadius: "100%",
+            // borderBottomRightRadius: "100%",
+          }} // Starts from the top
+          animate={{
+            y: 0,
+            // borderBottomLeftRadius: 0,
+            // borderBottomRightRadius: 0,
+          }} // Animates to visible
+          exit={{ y: "-100%" }} // Exits back to top
+          transition={{ type: "tween", duration: 0.5 }}
         >
           {/* Close Button */}
           <motion.div
             onClick={onClose}
-            className="right-2 absolute top-4 flex items-center gap-2 cursor-pointer hover:scale-105 transition text-white text-3xl"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -50 }}
-            transition={{ delay: 0.1 }}
+            initial={{opacity : 0,scale : 0, }}
+            animate={{opacity : 1,scale : 1}}
+            transition={{duration : 0.5,delay : 0.5,
+              ease: "easeInOut",
+            }}
+            className="md:right-6 right-4 absolute top-6 bg-white  hover:bg-opacity-80 hover:scale-105 transition-all duration-300 cursor-pointer p-6 rounded-full shadow-lg transform hover:shadow-2xl   text-3xl hover:text-gray-300"
           >
-            <span
-              className="text-3xl font-bold hover:scale-105 transition
-              text-white italic"
-            >
-              Close
-            </span>{" "}
-            <CgClose className="text-white text-4xl" />
+            <CgClose className="text-3xl text-primary" />
           </motion.div>
 
           {/* Links */}
           <motion.ul
-            className="flex items-center justify-center flex-col gap-4 h-full w-full"
+            className="flex items-center justify-center flex-col gap-6 h-full w-full text-center py-16"
             initial="hidden"
             animate="visible"
             exit="hidden"
@@ -71,7 +74,7 @@ const Sidebar = ({
             {links.map((link, i) => (
               <motion.li
                 key={i}
-                className="text-3xl font-bold hover:scale-105 transition text-white italic"
+                className="text-3xl font-bold text-white hover:scale-110 hover:text-yellow-400 transition-all duration-300"
                 variants={{
                   hidden: { opacity: 0, y: 50 },
                   visible: { opacity: 1, y: 0 },

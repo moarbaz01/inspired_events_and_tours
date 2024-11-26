@@ -1,39 +1,37 @@
+/* globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --background: #ffffff;
-  --font-heading: var(--font-bebas-neue);
-  --font-body: var(--font-lora);
+  --font-heading: 'Alegreya', serif;
+  --font-body: 'Lora', serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-playfair_display: 'Playfair Display', serif;
+  --font-dancing_script: 'Dancing Script', cursive;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading), sans-serif;
-  letter-spacing: 1px; /* Adds a bit of adventure style */
-}
-
-body,
-p,
-a,
-li,
-span {
-  font-family: var(--font-body), serif;
-  line-height: 1.6; /* Improves readability */
-}
-
+/* Body text */
 body {
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body); /* Use 'Lora' for general body text */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Paragraphs: Apply 'Poppins' font */
+p {
+  font-family: var(--font-poppins), sans-serif; /* Poppins for paragraphs */
+  line-height: 1.6; /* Adds a little more space between lines for readability */
+  margin-bottom: 1.5rem; /* Adds space between paragraphs */
+}
+
+/* Headings */
+h1, h2 {
+  font-family: var(--font-playfair_display), serif; /* Stylish serif font for headings */
+}
+
+/* Subheadings */
+h3, .subheading {
+  font-family: var(--font-dancing_script), cursive; /* Fun, script font for subheadings */
 }

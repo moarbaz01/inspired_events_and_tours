@@ -50,7 +50,7 @@ const Slider = () => {
         }}
         mousewheel={{ forceToAxis: false }} // Enable vertical scroll to slide horizontally
         modules={[Pagination, Mousewheel]}
-        className="w-full h-full"
+        className="w-full h-full bg-black/10"
       >
         {slides.map((item, i) => (
           <SwiperSlide key={i}>
@@ -66,7 +66,7 @@ const Slider = () => {
               />
               {/* Content */}
               <div className="absolute pb-12 w-full h-full flex flex-col gap-2 justify-end items-center left-0 px-4 z-10">
-                <h1 className="text-3xl font-bold text-white italic">
+                <h1 className="text-3xl font-bold text-white ">
                   {item.title}
                 </h1>
                 <p className="text-xl text-white">{item.desc}</p>

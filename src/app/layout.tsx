@@ -1,19 +1,26 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Lora } from "next/font/google";
+import { Poppins, Playfair_Display, Dancing_Script } from "next/font/google";
 import "./globals.css";
 
 // Google Fonts Integration
-const bebasNeue = Bebas_Neue({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-bebas-neue",
-  weight: ["400"], // Regular weight for strong headings
+  variable: "--font-poppins",
+  weight: ["400", "600", "700"], // Regular, Semi-bold, Bold
   display: "swap",
 });
 
-const lora = Lora({
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-lora",
+  variable: "--font-playfair_display",
   weight: ["400", "700"], // Regular and Bold weights
+  display: "swap",
+});
+
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  variable: "--font-dancing_script",
+  weight: ["400"], // Regular weight
   display: "swap",
 });
 
@@ -29,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${bebasNeue.variable} ${lora.variable} antialiased`}>
+      <body className={`${poppins.variable} ${playfairDisplay.variable} ${dancingScript.variable} antialiased`}>
         {children}
       </body>
     </html>
