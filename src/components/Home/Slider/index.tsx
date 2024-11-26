@@ -59,7 +59,7 @@ const Slider = () => {
                 src={item.imagePath}
                 layout="fill"
                 objectFit="cover"
-                className=" contrast-more:"
+                priority={true}
                 alt={`slider ${i + 1}`}
               />
               <div className="absolute pb-12 w-full h-full bg-black/0 left-0 flex flex-col gap-2 justify-end items-center px-4 ">
