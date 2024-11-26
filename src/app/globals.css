@@ -4,18 +4,30 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --font-heading: var(--font-bebas-neue);
+  --font-body: var(--font-lora);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), sans-serif;
+  letter-spacing: 1px; /* Adds a bit of adventure style */
+}
+
+body,
+p,
+a,
+li,
+span {
+  font-family: var(--font-body), serif;
+  line-height: 1.6; /* Improves readability */
 }
 
 body {
-  color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
