@@ -44,7 +44,13 @@ const Sidebar = ({
             exit={{ opacity: 0, y: -50 }}
             transition={{ delay: 0.1 }}
           >
-            Close <CgClose className="text-white text-4xl" />
+            <span
+              className="text-3xl font-bold hover:scale-105 transition
+              text-white italic"
+            >
+              Close
+            </span>{" "}
+            <CgClose className="text-white text-4xl" />
           </motion.div>
 
           {/* Links */}

@@ -43,7 +43,7 @@ const Slider = () => {
       <Swiper
         breakpoints={{
           640: { slidesPerView: 2 }, // 2 images for screens >= 640px
-          1024: { slidesPerView: 3 }, // 3 images for screens >= 1024px
+          1024: { slidesPerView: 4 }, // 3 images for screens >= 1024px
         }}
         pagination={{
           clickable: true,
@@ -54,20 +54,25 @@ const Slider = () => {
       >
         {slides.map((item, i) => (
           <SwiperSlide key={i}>
-            <div className="aspect-[9/16] h-full w-full relative">
+            <div className="aspect-[9/16] h-full group relative w-full cursor-pointer overflow-hidden">
+              {/* Image */}
               <Image
                 src={item.imagePath}
                 layout="fill"
                 objectFit="cover"
+                className="transition-transform duration-500 group-hover:scale-105"
                 priority={true}
                 alt={`slider ${i + 1}`}
               />
-              <div className="absolute pb-12 w-full h-full bg-black/0 left-0 flex flex-col gap-2 justify-end items-center px-4 ">
+              {/* Content */}
+              <div className="absolute pb-12 w-full h-full flex flex-col gap-2 justify-end items-center left-0 px-4 z-10">
                 <h1 className="text-3xl font-bold text-white italic">
                   {item.title}
                 </h1>
                 <p className="text-xl text-white">{item.desc}</p>
               </div>
+              {/* Overlay only for background */}
+              <div className="absolute bottom-0 left-0 h-[20%] w-full bg-gradient-to-t from-black via-black/60 to-transparent md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
           </SwiperSlide>
         ))}
