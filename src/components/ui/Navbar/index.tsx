@@ -1,7 +1,7 @@
 "use client";
 import Sidebar from "@/components/Home/Sidebar";
 import { useState } from "react";
-import { CgMenuBoxed, CgMenuRight } from "react-icons/cg";
+import { CgMenuRight } from "react-icons/cg";
 
 const Navbar = () => {
   const [isSidebar, setIsSidebar] = useState(false);

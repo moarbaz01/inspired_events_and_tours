@@ -79,7 +79,7 @@ const About = () => {
           >
             With a team of dedicated professionals, we aim to bring you closer
             to the world’s most beautiful destinations. From custom tours to
-            guided experiences, we're here to make your travel dreams come true.
+            guided experiences, we&apos;re here to make your travel dreams come true.
           </motion.p>
         </div>
       </div>

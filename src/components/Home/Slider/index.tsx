@@ -1,7 +1,7 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { Pagination, Mousewheel, Autoplay } from "swiper/modules";
+import { Pagination, Mousewheel } from "swiper/modules";
 import Image from "next/image";
 
 const slides = [

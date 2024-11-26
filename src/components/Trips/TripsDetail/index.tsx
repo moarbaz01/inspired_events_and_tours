@@ -18,7 +18,7 @@ const TripDetails = () => {
             <p className="text-gray-700 mt-2">
               Our road trip of a lifetime starts with us meeting at 8pm on
               Thursday 11th October at the port of Portsmouth to board our ferry
-              to Santander (Spain)" which sails at 21.50. This is a 35hr
+              to Santander (Spain) which sails at 21.50. This is a 35hr
               crossing and includes an internal cabin allowing for some quality
               rest.
             </p>
@@ -32,7 +32,7 @@ const TripDetails = () => {
             <p className="text-gray-700 mt-2">
               A full day on our ferry crossing to Santander, giving us a chance
               to get to know each other and discuss this amazing road trip that
-              we are heading off on. We will get a good night's sleep in our
+              we are heading off on. We will get a good night&apos;s sleep in our
               cabins before docking in Santander in the morning of the 15th.
             </p>
           </section>
@@ -59,8 +59,8 @@ const TripDetails = () => {
               DAY 4: NOVEMBER 16TH 2025 - Mileage: 280
             </h2>
             <p className="text-gray-700 mt-2">
-              A full day's riding today, traveling as a group will give us some
-              great photo opportunities along today's route. We will depart
+              A full day&apos;s riding today, traveling as a group will give us some
+              great photo opportunities along today&apos;s route. We will depart
               Caceres at around 9am and continue our journey towards Gibraltar
               along the E-803 passing through some stunning Spanish towns and
               villages. Stopping for the evening at Hotel Mir Octavio Algeciras
@@ -76,7 +76,7 @@ const TripDetails = () => {
             <p className="text-gray-700 mt-2">
               An early start around 8am sees us board our ferry over to Africa
               from Gibraltar to the main port of Morocco @ Tangiers. Then our
-              first day's riding in Africa, traveling along the western Atlantic
+              first day&apos;s riding in Africa, traveling along the western Atlantic
               coast taking in its amazing views and scenery as we start to head
               towards the real Morocco. Our evening will end with an overnight
               stop in Fez @ Hotel Volubilis. Fez is called Morocco&apos;s
@@ -123,7 +123,7 @@ const TripDetails = () => {
               DAY 8: NOVEMBER 20TH 2025 - Mileage: 185
             </h2>
             <p className="text-gray-700 mt-2">
-              Leaving Errachida, we have an epic day's riding ahead of us as our
+              Leaving Errachida, we have an epic day&apos;s riding ahead of us as our
               journey starts to head West to have some time on desert tracks at
               Jebel Sahro before setting off to the stunning Todra Gorges (the
               fault line between the High Atlas Mountains). From here we shoot
