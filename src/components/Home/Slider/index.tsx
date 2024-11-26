@@ -39,7 +39,7 @@ const slides = [
 
 const Slider = () => {
   return (
-    <div className="w-full h-screen">
+    <div className="w-full md:h-screen md:static fixed top-0 left-0 h-full">
       <Swiper
         breakpoints={{
           640: { slidesPerView: 2 }, // 2 images for screens >= 640px
