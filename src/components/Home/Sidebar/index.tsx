@@ -29,7 +29,7 @@ const Sidebar = ({
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className=" bg-primary/80 fixed left-0 top-0 w-full h-full z-[9999] shadow-2xl"
+          className=" bg-primary fixed left-0 top-0 w-full h-full z-[9999] shadow-2xl"
           initial={{
             y: "-100%",
             // borderBottomLeftRadius: "100%",
@@ -46,11 +46,9 @@ const Sidebar = ({
           {/* Close Button */}
           <motion.div
             onClick={onClose}
-            initial={{opacity : 0,scale : 0, }}
-            animate={{opacity : 1,scale : 1}}
-            transition={{duration : 0.5,delay : 0.5,
-              ease: "easeInOut",
-            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
             className="md:right-6 right-4 absolute top-6 bg-white  hover:bg-opacity-80 hover:scale-105 transition-all duration-300 cursor-pointer p-6 rounded-full shadow-lg transform hover:shadow-2xl   text-3xl hover:text-gray-300"
           >
             <CgClose className="text-3xl text-primary" />

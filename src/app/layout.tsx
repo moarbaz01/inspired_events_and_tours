@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Poppins, Playfair_Display, Dancing_Script } from "next/font/google";
 import "./globals.css";
+import Announcement from "@/components/ui/Announcement";
+import Navbar from "@/components/ui/Navbar";
+import Footer from "@/components/ui/Footer";
 
 // Google Fonts Integration
 const poppins = Poppins({
@@ -36,8 +39,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${playfairDisplay.variable} ${dancingScript.variable} antialiased`}>
+      <body
+        className={`${poppins.variable} ${playfairDisplay.variable} ${dancingScript.variable} antialiased`}
+      >
+        <Announcement />
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

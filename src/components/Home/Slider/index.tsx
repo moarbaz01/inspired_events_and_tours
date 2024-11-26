@@ -1,7 +1,7 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { Pagination, Mousewheel } from "swiper/modules";
+import { Pagination, Mousewheel, Autoplay } from "swiper/modules";
 import Image from "next/image";
 
 const slides = [
@@ -12,35 +12,44 @@ const slides = [
   },
   {
     title: "Explore the World",
-    desc: "Travel",
+    desc: "Discover breathtaking destinations across the globe.",
     imagePath: "/images/slider1.jpg",
   },
   {
     title: "Adventure Awaits",
-    desc: "Adventure",
+    desc: "Embark on thrilling adventures and create unforgettable memories.",
     imagePath: "/images/slider2.jpg",
   },
-
+  {
+    title: "Relax and Unwind",
+    desc: "Relaxation",
+    imagePath: "/images/slider3.jpg",
+  },
   {
     title: "Cultural Wonders",
-    desc: "Culture",
+    desc: "Dive into rich cultural experiences at incredible locations.",
     imagePath: "/images/slider4.jpg",
   },
   {
     title: "Cityscapes",
-    desc: "Urban",
+    desc: "Explore vibrant cities full of life and stories to tell.",
     imagePath: "/images/slider5.jpg",
   },
   {
     title: "Sunset Views",
-    desc: "Sunset",
+    desc: "Capture unforgettable moments with stunning sunset views.",
     imagePath: "/images/slider6.jpg",
   },
 ];
 
 const Slider = () => {
   return (
-    <div className="w-full md:h-screen md:static fixed top-0 left-0 h-full">
+    <div className="w-full py-12 ">
+      <div className="px-4 text-center">
+        <h1 className="text-4xl font-bold">Inspired Events and Tours</h1>
+        <p className="text-xl mt-2">Explore the world with us</p>
+      </div>
+
       <Swiper
         breakpoints={{
           640: { slidesPerView: 2 }, // 2 images for screens >= 640px
@@ -49,7 +58,7 @@ const Slider = () => {
         pagination={{
           clickable: true,
         }}
-        mousewheel={{ forceToAxis: false }} // Enable vertical scroll to slide horizontally
+        // mousewheel={{ forceToAxis: false }} // Enable vertical scroll to slide horizontally
         modules={[Pagination, Mousewheel]}
         className="w-full h-full bg-black/10"
       >
