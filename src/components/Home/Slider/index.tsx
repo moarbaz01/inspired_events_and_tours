@@ -6,6 +6,11 @@ import Image from "next/image";
 
 const slides = [
   {
+    title: "Relax and Unwind",
+    desc: "Relaxation",
+    imagePath: "/images/slider3.jpg",
+  },
+  {
     title: "Explore the World",
     desc: "Travel",
     imagePath: "/images/slider1.jpg",
@@ -15,11 +20,7 @@ const slides = [
     desc: "Adventure",
     imagePath: "/images/slider2.jpg",
   },
-  {
-    title: "Relax and Unwind",
-    desc: "Relaxation",
-    imagePath: "/images/slider3.jpg",
-  },
+
   {
     title: "Cultural Wonders",
     desc: "Culture",
@@ -66,9 +67,7 @@ const Slider = () => {
               />
               {/* Content */}
               <div className="absolute pb-12 w-full h-full flex flex-col gap-2 justify-end items-center left-0 px-4 z-10">
-                <h1 className="text-3xl font-bold text-white ">
-                  {item.title}
-                </h1>
+                <h1 className="text-3xl font-bold text-white ">{item.title}</h1>
                 <p className="text-xl text-white">{item.desc}</p>
               </div>
               {/* Overlay only for background */}
