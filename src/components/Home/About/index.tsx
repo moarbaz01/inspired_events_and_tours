@@ -5,7 +5,7 @@ import { FaArrowRight, FaSmile, FaGlobeAmericas } from "react-icons/fa";
 
 const About = () => {
   return (
-    <div className="bg-gradient-to-r from-primary/20 to-white pb-16 pt-28 px-6 md:px-16">
+    <div className="bg-gradient-to-r from-primary/20 to-white py-12 px-6 md:px-16">
       {/* Heading Section */}
       <div className="text-center mb-12">
         <motion.h2
@@ -109,11 +109,15 @@ const About = () => {
             </div>
             <div className="flex flex-col items-center text-gray-600">
               <FaSmile className="md:text-4xl text-xl mb-2" />
-              <p className="md:text-lg text-sm font-semibold">Happy Travelers</p>
+              <p className="md:text-lg text-sm font-semibold">
+                Happy Travelers
+              </p>
             </div>
             <div className="flex flex-col items-center text-gray-600">
               <FaGlobeAmericas className="md:text-4xl text-xl mb-2" />
-              <p className="md:text-lg text-sm font-semibold">Global Destinations</p>
+              <p className="md:text-lg text-sm font-semibold">
+                Global Destinations
+              </p>
             </div>
           </div>
 

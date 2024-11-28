@@ -29,7 +29,7 @@ const Hero = () => {
 
       {/* Hero Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center z-20 px-4 sm:px-6 md:px-16">
-        <motion.h3
+        <motion.h1
           {...fadeUp}
           transition={{ duration: 1 }}
           className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight text-center"
@@ -38,7 +38,7 @@ const Hero = () => {
           }}
         >
           Explore the World Like Never Before
-        </motion.h3>
+        </motion.h1>
 
         <motion.p
           {...fadeUp}
@@ -53,14 +53,14 @@ const Hero = () => {
           href="#trips"
           {...fadeUp}
           transition={{ duration: 1, delay: 0.4 }}
-          className="inline-block bg-primary text-white text-sm sm:text-lg py-2 px-6 sm:py-3 sm:px-8 rounded-full shadow-lg transform hover:scale-105 hover:bg-opacity-90 transition-all duration-300"
+          className="inline-block bg-primary text-white text-sm sm:text-lg py-4 px-6 sm:py-3 sm:px-8 rounded-full shadow-lg transform hover:scale-105 hover:bg-opacity-90 transition-all duration-300"
         >
           Start Your Adventure
         </motion.a>
       </div>
 
       {/* Slider Images */}
-      <div className="absolute -bottom-16 z-[20] left-0 w-full flex flex-wrap justify-center gap-4 px-4">
+      <div className="absolute hidden -bottom-16 z-[20] left-0 w-full md:flex flex-wrap justify-center gap-4 px-4">
         <Image
           src="/images/slider1.jpg"
           alt="Adventure in the mountains"

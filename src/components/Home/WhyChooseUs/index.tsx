@@ -26,7 +26,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <div className="py-12 bg-gray-50">
+    <div className="py-12  bg-gray-50">
       {/* Section Header */}
       <div className="text-center px-4 pb-4">
         <h2 className="text-4xl font-bold text-gray-800">Why Choose Us</h2>
@@ -42,11 +42,11 @@ const WhyChooseUs = () => {
             key={index}
             className="flex flex-col items-center text-center bg-white p-6 shadow-md rounded-lg transition-transform transform hover:scale-105"
           >
-            <div className="mb-4">{feature.icon}</div>
-            <h3 className="text-xl font-semibold text-gray-800">
+            <div className="mb-2">{feature.icon}</div>
+            <h2 className="text-xl font-semibold text-gray-800 leading-normal">
               {feature.title}
-            </h3>
-            <p className="text-sm text-gray-600 mt-2">{feature.desc}</p>
+            </h2>
+            <p className="text-sm text-gray-600 ">{feature.desc}</p>
           </div>
         ))}
       </div>

@@ -9,11 +9,10 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      {/* <TopBanner /> */}
       <Slider />
       <About />
       <WhyChooseUs />
-      <Banner/>
+      <Banner />
       <Testimonials />
     </div>
   );

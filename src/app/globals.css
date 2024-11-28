@@ -36,7 +36,6 @@ h1,
 h2 {
   font-family: var(--font-playfair_display), serif; /* Stylish serif font for headings */
   font-weight: 700; /* Bold weight for emphasis */
-  margin-bottom: 1.5rem; /* Adds space below headings */
 }
 
 /* Subheadings: Apply 'Dancing Script' for a playful, fun look */
@@ -54,14 +53,6 @@ a {
   font-family: var(--font-poppins), sans-serif; /* Consistent font for links */
   color: #0077cc; /* A pleasant blue for links */
   text-decoration: none;
-}
-
-/* Apply a bit more spacing around headings and subheadings */
-h1,
-h2,
-h3 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
 }
 
 /* Consistent margins for sections */

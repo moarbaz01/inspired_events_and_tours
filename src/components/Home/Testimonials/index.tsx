@@ -1,9 +1,15 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { FaQuoteLeft, FaStar } from "react-icons/fa";
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaQuoteLeft,
+  FaStar,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 const testimonials = [
   {
@@ -30,11 +36,19 @@ const testimonials = [
     rating: 5,
     imagePath: "/images/man.jpg",
   },
+  {
+    name: "Aarav Patel",
+    location: "Mumbai, India",
+    feedback:
+      "Highly recommend this agency! Their service and destination recommendations were top-notch.",
+    rating: 5,
+    imagePath: "/images/man.jpg",
+  },
 ];
 
 const Testimonials = () => {
   return (
-    <div className="py-12 bg-gradient-to-br from-blue-50 via-white to-gray-100">
+    <div className="py-12 bg-gradient-to-br from-blue-50 via-white to-gray-100 md:px-6 px-4">
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -58,42 +72,29 @@ const Testimonials = () => {
         loop={true}
         autoplay={{ delay: 5000 }}
         breakpoints={{
-          640: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 3,
-          },
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
         }}
+        navigation={{
+          prevEl: ".custom-prev",
+          nextEl: ".custom-next",
+        }}
+        modules={[Navigation, Autoplay, Pagination]}
         className="mySwiper"
       >
         {testimonials.map((testimonial, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide className="py-6" key={index}>
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="relative bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="relative bg-white border  p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              {/* Quote Icon */}
-              <FaQuoteLeft className="absolute top-4 left-4 text-4xl text-blue-200" />
-
-              {/* Customer Image */}
-              <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 w-24 h-24 rounded-full overflow-hidden shadow-lg">
-                <Image
-                  src={testimonial.imagePath}
-                  alt={testimonial.name}
-                  width={96}
-                  height={96}
-                  objectFit="cover"
-                />
-              </div>
-
               {/* Content */}
-              <div className="mt-12 text-center">
+              <div className=" text-center relative z-10">
                 <p className="text-gray-600 italic">{`"${testimonial.feedback}"`}</p>
-                <h3 className="mt-4 font-bold text-gray-800">
+                <h3 className="mt-4 font-semibold text-gray-800">
                   {testimonial.name}
                 </h3>
                 <p className="text-sm text-gray-500">{testimonial.location}</p>
@@ -108,6 +109,13 @@ const Testimonials = () => {
             </motion.div>
           </SwiperSlide>
         ))}
+        {/* Custom Navigation Buttons */}
+        <div className="custom-prev text-white absolute top-1/2 left-4 z-50 flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition">
+          <FaChevronLeft className="text-xl" />
+        </div>
+        <div className="custom-next text-white absolute top-1/2 right-4 z-50 flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition">
+          <FaChevronRight className="text-xl" />
+        </div>
       </Swiper>
     </div>
   );

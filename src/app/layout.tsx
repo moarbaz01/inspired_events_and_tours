@@ -43,8 +43,8 @@ export default function RootLayout({
         className={`${poppins.variable} ${playfairDisplay.variable} ${dancingScript.variable} antialiased`}
       >
         {/* Announcement Component */}
-        {/* <Announcement /> */}
         <main className="pt-24">
+          <Announcement />
           <Navbar />
           {children}
           <Footer />

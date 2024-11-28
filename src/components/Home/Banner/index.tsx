@@ -1,6 +1,6 @@
 export default function Banner() {
   return (
-    <div className="relative h-[50vh] overflow-hidden">
+    <div className="relative h-[50vh] overflow-hidden py-12">
       {/* Parallax Background */}
       <div
         className="absolute inset-0 bg-fixed bg-cover bg-center"

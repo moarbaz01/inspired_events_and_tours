@@ -1,45 +1,74 @@
 "use client";
 import Sidebar from "@/components/Home/Sidebar";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CgMenuRight } from "react-icons/cg";
 import { motion } from "framer-motion"; // Optional: If you want to animate the dropdown
+import Link from "next/link"; // Import Link component from Next.js
+import Announcement from "../Announcement";
+
+const trips = [
+  { name: "2025 Morocco Bike Trip", link: "#moroccoBike2025" },
+  { name: "2025 Car Trips", link: "#carTrips2025" },
+  { name: "2025 Land Rover Trips", link: "#landRoverTrips2025" },
+  { name: "2025 European Bike Trips", link: "#europeanBike2025" },
+  { name: "2025 UK Bike Trips", link: "#ukBike2025" },
+  { name: "2026 European Bike Trips", link: "#europeanBike2026" },
+  { name: "2026 Morocco Bike Trips", link: "#moroccoBike2026" },
+  { name: "2026 European Car Trips", link: "#europeanCar2026" },
+];
 
 const Navbar = () => {
   const [isSidebar, setIsSidebar] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State to handle the dropdown
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolling(true);
+      } else {
+        setIsScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <>
-      <div className="py-2 md:px-6 px-4 fixed top-0 left-0 w-full z-[999] bg-white shadow-lg border-b border-gray-200 transition-all duration-300 hover:shadow-2xl">
-        <div className="flex items-center justify-between max-w-screen-xl mx-auto">
+    <div className="fixed top-0 left-0 w-full z-[999]">
+      <Announcement />
+      <div className="py-2 md:px-6 px-4 bg-white shadow-lg border-b border-gray-200 transition-all duration-300 hover:shadow-2xl">
+        <div className="flex items-center justify-between ">
           <div className="flex items-center gap-2">
             <Image
-              src="/images/logo2.png"
+              src="/images/logo.png"
               alt="Logo Image"
               height={400}
               width={400}
-              className="h-20 w-auto mr-1 transform transition-transform duration-300 hover:scale-110"
+              className="h-20 w-20  transform transition-transform duration-300 hover:scale-110"
             />
-            <h3 className="md:text-3xl hidden md:block text-xl font-bold drop-shadow-lg text-primary hover:text-primary/80 transition-all duration-300">
+            <h1 className="md:text-3xl hidden md:block text-lg font-bold drop-shadow-lg text-primary hover:text-primary/80 transition-all duration-300">
               Inspired Events and Tours
-            </h3>
+            </h1>
           </div>
+          <h1 className="md:text-3xl text-wrap text-center md:hidden text-xl md:px-0 px-4 font-bold drop-shadow-lg text-primary hover:text-primary/80 transition-all duration-300">
+            Inspired Events and Tours
+          </h1>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            <a
+            <Link
               href="#home"
               className="text-base font-semibold text-primary hover:text-primary/80 transition-all duration-300 relative after:content-[''] after:block after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
             >
               Home
-            </a>
-            <a
-              href="#about"
-              className="text-base font-semibold text-primary hover:text-primary/80 transition-all duration-300 relative after:content-[''] after:block after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
-            >
-              About
-            </a>
+            </Link>
+
             <div className="relative">
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -58,27 +87,30 @@ const Navbar = () => {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <a
-                    href="#trip1"
-                    className="block py-2 text-primary hover:bg-primary/10 transition-all duration-300 rounded-md"
-                  >
-                    Trip 1
-                  </a>
-                  <a
-                    href="#trip2"
-                    className="block py-2 text-primary hover:bg-primary/10 transition-all duration-300 rounded-md"
-                  >
-                    Trip 2
-                  </a>
-                  <a
-                    href="#trip3"
-                    className="block py-2 text-primary hover:bg-primary/10 transition-all duration-300 rounded-md"
-                  >
-                    Trip 3
-                  </a>
+                  {trips.map((trip, index) => (
+                    <Link
+                      key={index}
+                      href={trip.link}
+                      className="block py-2 text-primary hover:bg-primary/10 transition-all duration-300 rounded-md"
+                    >
+                      {trip.name}
+                    </Link>
+                  ))}
                 </motion.div>
               )}
             </div>
+            <Link
+              href="#about"
+              className="text-base font-semibold text-primary hover:text-primary/80 transition-all duration-300 relative after:content-[''] after:block after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+            >
+              About
+            </Link>
+            <Link
+              href="#about"
+              className="text-base font-semibold text-primary hover:text-primary/80 transition-all duration-300 relative after:content-[''] after:block after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Gallery
+            </Link>
             <button className="bg-primary text-white py-2 px-6 rounded-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
               Get Started
             </button>
@@ -94,7 +126,7 @@ const Navbar = () => {
         </div>
       </div>
       <Sidebar isOpen={isSidebar} onClose={() => setIsSidebar(false)} />
-    </>
+    </div>
   );
 };
 
