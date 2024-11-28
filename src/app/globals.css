@@ -56,10 +56,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 /* Apply a bit more spacing around headings and subheadings */
 h1,
 h2,

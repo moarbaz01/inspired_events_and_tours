@@ -102,18 +102,18 @@ const About = () => {
           </motion.p>
 
           {/* Icons Section with grid layout */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8 lg:mb-10">
+          <div className="grid grid-cols-3 gap-12 mb-8 lg:mb-10">
             <div className="flex flex-col items-center text-gray-600">
-              <FaArrowRight className="text-4xl mb-2" />
-              <p className="text-lg font-semibold">Tailored Trips</p>
+              <FaArrowRight className="md:text-4xl text-xl mb-2" />
+              <p className="md:text-lg text-sm font-semibold">Tailored Trips</p>
             </div>
             <div className="flex flex-col items-center text-gray-600">
-              <FaSmile className="text-4xl mb-2" />
-              <p className="text-lg font-semibold">Happy Travelers</p>
+              <FaSmile className="md:text-4xl text-xl mb-2" />
+              <p className="md:text-lg text-sm font-semibold">Happy Travelers</p>
             </div>
             <div className="flex flex-col items-center text-gray-600">
-              <FaGlobeAmericas className="text-4xl mb-2" />
-              <p className="text-lg font-semibold">Global Destinations</p>
+              <FaGlobeAmericas className="md:text-4xl text-xl mb-2" />
+              <p className="md:text-lg text-sm font-semibold">Global Destinations</p>
             </div>
           </div>
 

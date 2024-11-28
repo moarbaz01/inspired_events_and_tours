@@ -7,40 +7,39 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const slides = [
   {
-    title: "Relax and Unwind",
-    desc: "Relaxation",
-    imagePath: "/images/slider3.jpg",
-  },
-  {
-    title: "Explore the World",
+    title: "European Motorcycle Trips 2025",
     desc: "Discover breathtaking destinations across the globe.",
-    imagePath: "/images/slider1.jpg",
+    imagePath: "/images/slides/european_motorcycle.png",
   },
   {
-    title: "Adventure Awaits",
-    desc: "Embark on thrilling adventures and create unforgettable memories.",
-    imagePath: "/images/slider2.jpg",
+    title: "European Car Trips 2025",
+    desc: "Discover breathtaking destinations across the globe.",
+    imagePath: "/images/slides/car_trips.png",
   },
   {
-    title: "Cultural Wonders",
-    desc: "Dive into rich cultural experiences at incredible locations.",
-    imagePath: "/images/slider4.jpg",
+    title: "European Motorcycle Track days 2025",
+    desc: "Discover breathtaking destinations across the globe.",
+    imagePath: "/images/morocoo.png",
   },
   {
-    title: "Cityscapes",
-    desc: "Explore vibrant cities full of life and stories to tell.",
-    imagePath: "/images/slider5.jpg",
+    title: "European Car Track Days 2025",
+    imagePath: "/images/slides/european_car_track.png",
   },
   {
-    title: "Sunset Views",
-    desc: "Capture unforgettable moments with stunning sunset views.",
-    imagePath: "/images/slider6.jpg",
+    title: "Morocco Overlanding Trip 2025",
+    desc: "Discover breathtaking destinations across the globe.",
+    imagePath: "/images/morocoo.png",
+  },
+  {
+    title: "Morocco Motorcycle Overlanding Trip 2025",
+    desc: "Discover breathtaking destinations across the globe.",
+    imagePath: "/images/morocoo.png",
   },
 ];
 
 const Slider = () => {
   return (
-    <div className="w-full py-12">
+    <div className="w-full py-12 md:px-6 px-4">
       <div className="px-4 text-center">
         <h1 className="text-4xl font-bold">Our Trips</h1>
         <p className="text-xl mt-2">Explore the world with us</p>
@@ -48,35 +47,43 @@ const Slider = () => {
 
       <Swiper
         breakpoints={{
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 4 },
+          640: { slidesPerView: 2, spaceBetween: 16 }, // Medium screens
+          1024: { slidesPerView: 4, spaceBetween: 24 }, // Large screens
         }}
         pagination={{
           clickable: true,
         }}
         navigation={{
-          prevEl: ".custom-prev", // Target custom previous button
-          nextEl: ".custom-next", // Target custom next button
+          prevEl: ".custom-prev",
+          nextEl: ".custom-next",
         }}
         modules={[Pagination, Navigation]}
-        className="relative w-full h-full bg-black/10"
+        className="relative w-full py-6 "
       >
         {slides.map((item, i) => (
-          <SwiperSlide key={i}>
-            <div className="aspect-[9/16] h-full group relative w-full cursor-pointer overflow-hidden">
-              <Image
-                src={item.imagePath}
-                layout="fill"
-                objectFit="cover"
-                className="transition-transform duration-500 group-hover:scale-105"
-                priority={true}
-                alt={`slider ${i + 1}`}
-              />
-              <div className="absolute pb-12 w-full h-full flex text-center flex-col gap-2 justify-end items-center left-0 px-4 z-10">
-                <h1 className="text-3xl font-bold text-white">{item.title}</h1>
-                <p className="text-xl text-white">{item.desc}</p>
+          <SwiperSlide key={i} className="flex justify-center">
+            <div className="group relative w-full cursor-pointer overflow-hidden rounded-lg shadow-lg border border-gray-200">
+              {/* Image Section */}
+              <div className="relative aspect-[4/3] w-full">
+                <Image
+                  src={item.imagePath}
+                  layout="fill"
+                  objectFit="cover"
+                  className="transition-transform duration-500 group-hover:scale-105"
+                  priority={true}
+                  alt={`card ${i + 1}`}
+                />
               </div>
-              <div className="absolute bottom-0 left-0 h-[20%] w-full bg-gradient-to-t from-black via-black/60 to-transparent md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              {/* Content Section */}
+              <div className="p-4 flex flex-col gap-2">
+                <h1 className="text-lg font-bold text-center text-gray-800">
+                  {item.title}
+                </h1>
+              </div>
+
+              {/* Optional Hover Effect */}
+              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
           </SwiperSlide>
         ))}

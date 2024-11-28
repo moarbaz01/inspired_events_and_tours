@@ -1,4 +1,5 @@
 import About from "@/components/Home/About";
+import Banner from "@/components/Home/Banner";
 import Hero from "@/components/Home/Hero";
 import Slider from "@/components/Home/Slider";
 import Testimonials from "@/components/Home/Testimonials";
@@ -9,9 +10,10 @@ export default function Home() {
     <div>
       <Hero />
       {/* <TopBanner /> */}
-      <About />
       <Slider />
+      <About />
       <WhyChooseUs />
+      <Banner/>
       <Testimonials />
     </div>
   );
