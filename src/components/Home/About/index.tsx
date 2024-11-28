@@ -5,11 +5,11 @@ import { FaArrowRight, FaSmile, FaGlobeAmericas } from "react-icons/fa";
 
 const About = () => {
   return (
-    <div className="bg-gradient-to-r from-primary/20 to-white py-12 px-6 md:px-16">
+    <div className="bg-gradient-to-r from-primary/20 to-white py-12 px-4 md:px-6">
       {/* Heading Section */}
       <div className="text-center mb-12">
         <motion.h2
-          className="text-5xl font-extrabold mb-4 text-primary leading-tight"
+          className="md:text-4xl text-3xl font-extrabold mb-4 text-primary leading-tight"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -18,7 +18,7 @@ const About = () => {
           About Us
         </motion.h2>
         <motion.p
-          className="text-xl max-w-2xl mx-auto mb-8 text-gray-600"
+          className="md:text-xl text-lg max-w-2xl mx-auto mb-8 text-gray-600"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -64,15 +64,15 @@ const About = () => {
         {/* Mission Text Section */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
           {/* Heading Section */}
-          <motion.h3
-            className="text-4xl font-bold text-gray-800 mb-4 lg:mb-6 leading-tight"
+          <motion.h1
+            className="md:text-3xl text-3xl font-bold text-gray-800 mb-4 lg:mb-6 leading-tight"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.5 }}
           >
             Our Mission
-          </motion.h3>
+          </motion.h1>
 
           {/* Mission Description Section */}
           <motion.p

@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
     <div className="py-12  bg-gray-50">
       {/* Section Header */}
       <div className="text-center px-4 pb-4">
-        <h2 className="text-4xl font-bold text-gray-800">Why Choose Us</h2>
+        <h2 className="md:text-4xl text-3xl font-bold text-gray-800">Why Choose Us?</h2>
         <p className="text-lg text-gray-600 mt-2">
           Discover what makes us the best travel agency for your adventures.
         </p>

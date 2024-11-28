@@ -41,8 +41,8 @@ const Slider = () => {
   return (
     <div className="w-full pt-20 pb-12 md:px-6 px-4">
       <div className="px-4 text-center pb-4 md:mt-12">
-        <h1 className="text-4xl font-bold">Our Trips</h1>
-        <p className="text-xl mt-2">Explore the world with us</p>
+        <h1 className="md:text-4xl text-3xl font-bold">Our Trips</h1>
+        <p className="text-xl mt-2">These are trips that we provides</p>
       </div>
 
       <Swiper
@@ -62,9 +62,9 @@ const Slider = () => {
       >
         {slides.map((item, i) => (
           <SwiperSlide key={i} className="flex justify-center pb-6">
-            <div className="group relative w-full cursor-pointer p-2 overflow-hidden rounded-lg shadow-lg border border-gray-200">
+            <div className="group relative w-full cursor-pointer overflow-hidden rounded-lg shadow-lg border border-gray-200">
               {/* Image Section */}
-              <div className="relative aspect-[1/1] w-full">
+              <div className="relative aspect-[4/3] w-full">
                 {" "}
                 {/* Fixed aspect ratio */}
                 <Image

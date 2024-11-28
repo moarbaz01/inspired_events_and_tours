@@ -4,11 +4,9 @@ import "swiper/swiper-bundle.css";
 import {
   FaChevronLeft,
   FaChevronRight,
-  FaQuoteLeft,
   FaStar,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 const testimonials = [
@@ -54,9 +52,9 @@ const Testimonials = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center px-4 pb-6"
+        className="text-center pb-4"
       >
-        <h2 className="text-4xl font-bold text-gray-800">
+        <h2 className="md:text-4xl text-3xl font-bold text-gray-800">
           What Our Clients Say
         </h2>
         <p className="text-lg text-gray-600 mt-2">
@@ -83,7 +81,7 @@ const Testimonials = () => {
         className="mySwiper"
       >
         {testimonials.map((testimonial, index) => (
-          <SwiperSlide className="py-6" key={index}>
+          <SwiperSlide className="py-4" key={index}>
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
