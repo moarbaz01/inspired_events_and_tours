@@ -1,7 +1,9 @@
 "use client";
-import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
 import { FaQuoteLeft, FaStar } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -49,49 +51,64 @@ const Testimonials = () => {
         </p>
       </motion.div>
 
-      {/* Testimonials Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 px-6 md:px-12 lg:px-20">
+      {/* Swiper Slider */}
+      <Swiper
+        spaceBetween={30}
+        slidesPerView={1}
+        loop={true}
+        autoplay={{ delay: 5000 }}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
+        className="mySwiper"
+      >
         {testimonials.map((testimonial, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            className="relative bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-          >
-            {/* Quote Icon */}
-            <FaQuoteLeft className="absolute top-4 left-4 text-4xl text-blue-200" />
+          <SwiperSlide key={index}>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              className="relative bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
+              {/* Quote Icon */}
+              <FaQuoteLeft className="absolute top-4 left-4 text-4xl text-blue-200" />
 
-            {/* Customer Image */}
-            <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 w-24 h-24 rounded-full overflow-hidden shadow-lg">
-              <Image
-                src={testimonial.imagePath}
-                alt={testimonial.name}
-                width={96}
-                height={96}
-                objectFit="cover"
-              />
-            </div>
-
-            {/* Content */}
-            <div className="mt-12 text-center">
-              <p className="text-gray-600 italic">{`"${testimonial.feedback}"`}</p>
-              <h3 className="mt-4 font-bold text-gray-800">
-                {testimonial.name}
-              </h3>
-              <p className="text-sm text-gray-500">{testimonial.location}</p>
-
-              {/* Rating */}
-              <div className="flex justify-center gap-1 mt-2">
-                {Array.from({ length: testimonial.rating }, (_, i) => (
-                  <FaStar key={i} className="text-yellow-400 text-lg" />
-                ))}
+              {/* Customer Image */}
+              <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 w-24 h-24 rounded-full overflow-hidden shadow-lg">
+                <Image
+                  src={testimonial.imagePath}
+                  alt={testimonial.name}
+                  width={96}
+                  height={96}
+                  objectFit="cover"
+                />
               </div>
-            </div>
-          </motion.div>
+
+              {/* Content */}
+              <div className="mt-12 text-center">
+                <p className="text-gray-600 italic">{`"${testimonial.feedback}"`}</p>
+                <h3 className="mt-4 font-bold text-gray-800">
+                  {testimonial.name}
+                </h3>
+                <p className="text-sm text-gray-500">{testimonial.location}</p>
+
+                {/* Rating */}
+                <div className="flex justify-center gap-1 mt-2">
+                  {Array.from({ length: testimonial.rating }, (_, i) => (
+                    <FaStar key={i} className="text-yellow-400 text-lg" />
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </div>
   );
 };

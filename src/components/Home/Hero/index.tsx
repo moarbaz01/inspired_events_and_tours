@@ -9,12 +9,12 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <motion.div className="w-full h-full">
           <Image
-            src="/images/hero.jpg" // Your Hero image
+            src="/images/hero.webp" // Your Hero image
             alt="Travel Hero"
             layout="fill"
             priority={true}
             objectFit="cover"
-            className="opacity-90"
+            className=""
           />
         </motion.div>
       </div>
