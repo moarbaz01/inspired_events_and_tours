@@ -6,17 +6,21 @@
 
 :root {
   --background: #ffffff;
-  --font-heading: 'Alegreya', serif;
-  --font-body: 'Lora', serif;
-  --font-poppins: 'Poppins', sans-serif;
-  --font-playfair_display: 'Playfair Display', serif;
-  --font-dancing_script: 'Dancing Script', cursive;
+  --font-heading: "Alegreya", serif;
+  --font-body: "Lora", serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-playfair_display: "Playfair Display", serif;
+  --font-dancing_script: "Dancing Script", cursive;
 }
 
 /* Body text */
 body {
   background: var(--background);
   font-family: var(--font-body); /* Use 'Lora' for general body text */
+  line-height: 1.8; /* Increased line height for better readability */
+  color: #333; /* Dark color for better contrast */
+  margin: 0;
+  padding: 0;
 }
 
 /* Paragraphs: Apply 'Poppins' font */
@@ -24,14 +28,47 @@ p {
   font-family: var(--font-poppins), sans-serif; /* Poppins for paragraphs */
   line-height: 1.6; /* Adds a little more space between lines for readability */
   margin-bottom: 1.5rem; /* Adds space between paragraphs */
+  font-weight: 400; /* Regular weight for paragraphs */
 }
 
-/* Headings */
-h1, h2 {
+/* Headings: Use 'Playfair Display' for major headings */
+h1,
+h2 {
   font-family: var(--font-playfair_display), serif; /* Stylish serif font for headings */
+  font-weight: 700; /* Bold weight for emphasis */
+  margin-bottom: 1.5rem; /* Adds space below headings */
 }
 
-/* Subheadings */
-h3, .subheading {
+/* Subheadings: Apply 'Dancing Script' for a playful, fun look */
+h3,
+.subheading {
   font-family: var(--font-dancing_script), cursive; /* Fun, script font for subheadings */
+  font-weight: 400; /* Regular weight for subheadings */
+  font-size: 1.25rem; /* Slightly larger font size for subheadings */
+  line-height: 1.5; /* Adjust line height for better spacing */
+  margin-bottom: 1rem; /* Space between subheading and next content */
+}
+
+/* Links (Ensure contrast and clarity) */
+a {
+  font-family: var(--font-poppins), sans-serif; /* Consistent font for links */
+  color: #0077cc; /* A pleasant blue for links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Apply a bit more spacing around headings and subheadings */
+h1,
+h2,
+h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Consistent margins for sections */
+section {
+  margin-bottom: 2rem;
 }

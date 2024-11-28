@@ -9,7 +9,7 @@ import Footer from "@/components/ui/Footer";
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
-  weight: ["400", "600", "700"], // Regular, Semi-bold, Bold
+  weight: ["400", "600"], // Regular and Semi-bold
   display: "swap",
 });
 
@@ -23,7 +23,7 @@ const playfairDisplay = Playfair_Display({
 const dancingScript = Dancing_Script({
   subsets: ["latin"],
   variable: "--font-dancing_script",
-  weight: ["400"], // Regular weight
+  weight: ["400"], // Regular weight only (use sparingly)
   display: "swap",
 });
 
@@ -42,10 +42,13 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${playfairDisplay.variable} ${dancingScript.variable} antialiased`}
       >
+        {/* Announcement Component */}
         {/* <Announcement /> */}
-        <Navbar />
-        {children}
-        <Footer />
+        <main className="pt-24">
+          <Navbar />
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );
