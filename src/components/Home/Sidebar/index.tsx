@@ -64,7 +64,7 @@ const Sidebar = ({
   useEffect(() => {
     // Close the sidebar when the route changes
     onClose();
-  }, [pathname, onClose]);
+  }, [pathname]);
 
   return (
     <motion.div
