@@ -4,40 +4,42 @@ import "swiper/swiper-bundle.css";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 const slides = [
   {
     title: "European Motorcycle Trips 2025",
     desc: "Discover breathtaking destinations across the globe.",
     imagePath: "/images/slides/european_motorcycle.png",
+    link: "/trips/european-bike-trips-2025",
   },
   {
     title: "European Car Trips 2025",
     desc: "Discover breathtaking destinations across the globe.",
     imagePath: "/images/slides/car_trips.png",
+    link: "/trips/car-trips-2025",
   },
   {
     title: "European Motorcycle Track days 2025",
     desc: "Discover breathtaking destinations across the globe.",
     imagePath: "/images/slides/morroco_land_rover.png",
+    link: "/trips/european-bike-trips-2025",
   },
   {
     title: "European Car Track Days 2025",
     imagePath: "/images/slides/european_car_track.png",
+    link: "/trips/european-car-trips-2025",
   },
   {
     title: "Morocco Overlanding Trip 2025",
     desc: "Discover breathtaking destinations across the globe.",
     imagePath: "/images/slides/morroco_land_rover.png",
-  },
-  {
-    title: "Morocco Motorcycle Overlanding Trip 2025",
-    desc: "Discover breathtaking destinations across the globe.",
-    imagePath: "/images/slides/morroco_land_rover.png",
+    link: "/trips/morocco-bike-trips-2025",
   },
 ];
 
 const Slider = () => {
+  const router = useRouter();
   return (
     <div className="w-full pt-20 pb-12 md:px-6 px-4">
       <div className="px-4 text-center pb-4 md:mt-12">
@@ -62,7 +64,10 @@ const Slider = () => {
       >
         {slides.map((item, i) => (
           <SwiperSlide key={i} className="flex justify-center pb-6">
-            <div className="group relative w-full cursor-pointer overflow-hidden rounded-lg shadow-lg border border-gray-200">
+            <div
+              onClick={() => router.push(item.link)}
+              className="group relative w-full cursor-pointer overflow-hidden rounded-lg shadow-lg border border-gray-200"
+            >
               {/* Image Section */}
               <div className="relative aspect-[4/3] w-full">
                 {" "}

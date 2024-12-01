@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Poppins, Playfair_Display, Dancing_Script } from "next/font/google";
 import "./globals.css";
-import Announcement from "@/components/ui/Announcement";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
+import NextTopLoader from "nextjs-toploader";
 
 // Google Fonts Integration
 const poppins = Poppins({
@@ -43,8 +43,8 @@ export default function RootLayout({
         className={`${poppins.variable} ${playfairDisplay.variable} ${dancingScript.variable} antialiased`}
       >
         {/* Announcement Component */}
-        <main className="pt-24">
-          <Announcement />
+        <main className="pt-32">
+          <NextTopLoader color="white" />
           <Navbar />
           {children}
           <Footer />

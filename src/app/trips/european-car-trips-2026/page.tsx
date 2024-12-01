@@ -3,21 +3,33 @@ import Link from "next/link";
 const trips = [
   {
     id: "1",
-    title: "Morocco Overland Motorcycle Trip",
-    startDate: "13th November 2025",
-    endDate: "26th November 2025",
-    location: "Morocco",
+    title: "France Austria & Switzerland CAR Road Trip",
+    startDate: "June 15th 2026",
+    endDate: "June 22nd 2026",
+    location: "Starting @ Folkestone",
     description:
-      "Our road trip of a lifetime starts with us meeting at 8pm on Thursday 11th October at the port of Portsmouth to board...",
-    link: "/trips/morocco_overland_motorcycleTrip_2025/trip1",
+      "Day 1. Calais(France)-Luxembourg. Approximately 250 Miles. Our tour starts with us meeting in Folkestone at around 8am on the first day of y...",
+    link: "/trips/european-car-trips-2026/trip1",
+    status: "",
+  },
+  {
+    id: "2",
+    title: "France Austria & Switzerland Car Road Trip",
+    startDate: "07TH SEPTEMBER 2026",
+    endDate: "14th September 2026",
+    location: "Start @ Folkestone",
+    description:
+      "Day 1. Calais(France)-Luxembourg. Approximately 250 Miles. Our tour starts with us meeting in Folkestone at around 8am on the first day of y...",
+    link: "/trips/european-car-trips-2026/trip2",
+    status: "",
   },
 ];
 
 const Page = () => {
   return (
-    <div className="py-12 px-6 bg-gray-50 min-h-screen">
+    <div className="py-12 px-4 md:px-6 bg-gray-50 min-h-screen">
       <h1 className="text-4xl font-extrabold text-center text-gray-800 mb-12">
-        Upcoming Trips
+        2026 Trips
       </h1>
       <div className="max-w-7xl mx-auto space-y-8">
         {trips.map((trip) => (
@@ -26,10 +38,15 @@ const Page = () => {
             className="flex flex-col md:flex-row bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
           >
             {/* Left side: Gradient Background with Title */}
-            <div className="flex-shrink-0 md:w-1/3 bg-primary flex items-center justify-center p-6">
-              <h2 className="text-lg md:text-xl font-bold text-white text-center">
+            <div className="flex-shrink-0 md:w-1/3 bg-primary flex items-center justify-center flex-col p-6">
+              <p className="text-lg md:text-xl font-bold text-white text-center">
                 {trip.title}
-              </h2>
+              </p>
+              <p className="text-lg md:text-2xl font-bold text-white text-center">
+                {trip?.status === "Booked"
+                  ? "FULLY BOOKED"
+                  : trip.startDate + " - " + trip.endDate}
+              </p>
             </div>
 
             {/* Right side: Card Content */}
@@ -57,7 +74,7 @@ const Page = () => {
                 href={trip.link}
                 className="mt-6 w-fit bg-primary hover:bg-primary-dark text-white font-bold text-sm py-3 px-6 rounded-lg transition"
               >
-                View Details
+                All Details
               </Link>
             </div>
           </div>

@@ -37,13 +37,13 @@ const Hero = () => {
             textShadow: "4px 4px 6px rgba(0, 0, 0, 0.5)", // Stroke effect
           }}
         >
-          Explore the World Like Never Before
+          Are You Ready For Trip Of Lifetime
         </motion.h1>
 
         <motion.p
           {...fadeUp}
           transition={{ duration: 1, delay: 0.2 }}
-          className="text-base sm:text-lg md:text-2xl text-white mb-6 sm:mb-8 text-center max-w-md sm:max-w-lg"
+          className="text-base sm:text-lg md:text-2xl text-white mb-6 sm:mb-8 text-center max-w-lg sm:max-w-lg"
         >
           Embark on unforgettable journeys, discover hidden gems, and experience
           the adventure of a lifetime with us.

@@ -1,176 +1,200 @@
 import React from "react";
 
-const RoadTripDetails = () => {
+const TripDetails = () => {
   return (
-    <div className="py-8 px-4 sm:px-6 lg:px-8 bg-gray-50 min-h-screen">
-      {/* Trip Banner Image (Optional) */}
-
-      {/* Road Trip Details Content */}
-      <div className="bg-white rounded-lg shadow-lg p-6">
+    <div className="py-8 px-4 sm:px-6 lg:px-8  min-h-screen">
+      {/* Trip Details Content */}
+      <div className=" p-6">
         <h1 className="text-3xl font-semibold text-center text-primary mb-4">
           France/Austria/Switzerland Car Road Trip
         </h1>
         <p className="text-lg text-center text-gray-600 mb-8">
-          <strong>Date:</strong> May 8th - May 15th, 2025
+          <strong>Date:</strong> June 16th 2025 - June 23rd 2025
         </p>
 
-        {/* Itinerary Section */}
+        {/* Daily Itinerary */}
         <div className="space-y-8">
           {/* Day 1 */}
           <section>
             <h2 className="text-2xl font-bold text-primary">
-              DAY 1: Calais (France) to Luxembourg (Approx. 250 Miles)
+              Day 1. Calais(France)-Luxembourg. Approximately 250 Miles.
             </h2>
             <p className="text-gray-700 mt-2">
-              Our tour starts with us meeting in Folkestone at around 8:00 am on
-              the first day of your chosen trip. The meeting point is the
-              Premier Inn to catch the 09:20 EuroTunnel to Calais. From
-              experience, many people have stayed here the night before their
-              trip. Once in France, we will regroup at the first petrol station
-              just after we depart the train.
-            </p>
-            <p className="text-gray-700 mt-2">
-              Once everyone is there, we will have a day&apos;s cross-country driving
-              through picturesque northern France via Dunkirk, Belgium, and
-              Luxembourg before reaching our first night&apos;s stop in Luxembourg
-              City.
+              Our tour starts with us meeting in Folkestone at around 8am on the
+              first day of your chosen trip. The meeting point is the Premier
+              Inn To catch the 09.20 EuroTunnel to Calais.From experience from
+              previous trips lots of people have stopped here the night before
+              their trip. Once in France we will regroup in the first petrol
+              station which is just after we depart the train. Once everyone is
+              there we will have a day’s cross country driving through
+              picturesque northern France via Dunkirk Belgium and Luxembourg
+              before reaching our first night&apos;s stop at the capital Luxembourg
             </p>
           </section>
 
           {/* Day 2 */}
           <section>
             <h2 className="text-2xl font-bold text-primary">
-              DAY 2: Luxembourg to Baden Baden, Germany (Approx. 220 Miles)
+              Day 2. Luxembourg-Baden Baden(Germany), Approximately 220 Miles
             </h2>
             <p className="text-gray-700 mt-2">
-              We continue our journey into eastern France before crossing into
-              Germany through the Vosges mountains. In the afternoon, we&apos;ll
-              drive through the Black Forest region, making our way to Baden
-              Baden for our second night. Here, we&apos;ll rest up for the famous
-              B500 stretch—a car driver&apos;s dream road known for its sweeping
-              bends and stunning views.
+              We then continue our drive into eastern France before crossing the
+              border into Germany via the beautiful Vosges mountains. The
+              afternoon’s drive brings us into the Black Forest region and to
+              our second night’s stop near Baden Baden @ Badischer Hof Hotel, we
+              rest up and get ready for the first famous part of the road trip
+              in the shape of the B500, this stretch of tarmac has long been
+              coveted by car drivers looking for long sweeping roads that run
+              from bend to bend. Sure not to disappoint, it will have you
+              wanting to drive it over and over again.
             </p>
           </section>
 
           {/* Day 3 */}
           <section>
             <h2 className="text-2xl font-bold text-primary">
-              DAY 3: Baden Baden to Zell am See, Austria (Approx. 300 Miles)
+              Day 3 Baden Baden(Germany)-Zell Am See(Austria) Approximately 300
+              Miles
             </h2>
             <p className="text-gray-700 mt-2">
-              After a scenic start along the B500, we cross into Austria,
-              winding through the Tyrol mountains before arriving near Zell am
-              See for a two-night stay. We&apos;ll check in at the Gasthof Geronimo
-              Hotel, nestled in the foothills, offering stunning views and a
-              true feel of Austrian charm.
+              Today sees us join the B500 at Baden Baden and wind our way along
+              this epic piece of road tats sees us leave Germany and head into
+              Austria through the foothills of the beautiful mountains of Tyrol
+              to our base for 2 nights near the historic town of Zell am
+              See.Approximately 20 km away. We will be stopping at Gasthof
+              Geronimo Hotel, nestled in the idyllic foothills giving you a real
+              feel of Austria.
             </p>
           </section>
 
           {/* Day 4 */}
           <section>
             <h2 className="text-2xl font-bold text-primary">
-              DAY 4: Rest Day in Zell am See
+              Day 4 Rest Day(Zell Am See)
             </h2>
             <p className="text-gray-700 mt-2">
-              This day is for leisure, giving you the chance to explore or
-              relax. Suggested activities include driving the Grossglockner High
-              Alpine Road, visiting Hitler&apos;s Eagle&apos;s Nest in Berchtesgaden, or
-              exploring Salzburg, Beethoven&apos;s birthplace. You could even do all
-              three! We&apos;ll return to the Gasthof Geronimo Hotel for our second
-              night.
+              Here we take a well deserved rest day, Giving you time for some
+              leisure time or traditional tourist activities. Which could
+              include a drive out to the famous Grossglockner high alpine road,
+              the highest surfaced mountain pass in Austria or a trip to the
+              Eagle’s nest- Hitler’s summer retreat in Berchtesgaden. Or you
+              could spend some time in historic Salzburg, a beautiful city and
+              birthplace of Beethoven.On previous trips we have known people
+              visit all three in the same day. Before returning to the hotel for
+              our second night at the hotel Gasthof Geronimo Hotel.
             </p>
           </section>
 
           {/* Day 5 */}
           <section>
             <h2 className="text-2xl font-bold text-primary">
-              DAY 5: Zell am See to Davos, Switzerland (Approx. 200 Miles)
+              Day 5. Zell Am See(Switzerland)-Davos(Switzerland) Approximately
+              200 Miles
             </h2>
             <p className="text-gray-700 mt-2">
-              Today, we head west into Switzerland, where we&apos;ll tackle five of
-              the most iconic Swiss mountain passes. Prepare for breathtaking
-              hairpins and stunning alpine views before reaching Davos for our
-              fifth night at a comfortable local hotel.
+              We then leave Zell am See continuing west to the awe inspiring
+              Swiss Alps. The Swiss Alps are one of the world’s most famous car
+              drivers&apos; haven and it&apos;s not difficult to see why with endless
+              hairpins and breathtaking beauty they bring drivers back here year
+              on year and on this tour we drive five of the greatest mountain
+              passes in Switzerland. Before spending our 5th night of our epic
+              trip at the bla bla hotel @ Davos.
             </p>
           </section>
 
           {/* Day 6 */}
           <section>
             <h2 className="text-2xl font-bold text-primary">
-              DAY 6: Davos to Belfort, France (Approx. 200 Miles)
+              Day 6 Davos(Switzerland) - Belfort (France) Approximately 200
+              Miles
             </h2>
             <p className="text-gray-700 mt-2">
-              We begin the day with a thrilling drive across the Gotthard Pass
-              and the famous Furka Pass (featured in the Bond film
-              *Goldfinger*). We&apos;ll also tackle the Grimsel and Nufenen passes
-              before heading to Belfort for our overnight stay in France.
+              From here we head for the Alpe Di Sorecia to take on the world
+              famous Gotthard pass with its famous cobbled hairpins, get in
+              touch with your inner 007 on the nearby Furka pass immortalized by
+              the car chase in Goldfinger then drive the giddy heights of the
+              Grimsel pass at an elevation of 7,100 feet and the Nufenen at
+              8,130 feet. Then after taking on these amazing passes we wind our
+              way towards Belfort for our evening stay.
             </p>
           </section>
 
           {/* Day 7 */}
           <section>
             <h2 className="text-2xl font-bold text-primary">
-              DAY 7: Belfort to Reims, France (Approx. 250 Miles)
+              Day 7 Belfort(France) - Reims(France) Approximately 250 Miles
             </h2>
             <p className="text-gray-700 mt-2">
-              Our route today takes us through charming French villages, with
-              stops in towns like Chaumont and Troyes—perfect for a food stop.
-              In Reims, the heart of the Champagne region, you&apos;ll enjoy a
-              cosmopolitan evening with excellent restaurants and bars.
+              As we start heading back up through France the traditional small
+              French villages are a real feature of the back roads along our
+              route that takes you through stunning towns like Chaumont and
+              Troyes, a medieval town that is really a great place for a food
+              stop and refreshment before heading to our evening stop in Reims.
+              A town in the heart of the Champagne district and one that you
+              will enjoy your evening in with a real cosmopolitan feel. With a
+              vast selection of bars and restaurants with something on offer for
+              everyone&apos;s pallet.
             </p>
           </section>
 
           {/* Day 8 */}
           <section>
             <h2 className="text-2xl font-bold text-primary">
-              DAY 8: Reims to Calais, France (Approx. 190 Miles)
+              Day 8 Reims(France)- Calais(France) Approximately 190 Miles
             </h2>
             <p className="text-gray-700 mt-2">
-              Our final adventure includes a visit to the historic Reims-Gueux
-              GP track. We&apos;ll take in the old pits and grandstand, capturing
-              unique photographs. Then, we head back to Calais for the return
-              EuroTunnel crossing to the UK.
+              Our last adventure on this tour comes with a visit to the GP track
+              Reims-Gueux, the disused track was the second location of the
+              Grand Prix, several Formula one races and the MotoGP. Our route
+              takes us on the old track riding past the old pits and grandstand.
+              Giving us a unique photograph opportunity, we will then head back
+              towards Calais to catch our return EuroTunnel crossing to the UK.
+              Please understand that this is a real drivers trip with some long
+              days taking on challenging routes through stunning vistas and
+              surroundings. But having completed this trip previously it really
+              is worth the journey. As Ralph Waldo Emerson the American
+              philosopher said” It&apos;s not the destination it&apos;s the journey”
+              meaning enjoy the journey to get to the destination. With this
+              amazing trip the journeys are a massive part of the trip.
             </p>
           </section>
         </div>
 
         {/* Pricing Section */}
         <section className="mt-12">
-          <h2 className="text-2xl font-bold text-primary">
-            EPIC EUROPEAN ROAD TRIP - MAY 2025
-          </h2>
-          <h3 className="text-xl font-semibold text-gray-800 mt-4">
-            Cost: £1589 per car (includes 1 passenger)
-          </h3>
           <p className="text-gray-700 mt-2">
-            Price includes:
-            <ul className="list-disc pl-5 mt-2 text-gray-700">
-              <li>Return EuroTunnel crossing from Folkestone to Calais</li>
-              <li>7 nights hotel accommodation with breakfast</li>
-              <li>Guided route suggestions and expert advice</li>
-              <li>Beautiful scenic driving routes through Europe</li>
-            </ul>
+            This is not a guided tour as that really doesn&apos;t work with a group
+            of this size. As lots of people often wish to spend more or less
+            time at certain places, or have other places and places of interest
+            they wish to visit. We are on hand everyday to give guidance and
+            advice. But each day you will travel between hotels at a pace and
+            route that suits you and we will regroup at the evenings hotel and
+            share stories of the day&apos;s journey. Please be aware that the daily
+            approximate mileage is based on riding the most direct route.
           </p>
           <p className="text-gray-700 mt-2">
-            What is not included:
-            <ul className="list-disc pl-5 mt-2 text-gray-700">
-              <li>
-                Evening meals (available at the hotels or nearby restaurants)
-              </li>
-              <li>
-                Optional extra activities (such as visits to Grossglockner or
-                Eagle&apos;s Nest)
-              </li>
-            </ul>
+            And will change depending on the route you ride between A to B. The
+            price per car which includes one passenger is <b>£1589</b> with your
+            crossing both ways by Eurotunnel and the 7 nights hotel
+            accommodation. Your accommodation will be double room to yourself
+            unless traveling with a passenger, and includes breakfast but
+            evening food is not included but is available at the hotels or
+            nearby restaurants.. A deposit of <b>£489</b> is required to book
+            your place with the balance due 8 weeks prior to the trip.
           </p>
-          <p className="mt-6 text-center">
+
+          <p className="text-xl font-bold">
+            Places can be reserved with a £489 deposit. Simply click on the link
+            to reserve your place
+          </p>
+          <p className="mt-6 ">
             <a
               href="https://buy.stripe.com/eVafZf89gfPe5jO5lz"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-primary text-white px-8 py-3 rounded-lg hover:opacity-80 transition duration-300"
             >
-              Reserve Your Place Now
+              Book Your Place
             </a>
           </p>
         </section>
@@ -179,4 +203,4 @@ const RoadTripDetails = () => {
   );
 };
 
-export default RoadTripDetails;
+export default TripDetails;

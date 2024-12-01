@@ -15,9 +15,9 @@ const trips = [
 
 const Page = () => {
   return (
-    <div className="py-12 px-6 bg-gray-50 min-h-screen">
+    <div className="py-12 px-4 md:px-6 bg-gray-50 min-h-screen">
       <h1 className="text-4xl font-extrabold text-center text-gray-800 mb-12">
-        Upcoming Trips
+        2025 Trips
       </h1>
       <div className="max-w-7xl mx-auto space-y-8">
         {trips.map((trip) => (
@@ -26,10 +26,13 @@ const Page = () => {
             className="flex flex-col md:flex-row bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
           >
             {/* Left side: Gradient Background with Title */}
-            <div className="flex-shrink-0 md:w-1/3 bg-primary flex items-center justify-center p-6">
-              <h2 className="text-lg md:text-xl font-bold text-white text-center">
+            <div className="flex-shrink-0 md:w-1/3 bg-primary flex items-center justify-center flex-col p-6">
+              <p className="text-lg md:text-xl font-bold text-white text-center">
                 {trip.title}
-              </h2>
+              </p>
+              <p className="text-lg md:text-2xl font-bold text-white text-center">
+                {trip.startDate + " - " + trip.endDate}
+              </p>
             </div>
 
             {/* Right side: Card Content */}
@@ -57,7 +60,7 @@ const Page = () => {
                 href={trip.link}
                 className="mt-6 w-fit bg-primary hover:bg-primary-dark text-white font-bold text-sm py-3 px-6 rounded-lg transition"
               >
-                View Details
+                All Details
               </Link>
             </div>
           </div>

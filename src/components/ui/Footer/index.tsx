@@ -5,11 +5,36 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import Link from "next/link";
+const tripsLinks = [
+  {
+    name: "2025 Morocco Bike Trip",
+    link: "/trips/morocco-bike-trips-2025",
+  },
+  { name: "2025 Car Trips", link: "/trips/car-trips-2025" },
+  { name: "2025 Land Rover Trips", link: "/trips/land-rover-trips-2025" },
+  {
+    name: "2025 European Bike Trips",
+    link: "/trips/european-bike-trips-2025",
+  },
+  { name: "2025 UK Bike Trips", link: "/trips/uk-bike-trips-2025" },
+  {
+    name: "2026 European Bike Trips",
+    link: "/trips/european-bike-trips-2026",
+  },
+  {
+    name: "2026 Morocco Bike Trips",
+    link: "/trips/morocco-bike-trips-2026",
+  },
+  {
+    name: "2026 European Car Trips",
+    link: "/trips/european-car-trips-2026",
+  },
+];
 
 const Footer = () => {
   return (
-    <div className="bg-primary text-white py-12 px-6 md:px-16">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+    <div className="bg-primary text-white py-12 px-4 md:px-6 w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
         {/* Footer Left - Logo and Short Description */}
         <div className="flex flex-col justify-between">
           <div>
@@ -54,12 +79,12 @@ const Footer = () => {
         </div>
 
         {/* Footer Middle - Quick Links */}
-        <div className="text-center md:text-left">
+        <div className="">
           <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
               <Link
-                href="#contact"
+                href="/contact"
                 className="text-white hover:opacity-80 transition-all"
               >
                 Contact
@@ -67,7 +92,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="#faq"
+                href="/faqs"
                 className="text-white hover:opacity-80 transition-all"
               >
                 FAQ
@@ -85,97 +110,33 @@ const Footer = () => {
         </div>
 
         {/* Footer Right - Trips */}
-        <div className="text-center md:text-left">
+        <div className="">
           <h3 className="text-xl font-semibold mb-4">Our Trips</h3>
           <ul className="space-y-2">
-            <li>
-              <Link
-                href="#morocco2025"
-                className="text-white hover:opacity-80 transition-all"
-              >
-                2025 Morocco Bike Trip
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#cartrips2025"
-                className="text-white hover:opacity-80 transition-all"
-              >
-                2025 Car Trips
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#landrover2025"
-                className="text-white hover:opacity-80 transition-all"
-              >
-                2025 Land Rover Trips
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#europe2025"
-                className="text-white hover:opacity-80 transition-all"
-              >
-                2025 European Bike Trips
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#uk2025"
-                className="text-white hover:opacity-80 transition-all"
-              >
-                2025 UK Bike Trips
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#europe2026"
-                className="text-white hover:opacity-80 transition-all"
-              >
-                2026 European Bike Trips
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#morocco2026"
-                className="text-white hover:opacity-80 transition-all"
-              >
-                2026 Morocco Bike Trips
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#europecar2026"
-                className="text-white hover:opacity-80 transition-all"
-              >
-                2026 European Car Trips
-              </Link>
-            </li>
+            {tripsLinks.map((link, i) => (
+              <li key={i}>
+                <Link
+                  href={link.link}
+                  className="text-white hover:opacity-80 transition-all"
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Footer Bottom - Contact Info */}
-        <div className="text-center md:text-right">
+        <div className="">
           <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-          <p className="mb-2">Email: info@inspiredevents.com</p>
+          <p className="mb-2  break-words">
+            Email: info@inspiredeventsandtours.co.uk
+          </p>
           <p className="mb-4">Phone: +123 456 7890</p>
           <p className="mb-4">
-            Address: 14 Hints Road, Hopwas, Tamworth, B78 3AA, United Kingdom
+            Address: 35 Burton Road, Fradley and Streethay, Lichfield, WS13 8LP,
+            United Kingdom
           </p>
-          <form>
-            <input
-              type="email"
-              placeholder="Subscribe for updates"
-              className="w-full max-w-xs py-3 px-6 rounded-full text-black mb-4"
-            />
-            <button
-              type="submit"
-              className="w-full max-w-xs bg-primary text-white py-3 px-6 rounded-full hover:bg-opacity-90 transition-all"
-            >
-              Subscribe
-            </button>
-          </form>
         </div>
       </div>
 

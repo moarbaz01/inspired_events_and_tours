@@ -2,196 +2,107 @@ import React from "react";
 
 const RoadTripDetails = () => {
   return (
-    <div className="py-8 px-4 sm:px-6 lg:px-8 bg-gray-50 min-h-screen">
+    <div className="py-8 px-4 sm:px-6 lg:px-8  min-h-screen">
       {/* Trip Banner Image (Optional) */}
 
       {/* Road Trip Details Content */}
-      <div className="bg-white rounded-lg shadow-lg p-6">
+      <div className=" p-6">
         <h1 className="text-3xl font-semibold text-center text-primary mb-4">
           France/Austria/Switzerland Car Road Trip
         </h1>
         <p className="text-lg text-center text-gray-600 mb-8">
-          <strong>Date:</strong> August 2nd, 2025 - August 8th, 2025
+          <strong>Date:</strong> 27th August 2025 - 29th August 2025
         </p>
 
         {/* Itinerary Section */}
         <div className="space-y-8">
           {/* Day 1 */}
           <section>
-            <h2 className="text-2xl font-bold text-primary">
-              Day 1: Calais (France) - Luxembourg (Approx. 250 Miles)
-            </h2>
             <p className="text-gray-700 mt-2">
-              Our tour starts with us meeting in Folkestone at around 8am on the
-              first day of your chosen trip. The meeting point is the Premier
-              Inn to catch the 09:20 EuroTunnel to Calais. From experience from
-              previous trips, lots of people have stopped here the night before
-              their trip. Once in France, we will regroup in the first petrol
-              station just after we depart the train.
+              We all meet at Folkestone at 11.30 am on August 27th and sort out
+              all the tickets and paperwork ready to board the 1.20 train to
+              Calais. Once on the other side in France we will regroup and head
+              to our overnight stay in Soissons. Which is about a 3hr drive
+              depending on speeds. From experience most drivers want to make
+              their own way to Soissons rather than follow the support vehicle.
+              Little boring at 70mph on a motorway. There are route options to
+              Soisson&apos;s and most choose the more exciting route. We give you
+              printed out map instructions if you need them. Once checked in,
+              the rest of the day is your own to spend as you wish, but most
+              people seem to just want to relax and have something to eat and a
+              couple of drinks before getting an early night ready for the track
+              day. There are a selection of restaurant&apos;s within a 5-minute walk.
+              And a great Chinese buffet next door to the hotel that offers
+              great food and for £20 you get all you can eat and 3 beers. This
+              one seems to be most people&apos;s choice..
             </p>
             <p className="text-gray-700 mt-2">
-              Once everyone is there, we will have a day&apos;s cross-country driving
-              through picturesque northern France via Dunkirk, Belgium, and
-              Luxembourg before reaching our first night&apos;s stop at the capital
-              Luxembourg.
+              Thursday morning there is a continental breakfast on offer at the
+              hotel for an additional cost. We will depart at 8.30 am and travel
+              about half an hour to the Circuit De Folembray. Where we will book
+              in and cover over the health and safety and track rules etc. In
+              the morning we will be going out in groups so that everyone can
+              get a feel for the circuit and pace they are comfortable at. There
+              are never more than 15 cars on track at any one time. And being a
+              fairly long track, it means you will not be bunched up or feel
+              intimidated. And the best thing about the track day is its an open
+              pit meaning you can go out as often as you like. Not like many
+              track days.
             </p>
           </section>
 
           {/* Day 2 */}
           <section>
-            <h2 className="text-2xl font-bold text-primary">
-              Day 2: Luxembourg - Baden Baden (Germany) (Approx. 220 Miles)
-            </h2>
             <p className="text-gray-700 mt-2">
-              We then continue our drive into eastern France before crossing the
-              border into Germany via the beautiful Vosges mountains. The
-              afternoon&apos;s drive brings us into the Black Forest region and to
-              our second night&apos;s stop near Baden Baden at Badischer Hof Hotel.
-              We rest up and get ready for the first famous part of the road
-              trip in the shape of the B500. This stretch of tarmac has long
-              been coveted by car drivers looking for long sweeping roads that
-              run from bend to bend. Sure not to disappoint, it will have you
-              wanting to drive it over and over again.
+              There is a snack bar at the circuit with a selection of drinks and
+              snacks on offer for you to purchase. The track day ends at 5pm and
+              we then return to the hotel to freshen up, we try to all go into
+              town as a group and have a few drinks and some food and talk about
+              the day&apos;s high and lows. This will mean getting some taxis which
+              are not included in the price. These can be great nights and a
+              great way to make new friends. But people are free to enjoy their
+              evening as they wish.
             </p>
           </section>
 
           {/* Day 3 */}
           <section>
-            <h2 className="text-2xl font-bold text-primary">
-              Day 3: Baden Baden (Germany) - Zell Am See (Austria) (Approx. 300
-              Miles)
-            </h2>
             <p className="text-gray-700 mt-2">
-              Today sees us join the B500 at Baden Baden and wind our way along
-              this epic piece of road that sees us leave Germany and head into
-              Austria through the foothills of the beautiful mountains of Tyrol
-              to our base for 2 nights near the historic town of Zell am See.
-              Approximately 20 km away, we will be stopping at Gasthof Geronimo
-              Hotel, nestled in the idyllic foothills, giving you a real feel of
-              Austria.
+              On Friday morning the support vehicle will depart by 9.30am for
+              our return crossing from Calais at 15.20. Most people seem to make
+              their own way back for the crossing in groups they came with or
+              with new groups of friends they have made on the trip. Our tickets
+              are open for a return crossing any time on the 24th, but if you
+              return at a different time on the day there may be an admin charge
+              payable to Eurotunnel so you are free to make your own way back if
+              you wish or travel back as part your own group or follow the
+              support vehicle.
             </p>
           </section>
 
           {/* Day 4 */}
           <section>
-            <h2 className="text-2xl font-bold text-primary">
-              Day 4: Rest Day (Zell Am See)
-            </h2>
             <p className="text-gray-700 mt-2">
-              Here we take a well-deserved rest day, giving you time for some
-              leisure time or traditional tourist activities. Which could
-              include a drive out to the famous Grossglockner high alpine road,
-              the highest surfaced mountain pass in Austria, or a trip to the
-              Eagle&apos;s Nest – Hitler&apos;s summer retreat in Berchtesgaden. Or you
-              could spend some time in historic Salzburg, a beautiful city and
-              birthplace of Beethoven. On previous trips, we have known people
-              visit all three in the same day. Before returning to the hotel for
-              our second night at Gasthof Geronimo Hotel.
+              Some of the things that that this track day offers . A
+              professional photographer will be at the track who will be taking
+              pictures of everyone all day , and upload them to a website a few
+              days after the trip so you can download as many pictures as you
+              wish. Full public liability insurance, circuit marshals and a
+              medical team on standby at the circuit.
             </p>
           </section>
 
           {/* Day 5 */}
-          <section>
-            <h2 className="text-2xl font-bold text-primary">
-              Day 5: Zell Am See (Austria) - Davos (Switzerland) (Approx. 200
-              Miles)
-            </h2>
-            <p className="text-gray-700 mt-2">
-              We then leave Zell am See continuing west to the awe-inspiring
-              Swiss Alps. The Swiss Alps are one of the world&apos;s most famous car
-              drivers&apos; havens, and it&apos;s not difficult to see why. With endless
-              hairpins and breathtaking beauty, they bring drivers back here
-              year on year. On this tour, we drive five of the greatest mountain
-              passes in Switzerland before spending our 5th night of our epic
-              trip at the Bla Bla Hotel in Davos.
-            </p>
-          </section>
-
-          {/* Day 6 */}
-          <section>
-            <h2 className="text-2xl font-bold text-primary">
-              Day 6: Davos (Switzerland) - Belfort (France) (Approx. 200 Miles)
-            </h2>
-            <p className="text-gray-700 mt-2">
-              From here, we head for the Alpe Di Sorecia to take on the
-              world-famous Gotthard Pass with its famous cobbled hairpins. Get
-              in touch with your inner 007 on the nearby Furka Pass immortalized
-              by the car chase in *Goldfinger*, then drive the giddy heights of
-              the Grimsel Pass at an elevation of 7,100 feet and the Nufenen at
-              8,130 feet. After taking on these amazing passes, we wind our way
-              towards Belfort for our evening stay.
-            </p>
-          </section>
-
-          {/* Day 7 */}
-          <section>
-            <h2 className="text-2xl font-bold text-primary">
-              Day 7: Belfort (France) - Reims (France) (Approx. 250 Miles)
-            </h2>
-            <p className="text-gray-700 mt-2">
-              As we start heading back up through France, the traditional small
-              French villages are a real feature of the back roads along our
-              route. We pass stunning towns like Chaumont and Troyes, a medieval
-              town that is really a great place for a food stop and refreshment
-              before heading to our evening stop in Reims. A town in the heart
-              of the Champagne district and one that you will enjoy your evening
-              in with a real cosmopolitan feel. With a vast selection of bars
-              and restaurants, there is something for everyone.
-            </p>
-          </section>
-
-          {/* Day 8 */}
-          <section>
-            <h2 className="text-2xl font-bold text-primary">
-              Day 8: Reims (France) - Calais (France) (Approx. 190 Miles)
-            </h2>
-            <p className="text-gray-700 mt-2">
-              Our last adventure on this tour comes with a visit to the GP track
-              Reims-Gueux, the disused track that was the second location of the
-              Grand Prix, several Formula One races, and the MotoGP. Our route
-              takes us on the old track, riding past the old pits and
-              grandstand, giving us a unique photograph opportunity. We will
-              then head back towards Calais to catch our return EuroTunnel
-              crossing to the UK. Please understand that this is a real driver&apos;s
-              trip with some long days taking on challenging routes through
-              stunning vistas and surroundings. But having completed this trip
-              previously, it really is worth the journey. As Ralph Waldo
-              Emerson, the American philosopher, said, “It&apos;s not the
-              destination, it&apos;s the journey,” meaning enjoy the journey to get
-              to the destination. With this amazing trip, the journeys are a
-              massive part of the trip.
-            </p>
-          </section>
         </div>
 
         {/* Pricing Section */}
         <section className="mt-12">
-          <h2 className="text-2xl font-bold text-primary">
-            EPIC EUROPEAN ROAD TRIP - AUGUST 2025
-          </h2>
-          <h3 className="text-xl font-semibold text-gray-800 mt-4">
-            Cost: £1589 per car (includes 1 passenger)
-          </h3>
-          <p className="text-gray-700 mt-2">
-            Price includes:
-            <ul className="list-disc pl-5 mt-2 text-gray-700">
-              <li>Return EuroTunnel crossing from Folkestone to Calais</li>
-              <li>7 nights hotel accommodation with breakfast</li>
-              <li>Guided route suggestions and expert advice</li>
-              <li>Beautiful scenic driving routes through Europe</li>
-            </ul>
-          </p>
-          <p className="text-gray-700 mt-2">
-            What is not included:
-            <ul className="list-disc pl-5 mt-2 text-gray-700">
-              <li>
-                Evening meals (available at the hotels or nearby restaurants)
-              </li>
-              <li>
-                Optional extra activities (such as visits to Grossglockner or
-                Eagle&apos;s Nest)
-              </li>
-            </ul>
+          <p className="text-lg  text-gray-800 mt-4">
+            The full cost of the trip is just <b>£579</b> per car and driver a
+            passenger can join at the additional cost of <b>£80</b> .We hope you
+            like the sound of this amazing trip and decide to join us. You can
+            secure your place with a <b>£149</b> deposit paid by debit or credit
+            card.. Please let me know your thoughts Regards Adam
           </p>
           <p className="text-lg font-semibold text-gray-800 mt-4">
             A £489 deposit is required to reserve your place. Balance due 8
@@ -200,7 +111,7 @@ const RoadTripDetails = () => {
 
           <a
             href="https://buy.stripe.com/fZe00hgFM46wbIcg0b"
-            className="mt-8 block w-full py-3 text-center bg-primary text-white rounded-lg"
+            className="mt-8 block w-fit px-3 py-3  bg-primary text-white rounded-lg"
           >
             Reserve Your Place Now
           </a>

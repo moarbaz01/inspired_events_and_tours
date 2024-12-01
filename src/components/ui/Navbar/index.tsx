@@ -1,36 +1,41 @@
 "use client";
+
 import Sidebar from "@/components/Home/Sidebar";
 import Image from "next/image";
-import {  useState } from "react";
+import { useState, useEffect } from "react";
 import { CgMenuRight } from "react-icons/cg";
 import { motion } from "framer-motion"; // Optional: If you want to animate the dropdown
 import Link from "next/link"; // Import Link component from Next.js
+import { usePathname } from "next/navigation"; // Import useRouter
 import Announcement from "../Announcement";
 
 const trips = [
   {
     name: "2025 Morocco Bike Trip",
-    link: "/trips/morocco_overland_motorcycleTrip_2025",
+    link: "/trips/morocco-bike-trips-2025",
   },
   { name: "2025 Car Trips", link: "/trips/car-trips-2025" },
   { name: "2025 Land Rover Trips", link: "/trips/land-rover-trips-2025" },
-  { name: "2025 European Bike Trips", link: "#europeanBike2025" },
-  { name: "2025 UK Bike Trips", link: "#ukBike2025" },
-  { name: "2026 European Bike Trips", link: "#europeanBike2026" },
-  { name: "2026 Morocco Bike Trips", link: "#moroccoBike2026" },
-  { name: "2026 European Car Trips", link: "#europeanCar2026" },
+  { name: "2025 European Bike Trips", link: "/trips/european-bike-trips-2025" },
+  { name: "2025 UK Bike Trips", link: "/trips/uk-bike-trips-2025" },
+  { name: "2026 European Bike Trips", link: "/trips/european-bike-trips-2026" },
+  { name: "2026 Morocco Bike Trips", link: "/trips/morocco-bike-trips-2026" },
+  { name: "2026 European Car Trips", link: "/trips/european-car-trips-2026" },
 ];
 
 const Navbar = () => {
   const [isSidebar, setIsSidebar] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State to handle the dropdown
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const pathname = usePathname();
 
- 
+  useEffect(() => {
+    setIsDropdownOpen(false);
+  }, [pathname]);
 
   return (
     <div className="fixed top-0 left-0 w-full z-[999]">
       <Announcement />
-      <div className="py-2 md:px-6 px-4 bg-white shadow-lg border-b border-gray-200 transition-all duration-300 hover:shadow-2xl">
+      <div className="py-2 md:px-6 px-4 bg-white shadow-sm border-b border-gray-200 transition-all duration-300 ">
         <div className="flex items-center justify-between ">
           <Link href="/" className="flex items-center cursor-pointer gap-2">
             <Image
@@ -88,20 +93,17 @@ const Navbar = () => {
               )}
             </div>
             <Link
-              href="#about"
+              href="/contact"
               className="text-base font-semibold text-primary hover:text-primary/80 transition-all duration-300 relative after:content-[''] after:block after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
             >
-              About
+              Contact
             </Link>
             <Link
-              href="#about"
+              href="/gallery"
               className="text-base font-semibold text-primary hover:text-primary/80 transition-all duration-300 relative after:content-[''] after:block after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
             >
               Gallery
             </Link>
-            <button className="bg-primary text-white py-2 px-6 rounded-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
-              Get Started
-            </button>
           </div>
 
           {/* Mobile Sidebar Trigger */}

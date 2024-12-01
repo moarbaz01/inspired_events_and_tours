@@ -5,31 +5,7 @@ import { FaArrowRight, FaSmile, FaGlobeAmericas } from "react-icons/fa";
 
 const About = () => {
   return (
-    <div className="bg-gradient-to-r from-primary/20 to-white py-12 px-4 md:px-6">
-      {/* Heading Section */}
-      <div className="text-center mb-12">
-        <motion.h2
-          className="md:text-4xl text-3xl font-extrabold mb-4 text-primary leading-tight"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        >
-          About Us
-        </motion.h2>
-        <motion.p
-          className="md:text-xl text-lg max-w-2xl mx-auto mb-8 text-gray-600"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.2 }}
-        >
-          We are a passionate team of travel experts dedicated to curating the
-          best travel experiences, whether it’s exploring new destinations or
-          simply relaxing in exotic locations.
-        </motion.p>
-      </div>
-
+    <div className="bg-primary/10 md:pt-36 pt-20 pb-20 px-4 md:px-6">
       {/* Team Image & Mission Section */}
       <div className="flex flex-col lg:flex-row items-center justify-between md:gap-12 gap-6">
         {/* Image Section with Floating Overlay */}
@@ -82,10 +58,10 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            Our mission is to provide exceptional travel experiences, tailored
-            to your needs and preferences. We strive to offer personalized
-            itineraries, expert advice, and seamless bookings, ensuring your
-            trip is stress-free and unforgettable.
+            At Inspired Events and Tours, our mission is to bring people
+            together for an unforgettable experience. We aim to create epic
+            trips That fosters community, creativity, and inspiration, ensuring
+            that every participant leaves with lasting memories.
           </motion.p>
 
           <motion.p
@@ -95,10 +71,16 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.7 }}
           >
-            With a team of dedicated professionals, we aim to bring you closer
-            to the world’s most beautiful destinations. From custom tours to
-            guided experiences, we&apos;re here to make your travel dreams come
-            true.
+            Having taken part in various track days and road trips organised by
+            larger companies. But often felt that the big corporate organisers
+            often ran trips that felt soulless which most people would normally
+            only attended once. So we decided to plan and organize my own trips
+            looking to add a personal feel to them and make them a social trip
+            that people would want to attend year after year. We have made lots
+            of new friends whilst enjoying these events. And hope you will to.
+            We are now in our 4th year having run over 100 successful trips our
+            range becomes more varied year on year, with track days , road trips
+            and overlanding adventures plus new trips always in the planning.
           </motion.p>
 
           {/* Icons Section with grid layout */}

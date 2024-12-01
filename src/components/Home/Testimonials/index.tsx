@@ -46,7 +46,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="py-12 bg-gradient-to-br from-blue-50 via-white to-gray-100 md:px-6 px-4">
+    <div className="py-12 bg-primary/10 md:px-6 px-4">
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
