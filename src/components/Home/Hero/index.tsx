@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
 const Hero = () => {
   const fadeUp = {
     initial: { opacity: 0, y: 50 },
@@ -60,7 +59,7 @@ const Hero = () => {
       </div>
 
       {/* Slider Images */}
-      <div className="absolute hidden -bottom-16 z-[20] left-0 w-full md:flex flex-wrap justify-center gap-4 px-4">
+      {/* <div className="absolute hidden -bottom-16 z-[20] left-0 w-full md:flex flex-wrap justify-center gap-4 px-4">
         <Image
           src="/images/slider1.jpg"
           alt="Adventure in the mountains"
@@ -82,7 +81,7 @@ const Hero = () => {
           width={400}
           className="h-24 sm:h-32 md:h-40 aspect-square w-auto rounded-xl border-white border-4 shadow-md"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

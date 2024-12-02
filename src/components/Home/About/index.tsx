@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="bg-primary/10 md:pt-36 pt-20 pb-20 px-4 md:px-6">
       {/* Team Image & Mission Section */}
-      <div className="flex flex-col lg:flex-row items-center justify-between md:gap-12 gap-6">
+      <div className="flex flex-col lg:flex-row  justify-between md:gap-12 gap-6">
         {/* Image Section with Floating Overlay */}
         <motion.div
           className="relative w-full lg:w-1/2 h-[400px] lg:h-[500px] mb-8 lg:mb-0 overflow-hidden rounded-xl shadow-xl transform transition duration-500 hover:scale-105"
@@ -72,7 +72,7 @@ const About = () => {
             transition={{ duration: 1, delay: 0.7 }}
           >
             Having taken part in various track days and road trips organised by
-            larger companies. But often felt that the big corporate organisers
+            larger companies. We often felt that the big corporate organisers
             often ran trips that felt soulless which most people would normally
             only attended once. So we decided to plan and organize my own trips
             looking to add a personal feel to them and make them a social trip

@@ -41,7 +41,7 @@ const slides = [
 const Slider = () => {
   const router = useRouter();
   return (
-    <div className="w-full pt-20 pb-12 md:px-6 px-4">
+    <div className="w-full py-12 md:px-6 px-4">
       <div className="px-4 text-center pb-4 md:mt-12">
         <h1 className="md:text-4xl text-3xl font-bold">Our Trips</h1>
         <p className="text-xl mt-2">These are trips that we provides</p>
