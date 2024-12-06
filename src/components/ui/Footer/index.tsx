@@ -43,7 +43,7 @@ const Footer = () => {
             </h2>
             <p className="text-lg mb-6">
               Explore unforgettable journeys, hidden gems, and the adventure of
-              a lifetime with us. Join us to make your dream vacation come true!
+              a lifetime with us. Join us to make your dream trip come true! making memories one trip at a time
             </p>
           </div>
           <div className="flex space-x-4">
@@ -132,10 +132,9 @@ const Footer = () => {
           <p className="mb-2  break-words">
             Email: info@inspiredeventsandtours.co.uk
           </p>
-          <p className="mb-4">Phone: +123 456 7890</p>
+          <p className="mb-4">Phone: 07895961091</p>
           <p className="mb-4">
-            Address: 35 Burton Road, Fradley and Streethay, Lichfield, WS13 8LP,
-            United Kingdom
+            Address: 14 Hints Road, Hopwas, Tamworth, B78 3AA, United Kingdom
           </p>
         </div>
       </div>
@@ -143,7 +142,7 @@ const Footer = () => {
       {/* Footer Bottom - Copyright */}
       <div className="text-center mt-12 border-t border-white pt-6">
         <p className="text-lg">
-          &copy; {new Date().getFullYear()} Inspired Events and Tours. All
+          &copy; 2021 Inspired Events and Tours. All
           Rights Reserved.
         </p>
       </div>

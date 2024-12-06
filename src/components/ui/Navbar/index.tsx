@@ -2,7 +2,7 @@
 
 import Sidebar from "@/components/Home/Sidebar";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { CgMenuRight } from "react-icons/cg";
 import { motion } from "framer-motion"; // Optional: If you want to animate the dropdown
 import Link from "next/link"; // Import Link component from Next.js
@@ -27,6 +27,10 @@ const Navbar = () => {
   const [isSidebar, setIsSidebar] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const pathname = usePathname();
+
+  const handleClose = useCallback(() => {
+    setIsSidebar(false);
+  },[]);
 
   useEffect(() => {
     setIsDropdownOpen(false);
@@ -115,7 +119,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <Sidebar isOpen={isSidebar} onClose={() => setIsSidebar(false)} />
+      <Sidebar isOpen={isSidebar} onClose={handleClose} />
     </div>
   );
 };

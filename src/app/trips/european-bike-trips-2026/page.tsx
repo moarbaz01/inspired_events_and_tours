@@ -64,7 +64,7 @@ const Page = () => {
               <p className="text-lg md:text-xl font-bold text-white text-center">
                 {trip.title}
               </p>
-              <p className="text-lg md:text-2xl font-bold text-white text-center">
+              <p className="text-lg md:text-xl font-bold text-white text-center">
                 {trip?.status === "Booked"
                   ? "FULLY BOOKED"
                   : trip.startDate + " - " + trip.endDate}

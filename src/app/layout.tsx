@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 import NextTopLoader from "nextjs-toploader";
-
+import {Toaster} from "react-hot-toast"
 // Google Fonts Integration
 const poppins = Poppins({
   subsets: ["latin"],
@@ -44,6 +44,7 @@ export default function RootLayout({
       >
         {/* Announcement Component */}
         <main className="pt-32">
+          <Toaster />
           <NextTopLoader color="white" />
           <Navbar />
           {children}

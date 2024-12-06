@@ -32,7 +32,7 @@ const ImageGalleryCarousel = () => {
 
   return (
     <div className="w-full max-w-5xl mx-auto py-12 px-4">
-      <div className="px-4 text-center md:mt-12 mb-12">
+      <div className="px-4 text-center  mb-6">
         <h1 className="md:text-4xl text-3xl font-bold">Image Gallery</h1>
       </div>
 

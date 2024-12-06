@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { SocialIcon } from "react-social-icons";
 
@@ -19,10 +20,25 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted with data: ", formData);
-    // You would typically handle form submission here, like calling an API
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+    if (res.ok) {
+      toast.success("Message sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } else {
+      toast.error("Failed to send message. Please try again later.");
+    }
   };
 
   return (
@@ -141,8 +157,7 @@ const Contact = () => {
                   <FaMapMarkerAlt className="text-primary text-2xl" />
                 </div>
                 <p className="text-lg text-gray-700">
-                  Address: 35 Burton Road, Fradley and Streethay, Lichfield,
-                  WS13 8LP, United Kingdom
+                  Address: 14 Hints Road, Hopwas, Tamworth, B78 3AA, United Kingdom
                 </p>
               </div>
             </div>
