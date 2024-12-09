@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FaArrowRight, FaSmile, FaGlobeAmericas } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -59,7 +58,7 @@ const About = () => {
             transition={{ duration: 1, delay: 0.6 }}
           >
             At Inspired Events and Tours, our mission is to bring people
-            together for an unforgettable experience. We aim to create epic
+            together for a truly unforgettable experience. We aim to create epic
             trips That fosters community, creativity, and inspiration, ensuring
             that every participant leaves with lasting memories.
           </motion.p>
@@ -71,37 +70,20 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.7 }}
           >
-            Having taken part in various track days and road trips organised by
-            larger companies. We often felt that the big corporate organisers
-            often ran trips that felt soulless which most people would normally
-            only attended once. So we decided to plan and organize my own trips
-            looking to add a personal feel to them and make them a social trip
-            that people would want to attend year after year. We have made lots
-            of new friends whilst enjoying these events. And hope you will to.
-            We are now in our 4th year having run over 100 successful trips our
-            range becomes more varied year on year, with track days , road trips
-            and overlanding adventures plus new trips always in the planning.
+            After participating in numerous road trips and track days organized
+            by larger companies, we often felt that these events lacked a
+            personal touch and felt somewhat soulless, with most people
+            attending only once. So, we decided to plan and organize our own
+            unique adventures, aiming to create a more personalized and social
+            experience that people would love and look at attending a different
+            destination with us in the following years. We&apos;ve have made many new
+            friends along the way, and we hope you will too. Now in our fourth
+            year, we&apos;ve successfully run over 100 trips, and with our range of
+            destinations becoming more varied each year. We are confident that
+            one of our offerings will tempt you to book and join us. And if not
+            please keep checking us out as there are always new trips always in
+            the planning.
           </motion.p>
-
-          {/* Icons Section with grid layout */}
-          <div className="grid grid-cols-3 gap-12 mb-8 lg:mb-10">
-            <div className="flex flex-col items-center text-gray-600">
-              <FaArrowRight className="md:text-4xl text-xl mb-2" />
-              <p className="md:text-lg text-sm font-semibold">Tailored Trips</p>
-            </div>
-            <div className="flex flex-col items-center text-gray-600">
-              <FaSmile className="md:text-4xl text-xl mb-2" />
-              <p className="md:text-lg text-sm font-semibold">
-                Happy Travelers
-              </p>
-            </div>
-            <div className="flex flex-col items-center text-gray-600">
-              <FaGlobeAmericas className="md:text-4xl text-xl mb-2" />
-              <p className="md:text-lg text-sm font-semibold">
-                Global Destinations
-              </p>
-            </div>
-          </div>
 
           {/* Call-to-Action Button */}
           <motion.div

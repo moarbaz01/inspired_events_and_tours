@@ -7,13 +7,14 @@ import Testimonials from "@/components/Home/Testimonials";
 import WhyChooseUs from "@/components/Home/WhyChooseUs";
 
 export default function Home() {
+  
   return (
     <div>
-      <ChatWidget/>
+      <ChatWidget />
       <Hero />
       <About />
       <Slider />
-      <ImageGalleryCarousel/>
+      <ImageGalleryCarousel  />
       <WhyChooseUs />
       <Testimonials />
     </div>

@@ -157,14 +157,16 @@ const Contact = () => {
                   <FaMapMarkerAlt className="text-primary text-2xl" />
                 </div>
                 <p className="text-lg text-gray-700">
-                  Address: 14 Hints Road, Hopwas, Tamworth, B78 3AA, United Kingdom
+                  Address: 14 Hints Road, Hopwas, Tamworth, B78 3AA, United
+                  Kingdom
                 </p>
               </div>
             </div>
 
             {/* Map */}
+
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d77388.02974800543!2d-1.880175254381018!3d52.68930643474204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x487a0801df178f9f%3A0x79d841dd6bf4ba61!2s35%20Burton%20Rd%2C%20Streethay%2C%20Lichfield%20WS13%208LR%2C%20UK!3m2!1d52.689335!2d-1.7977751!5e0!3m2!1sen!2sin!4v1732972009347!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2420.9727892815326!2d-1.7384648236535147!3d52.6424046271603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870a9017b428535%3A0x6f71cffa5dbed7cd!2s14%20Hints%20Rd%2C%20Hopwas%2C%20Tamworth%20B78%203AE%2C%20UK!5e0!3m2!1sen!2sin!4v1733570583254!5m2!1sen!2sin"
               width="600"
               height="450"
               className="border-0 w-full"

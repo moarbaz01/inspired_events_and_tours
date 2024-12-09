@@ -1,11 +1,7 @@
 "use client";
 
 import React from "react";
-import {
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-} from "@mui/material";
+import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const faqs = [
@@ -20,9 +16,9 @@ const faqs = [
       "We highly recommend purchasing travel insurance to cover any unforeseen events such as trip cancellations, medical emergencies, or lost luggage. Please contact our team for more information on options.",
   },
   {
-    question: "Can I modify my booking?",
+    question: "Can I modify my crossing?",
     answer:
-      "Yes, you can modify your booking depending on the terms of your package. Please contact our customer service team, and we will assist you with the changes.",
+      "Yes, you can modify your crossing for alternative return times or dates. Please contact us with your requirements, and we will assist you with the changes.",
   },
   {
     question: "Are meals included in my package?",
@@ -34,6 +30,36 @@ const faqs = [
     answer:
       "We offer airport transfers for some destinations. If your package doesn't include transfers, we can help you arrange private transport. Please reach out to us to check availability.",
   },
+  {
+    question: "Peace of Mind",
+    answer:
+      "Knowing you have support in case of a breakdown can make your trip much more enjoyable and stress-free.",
+  },
+  {
+    question: "Comprehensive Assistance",
+    answer:
+      "European breakdown cover typically includes roadside assistance, towing, and repairs, ensuring you're not stranded in a foreign country.",
+  },
+  {
+    question: "Cost Savings",
+    answer:
+      "Without coverage, the cost of towing, repairs, and accommodations can add up quickly. Breakdown cover can save you money by covering these expenses.",
+  },
+  {
+    question: "Convenience",
+    answer:
+      "Many policies offer additional benefits, such as onward travel, and accommodation, ensuring minimal disruption to your journey.",
+  },
+  {
+    question: "Legal Assistance",
+    answer:
+      "Some breakdown cover policies include legal assistance, helping you navigate local laws and regulations if needed.",
+  },
+  {
+    question: "Coverage Across Europe",
+    answer:
+      "Whether you're on a short trip or an extended tour, having coverage across multiple countries ensures you're protected no matter where you travel in Europe.",
+  },
 ];
 
 const FAQs = () => {
@@ -43,20 +69,20 @@ const FAQs = () => {
         Frequently Asked Questions
       </h1>
 
-     <div className="pb-4">
-     {faqs.map((faq, index) => (
-        <Accordion key={index} className="py-2">
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon className="text-primary-dark" />}
-          >
-            <p className="font-[600]">{faq.question}</p>
-          </AccordionSummary>
-          <AccordionDetails>
-            <p>{faq.answer}</p>
-          </AccordionDetails>
-        </Accordion>
-      ))}
-     </div>
+      <div className="pb-4">
+        {faqs.map((faq, index) => (
+          <Accordion key={index} className="py-2">
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon className="text-primary-dark" />}
+            >
+              <p className="font-[600]">{faq.question}</p>
+            </AccordionSummary>
+            <AccordionDetails>
+              <p>{faq.answer}</p>
+            </AccordionDetails>
+          </Accordion>
+        ))}
+      </div>
     </div>
   );
 };

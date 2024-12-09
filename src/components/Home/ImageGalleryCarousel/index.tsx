@@ -1,116 +1,135 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react"; // Import SwiperInstance
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
-import "swiper/css/pagination";
-import { Navigation, Thumbs } from "swiper/modules";
+import React, { useState, useRef } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Image from "next/image";
-import { Swiper as SwiperInstance } from "swiper/types";
 
-const ImageGalleryCarousel = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperInstance | null>(null); // Proper typing
-  const [activeIndex, setActiveIndex] = useState(0); // Track the active index
+const images = [
+  { src: "/images/slider1.jpg", alt: "slider1" },
+  { src: "/images/slider2.jpg", alt: "slider2" },
+  { src: "/images/slider3.jpg", alt: "slider3" },
+  { src: "/images/slider4.jpg", alt: "slider4" },
+  { src: "/images/slider5.jpg", alt: "slider5" },
+  { src: "/images/slider6.jpg", alt: "slider6" },
+  {
+    src: "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "slider7",
+  },
+];
 
-  const images = [
-    "/images/slider1.jpg",
-    "/images/slider2.jpg",
-    "/images/slider3.jpg",
-    "/images/slider4.jpg",
-    "/images/slider5.jpg",
-    "/images/slider6.jpg",
-  ];
+// Custom Arrow Components
+const RightArrow = ({ onClick }) => (
+  <div
+    onClick={onClick}
+    className="custom-next text-white absolute top-1/2 right-4 z-50 flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition transform -translate-y-1/2"
+  >
+    <FaChevronRight className="text-xl" />
+  </div>
+);
 
-  // Sync main swiper to bottom swiper
-  useEffect(() => {
-    if (thumbsSwiper) {
-      thumbsSwiper.slideTo(activeIndex); // Move the thumbnail swiper to the active index
+const LeftArrow = ({ onClick }) => (
+  <div
+    onClick={onClick}
+    className="custom-prev text-white absolute top-1/2 left-4 z-50 flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition transform -translate-y-1/2"
+  >
+    <FaChevronLeft className="text-xl" />
+  </div>
+);
+
+function VariableWidth() {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const mainSliderRef = useRef<Slider | null>(null);
+  const thumbnailSliderRef = useRef(null);
+
+  const mainSliderSettings = {
+    className: "slider variable-width",
+    centerPadding: "60px",
+    arrows: true,
+    dots: true,
+    infinite: true,
+    centerMode: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 500,
+    variableWidth: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    beforeChange: (current, next) => setActiveSlide(next),
+    nextArrow: <RightArrow onClick />,
+    prevArrow: <LeftArrow onClick />,
+  };
+
+  const thumbnailSliderSettings = {
+    slidesToShow: Math.min(images.length, 6),
+    slidesToScroll: 1,
+    focusOnSelect: true,
+    infinite: images.length > 6,
+    arrows: true,
+  };
+
+  const handleSlideClick = (index) => {
+    if (mainSliderRef.current) {
+      mainSliderRef.current.slickGoTo(index); // Navigate the main slider
     }
-  }, [activeIndex, thumbsSwiper]);
+    setActiveSlide(index); // Update the active slide state
+  };
 
   return (
-    <div className="w-full max-w-5xl mx-auto py-12 px-4">
-      <div className="px-4 text-center  mb-6">
+    <div className="w-full px-4 mx-auto my-10">
+      <div className="px-4 text-center pb-4 md:mt-12">
         <h1 className="md:text-4xl text-3xl font-bold">Image Gallery</h1>
+        <p className="text-xl mt-2">Our Tour Images</p>
       </div>
-
-      {/* Main Big Carousel */}
-      <Swiper
-        modules={[Navigation, Thumbs]}
-        spaceBetween={10}
-        slidesPerView={1}
-        thumbs={{ swiper: thumbsSwiper }}
-        className="w-full rounded-lg overflow-hidden"
-        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)} // Update active index
-        navigation={{
-          prevEl: ".custom-prev",
-          nextEl: ".custom-next",
-        }}
-      >
+      <Slider ref={mainSliderRef} {...mainSliderSettings}>
         {images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <div className="w-full aspect-video bg-gray-100">
-              <Image
-                src={image}
-                layout="fill"
-                alt={`Slide ${index + 1}`}
-                className="w-full h-full object-contain"
-              />
-            </div>
-          </SwiperSlide>
+          <div
+            key={index}
+            onClick={() => handleSlideClick(index)}
+            className={`w-full h-[300px] lg:h-[600px] cursor-pointer ${
+              index === activeSlide ? "opacity-100" : "opacity-70"
+            }`}
+          >
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={1000}
+              height={1000}
+               layout="responsive"
+              className="w-full h-full object-cover shadow-md"
+            />
+          </div>
         ))}
-        {/* Custom Navigation Buttons */}
-        <div className="custom-prev select-none text-white absolute top-1/2 left-4 z-50 flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition">
-          <FaChevronLeft className="text-xl" />
-        </div>
-        <div className="custom-next select-none text-white absolute top-1/2 right-4 z-50 flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition">
-          <FaChevronRight className="text-xl" />
-        </div>
-      </Swiper>
+      </Slider>
 
-      {/* Lower Thumbnail Carousel */}
-      <Swiper
-        onSwiper={(swiper) => setThumbsSwiper(swiper)} // Set the Swiper instance
-        modules={[Thumbs, Navigation]}
-        spaceBetween={10}
-        slidesPerView={6}
-        className="mt-4"
-        watchSlidesProgress
-        navigation={{
-          prevEl: ".thumb-prev",
-          nextEl: ".thumb-next",
-        }}
-      >
-        {images.map((image, index) => (
-          <SwiperSlide key={index}>
+      {/* Thumbnail Slider */}
+      <div className="mt-8">
+        <Slider ref={thumbnailSliderRef} {...thumbnailSliderSettings}>
+          {images.map((image, index) => (
             <div
-              className={`aspect-square bg-gray-200 rounded-lg overflow-hidden border-2 cursor-pointer transition-all ${
-                activeIndex === index ? "border-blue-500" : "border-transparent"
-              }`}
+              key={index}
+              className={`relative h-[100px] w-[100px] cursor-pointer overflow-hidden border-2 rounded-md ${
+                index === activeSlide
+                  ? "border-4 border-blue-500"
+                  : "border-2 border-gray-300"
+              } m-2`}
+              onClick={() => handleSlideClick(index)}
             >
               <Image
-                src={image}
-                width={100}
-                height={100}
+                src={image.src}
+                alt={image.alt}
+                width={1000}
+                height={1000}
                 layout="responsive"
-                alt={`Thumbnail ${index + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
-          </SwiperSlide>
-        ))}
-        {/* Custom Navigation Buttons for Thumbnails */}
-        <div className="thumb-prev select-none text-gray-700 absolute top-1/2 left-0 z-40 flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full shadow cursor-pointer hover:bg-gray-400 transition">
-          <FaChevronLeft className="text-sm" />
-        </div>
-        <div className="thumb-next select-none text-gray-700 absolute top-1/2 right-0 z-40 flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full shadow cursor-pointer hover:bg-gray-400 transition">
-          <FaChevronRight className="text-sm" />
-        </div>
-      </Swiper>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
-};
+}
 
-export default ImageGalleryCarousel;
+export default VariableWidth;
