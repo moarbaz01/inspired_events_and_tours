@@ -23,18 +23,18 @@ const images = [
 const RightArrow = ({ onClick }) => (
   <div
     onClick={onClick}
-    className="custom-next text-white absolute top-1/2 right-4 z-50 flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition transform -translate-y-1/2"
+    className="custom-next text-white absolute top-1/2 md:right-4 right-2 z-50 flex items-center justify-center md:w-12 md:h-12 h-8 w-8 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition transform -translate-y-1/2"
   >
-    <FaChevronRight className="text-xl" />
+    <FaChevronRight className="md:text-xl text-sm" />
   </div>
 );
 
 const LeftArrow = ({ onClick }) => (
   <div
     onClick={onClick}
-    className="custom-prev text-white absolute top-1/2 left-4 z-50 flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition transform -translate-y-1/2"
+    className="custom-prev text-white absolute top-1/2 md:left-4 left-2 z-50 flex items-center justify-center md:w-12 md:h-12 w-8 h-8 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition transform -translate-y-1/2"
   >
-    <FaChevronLeft className="text-xl" />
+    <FaChevronLeft className="md:text-xl text-sm" />
   </div>
 );
 
@@ -45,7 +45,7 @@ function VariableWidth() {
 
   const mainSliderSettings = {
     className: "slider variable-width",
-    centerPadding: "60px",
+    centerPadding: "10px",
     arrows: true,
     dots: true,
     infinite: true,
@@ -62,11 +62,33 @@ function VariableWidth() {
   };
 
   const thumbnailSliderSettings = {
-    slidesToShow: Math.min(images.length, 6),
+    slidesToShow: 6,
     slidesToScroll: 1,
     focusOnSelect: true,
-    infinite: images.length > 6,
+    infinite: images.length > 12,
     arrows: true,
+    nextArrow: <RightArrow onClick />,
+    prevArrow: <LeftArrow onClick />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+    ],
   };
 
   const handleSlideClick = (index) => {
@@ -87,7 +109,7 @@ function VariableWidth() {
           <div
             key={index}
             onClick={() => handleSlideClick(index)}
-            className={`w-full h-[300px] lg:h-[600px] cursor-pointer ${
+            className={`w-auto h-[300px] md:h-[600px] cursor-pointer ${
               index === activeSlide ? "opacity-100" : "opacity-70"
             }`}
           >
@@ -96,8 +118,7 @@ function VariableWidth() {
               alt={image.alt}
               width={1000}
               height={1000}
-               layout="responsive"
-              className="w-full h-full object-cover shadow-md"
+              className="w-auto h-full object-cover shadow-md"
             />
           </div>
         ))}
@@ -109,9 +130,9 @@ function VariableWidth() {
           {images.map((image, index) => (
             <div
               key={index}
-              className={`relative h-[100px] w-[100px] cursor-pointer overflow-hidden border-2 rounded-md ${
+              className={`relative w-[100px] h-[100px] cursor-pointer overflow-hidden border-2 rounded-md ${
                 index === activeSlide
-                  ? "border-4 border-blue-500"
+                  ? "border-2 border-blue-500"
                   : "border-2 border-gray-300"
               } m-2`}
               onClick={() => handleSlideClick(index)}
@@ -119,9 +140,8 @@ function VariableWidth() {
               <Image
                 src={image.src}
                 alt={image.alt}
-                width={1000}
-                height={1000}
-                layout="responsive"
+                width={500} // Fixed width for the image
+                height={500} // Fixed height for the image
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
