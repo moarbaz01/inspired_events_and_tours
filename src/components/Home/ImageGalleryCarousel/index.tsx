@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const images = [
   { src: "/images/slider1.jpg", alt: "slider1" },
@@ -100,32 +101,50 @@ function VariableWidth() {
 
   return (
     <div className="w-full px-4 mx-auto my-10">
-      <div className="px-4 text-center pb-4 md:mt-12">
-        <h1 className="md:text-4xl text-3xl font-bold">Image Gallery</h1>
-        <p className="text-xl mt-2">Our Tour Images</p>
-      </div>
-      <Slider ref={mainSliderRef} {...mainSliderSettings}>
-        {images.map((image, index) => (
-          <div
-            key={index}
-            onClick={() => handleSlideClick(index)}
-            className={`w-auto h-[300px] md:h-[600px] cursor-pointer ${
-              index === activeSlide ? "opacity-100" : "opacity-70"
-            }`}
-          >
-            <Image
-              src={image.src}
-              alt={image.alt}
-              width={1000}
-              height={1000}
-              className="w-auto h-full object-cover shadow-md"
-            />
-          </div>
-        ))}
-      </Slider>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="px-4 text-center pb-4 md:mt-12"
+      >
+        <h1 className="md:text-4xl text-3xl font-bold">
+          Images From Previous Trips
+        </h1>
+        <p className="text-xl mt-2">
+          Explore the beauty of our previous trips through our image gallery.
+        </p>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
+        <Slider ref={mainSliderRef} {...mainSliderSettings}>
+          {images.map((image, index) => (
+            <div
+              key={index}
+              onClick={() => handleSlideClick(index)}
+              className={`w-auto h-[300px] md:h-[600px] cursor-pointer ${
+                index === activeSlide ? "opacity-100" : "opacity-70"
+              }`}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={1000}
+                height={1000}
+                className="w-auto h-full object-cover shadow-md"
+              />
+            </div>
+          ))}
+        </Slider>
+      </motion.div>
 
       {/* Thumbnail Slider */}
-      <div className="mt-8">
+      <div className="mt-8 md:block hidden">
         <Slider ref={thumbnailSliderRef} {...thumbnailSliderSettings}>
           {images.map((image, index) => (
             <div

@@ -50,8 +50,9 @@ const Testimonials = () => {
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
         className="text-center pb-4"
       >
         <h2 className="md:text-4xl text-3xl font-bold text-gray-800">

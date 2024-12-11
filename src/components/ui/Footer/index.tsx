@@ -43,7 +43,8 @@ const Footer = () => {
             </h2>
             <p className="text-lg mb-6">
               Explore unforgettable journeys, hidden gems, and the adventure of
-              a lifetime with us. Join us to make your dream trip come true! making memories one trip at a time
+              a lifetime with us. Join us to make your dream trip come true!
+              making memories one trip at a time
             </p>
           </div>
           <div className="flex space-x-4">
@@ -100,7 +101,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="#about"
+                href="/about"
                 className="text-white hover:opacity-80 transition-all"
               >
                 About Us
@@ -142,8 +143,7 @@ const Footer = () => {
       {/* Footer Bottom - Copyright */}
       <div className="text-center mt-12 border-t border-white pt-6">
         <p className="text-lg">
-          &copy; 2021 Inspired Events and Tours. All
-          Rights Reserved.
+          &copy; 2021 Inspired Events and Tours. All Rights Reserved.
         </p>
       </div>
     </div>
