@@ -96,7 +96,7 @@ function VariableWidth() {
               alt={image.alt}
               width={1000}
               height={1000}
-               layout="responsive"
+              layout="responsive"
               className="w-full h-full object-cover shadow-md"
             />
           </div>
