@@ -1,5 +1,6 @@
 "use client";
 import { FaPlane, FaHeart, FaDollarSign, FaMapMarkedAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const WhyChooseUs = () => {
   const features = [
@@ -26,20 +27,32 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <div className="py-12  bg-gray-50">
+    <div className="md:py-32 py-12 bg-gray-50">
       {/* Section Header */}
-      <div className="text-center px-4 pb-4">
-        <h2 className="md:text-4xl text-3xl font-bold text-gray-800">Why Choose Us?</h2>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="text-center px-4 pb-4"
+      >
+        <h2 className="md:text-3xl text-2xl font-bold text-gray-800">
+          Why Choose Us?
+        </h2>
         <p className="text-lg text-gray-600 mt-2">
           Discover what makes us the best travel agency for your adventures.
         </p>
-      </div>
+      </motion.div>
 
       {/* Features Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8 px-6 md:px-12 lg:px-20">
         {features.map((feature, index) => (
-          <div
+          <motion.div
             key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
             className="flex flex-col items-center text-center bg-white p-6 shadow-md rounded-lg transition-transform transform hover:scale-105"
           >
             <div className="mb-2">{feature.icon}</div>
@@ -47,7 +60,7 @@ const WhyChooseUs = () => {
               {feature.title}
             </h2>
             <p className="text-sm text-gray-600 ">{feature.desc}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

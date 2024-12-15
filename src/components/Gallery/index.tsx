@@ -5,14 +5,11 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import Image from "next/image";
 
-// Images for the gallery
-const images = [
-  { src: "/images/slider1.jpg", alt: "Mountain View" },
-  { src: "/images/slider2.jpg", alt: "Beach Sunset" },
-  { src: "/images/slider3.jpg", alt: "City Lights" },
-  { src: "/images/slider4.jpg", alt: "Forest Trail" },
-  { src: "/images/slider5.jpg", alt: "Desert Dunes" },
-];
+// Dynamically import images from the `public/images` folder
+const images = Array.from({ length: 92 }, (_, i) => ({
+  src: `/images/trips/trip${i + 1}.jpg`,
+  alt: `Image ${i + 1}`,
+}));
 
 const Gallery = () => {
   const [currentImage, setCurrentImage] = useState<number | null>(null);
@@ -46,7 +43,6 @@ const Gallery = () => {
                   alt={image.alt}
                   width={400}
                   height={300}
-                  layout="responsive"
                   className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-105"
                 />
               </div>

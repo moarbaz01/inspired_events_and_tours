@@ -1,4 +1,4 @@
-import Link from "next/link";
+import TripCard from "@/components/TripCard";
 
 const trips = [
   {
@@ -51,49 +51,7 @@ const Page = () => {
       </h1>
       <div className="max-w-7xl mx-auto space-y-8">
         {trips.map((trip) => (
-          <div
-            key={trip.id}
-            className="flex flex-col md:flex-row bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
-          >
-            {/* Left side: Gradient Background with Title */}
-            <div className="flex-shrink-0 md:w-1/3 bg-primary flex items-center justify-center flex-col p-6">
-              <p className="text-lg md:text-xl font-bold text-white text-center">
-                {trip.title}
-              </p>
-              <p className="text-lg md:text-xl font-bold text-white text-center">
-                {trip.startDate + " - " + trip.endDate}
-              </p>
-            </div>
-
-            {/* Right side: Card Content */}
-            <div className="flex flex-col justify-between flex-1 p-6">
-              <div>
-                <p className="text-gray-800 text-base font-medium mb-4 line-clamp-3">
-                  {trip.description}
-                </p>
-                <div className="text-sm text-gray-600 space-y-2">
-                  <p>
-                    <span className="font-bold text-primary">Start Date:</span>{" "}
-                    {trip.startDate}
-                  </p>
-                  <p>
-                    <span className="font-bold text-primary">End Date:</span>{" "}
-                    {trip.endDate}
-                  </p>
-                  <p>
-                    <span className="font-bold text-primary">Location:</span>{" "}
-                    {trip.location}
-                  </p>
-                </div>
-              </div>
-              <Link
-                href={trip.link}
-                className="mt-6 w-fit bg-primary hover:bg-primary-dark text-white font-bold text-sm py-3 px-6 rounded-lg transition"
-              >
-                All Details
-              </Link>
-            </div>
-          </div>
+          <TripCard key={trip.id} {...trip} />
         ))}
       </div>
     </div>

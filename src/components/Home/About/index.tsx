@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -23,17 +24,6 @@ const About = () => {
             objectFit="cover"
             className="rounded-xl shadow-lg transform transition duration-500 hover:scale-110"
           />
-          {/* Second Image positioned differently */}
-          <div className="absolute bottom-4 right-4 w-40 h-40 overflow-hidden rounded-xl shadow-lg border-4 border-white">
-            <Image
-              src="/images/slider2.jpg" // Replace with your second image
-              alt="Team Work"
-              layout="fill"
-              priority={true}
-              objectFit="cover"
-              className="rounded-xl shadow-lg"
-            />
-          </div>
         </motion.div>
 
         {/* Mission Text Section */}
@@ -76,13 +66,13 @@ const About = () => {
             attending only once. So, we decided to plan and organize our own
             unique adventures, aiming to create a more personalized and social
             experience that people would love and look at attending a different
-            destination with us in the following years. We&apos;ve have made many new
-            friends along the way, and we hope you will too. Now in our fourth
-            year, we&apos;ve successfully run over 100 trips, and with our range of
-            destinations becoming more varied each year. We are confident that
-            one of our offerings will tempt you to book and join us. And if not
-            please keep checking us out as there are always new trips always in
-            the planning.
+            destination with us in the following years. We&apos;ve have made
+            many new friends along the way, and we hope you will too. Now in our
+            fourth year, we&apos;ve successfully run over 100 trips, and with
+            our range of destinations becoming more varied each year. We are
+            confident that one of our offerings will tempt you to book and join
+            us. And if not please keep checking us out as there are always new
+            trips always in the planning.
           </motion.p>
 
           {/* Call-to-Action Button */}
@@ -93,12 +83,12 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.8 }}
           >
-            <a
+            <Link
               href="/contact"
               className="bg-primary text-white px-6 py-3 text-xl font-semibold rounded-lg shadow-md hover:bg-primary-dark transition duration-300"
             >
               Contact Us
-            </a>
+            </Link>
           </motion.div>
         </div>
       </div>

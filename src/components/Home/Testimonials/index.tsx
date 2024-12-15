@@ -1,11 +1,7 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import {
-  FaChevronLeft,
-  FaChevronRight,
-  FaStar,
-} from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaStar } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
@@ -46,15 +42,16 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="py-12 bg-primary/10 md:px-6 px-4">
+    <div className="md:py-32 py-12 bg-primary/10 md:px-6 px-4">
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
         className="text-center pb-4"
       >
-        <h2 className="md:text-4xl text-3xl font-bold text-gray-800">
+        <h2 className="md:text-3xl text-2xl font-bold text-gray-800">
           What Our Clients Say
         </h2>
         <p className="text-lg text-gray-600 mt-2">
