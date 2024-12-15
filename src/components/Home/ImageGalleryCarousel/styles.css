@@ -1,0 +1,9 @@
+/* Optional Custom Styling */
+.slick-center .slick-slide {
+    transform: scale(1.1); /* Slightly enlarge the centered image */
+  }
+  
+  .slick-prev, .slick-next {
+    z-index: 10;
+  }
+  

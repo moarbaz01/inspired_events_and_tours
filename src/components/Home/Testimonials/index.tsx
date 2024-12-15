@@ -4,6 +4,7 @@ import "swiper/swiper-bundle.css";
 import { FaChevronLeft, FaChevronRight, FaStar } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { useEffect } from "react";
 
 const testimonials = [
   {
@@ -41,6 +42,15 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+  useEffect(() => {
+    const fetchReviews = async () => {
+      const res = await fetch("/api/reviews");
+      const data = await res.json();
+      console.log(data);
+    };
+
+    fetchReviews();
+  }, []);
   return (
     <div className="md:py-32 py-12 bg-primary/10 md:px-6 px-4">
       {/* Section Header */}
@@ -84,7 +94,7 @@ const Testimonials = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="relative bg-white border  p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="relative bg-white border p-8 rounded-lg  hover:shadow-xl transition-shadow duration-300"
             >
               {/* Content */}
               <div className=" text-center relative z-10">

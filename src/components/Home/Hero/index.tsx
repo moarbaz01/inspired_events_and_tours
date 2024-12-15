@@ -59,30 +59,6 @@ const Hero = () => {
         </motion.a>
       </div>
 
-      {/* Slider Images */}
-      {/* <div className="absolute hidden -bottom-16 z-[20] left-0 w-full md:flex flex-wrap justify-center gap-4 px-4">
-        <Image
-          src="/images/slider1.jpg"
-          alt="Adventure in the mountains"
-          height={400}
-          width={400}
-          className="h-24 sm:h-32 md:h-40 aspect-square w-auto rounded-xl border-white border-4 shadow-md"
-        />
-        <Image
-          src="/images/slider2.jpg"
-          alt="Relaxing at the beach"
-          height={400}
-          width={400}
-          className="h-24 sm:h-32 md:h-40 aspect-square w-auto rounded-xl border-white border-4 shadow-md"
-        />
-        <Image
-          src="/images/slider3.jpg"
-          alt="City exploration"
-          height={400}
-          width={400}
-          className="h-24 sm:h-32 md:h-40 aspect-square w-auto rounded-xl border-white border-4 shadow-md"
-        />
-      </div> */}
     </div>
   );
 };

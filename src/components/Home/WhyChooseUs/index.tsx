@@ -1,5 +1,10 @@
 "use client";
-import { FaPlane, FaHeart, FaDollarSign, FaMapMarkedAlt } from "react-icons/fa";
+import {
+  FaPlane,
+  FaHeart,
+  FaGlobe,
+  FaEuroSign,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const WhyChooseUs = () => {
@@ -11,18 +16,18 @@ const WhyChooseUs = () => {
     },
     {
       icon: <FaHeart className="text-4xl text-primary" />,
-      title: "Trusted by Thousands",
+      title: "100s Of Returning Customers",
       desc: "Over 10,000 happy travelers have trusted us with their trips.",
     },
     {
-      icon: <FaDollarSign className="text-4xl text-primary" />,
+      icon: <FaEuroSign className="text-4xl text-primary" />,
       title: "Best Price Guarantee",
       desc: "We offer competitive prices without compromising quality.",
     },
     {
-      icon: <FaMapMarkedAlt className="text-4xl text-primary" />,
+      icon: <FaGlobe className="text-4xl text-primary" />,
       title: "Wide Range of Destinations",
-      desc: "Explore our curated selection of breathtaking destinations.",
+      desc: "We operate within UK Europe & Africa",
     },
   ];
 
@@ -40,7 +45,7 @@ const WhyChooseUs = () => {
           Why Choose Us?
         </h2>
         <p className="text-lg text-gray-600 mt-2">
-          Discover what makes us the best travel agency for your adventures.
+          Discovery what makes us your best choice for your next adventure.
         </p>
       </motion.div>
 
@@ -56,10 +61,10 @@ const WhyChooseUs = () => {
             className="flex flex-col items-center text-center bg-white p-6 shadow-md rounded-lg transition-transform transform hover:scale-105"
           >
             <div className="mb-2">{feature.icon}</div>
-            <h2 className="text-xl font-semibold text-gray-800 leading-normal">
+            <h2 className="text-lg font-semibold text-gray-800 leading-normal">
               {feature.title}
             </h2>
-            <p className="text-sm text-gray-600 ">{feature.desc}</p>
+            <p className="text-sm mt-2 text-gray-600 ">{feature.desc}</p>
           </motion.div>
         ))}
       </div>

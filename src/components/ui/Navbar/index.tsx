@@ -46,13 +46,14 @@ const Navbar = () => {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5 }}
+              className="h-20 w-20 aspect-square md:ml-0 -ml-4"
             >
               <Image
                 src="/images/logo.png"
                 alt="Logo Image"
                 height={400}
                 width={400}
-                className="h-20 w-20 transform transition-transform duration-300 hover:scale-110"
+                className="h-full w-full transform transition-transform duration-300 hover:scale-110"
               />
             </motion.div>
             <motion.h1
@@ -67,7 +68,7 @@ const Navbar = () => {
 
           {/* Mobile Title */}
           <motion.h1
-            className="md:text-3xl text-wrap text-center md:hidden text-xl md:px-0 px-4 font-bold drop-shadow-lg text-primary hover:text-primary/80 transition-all duration-300"
+            className="md:text-3xl text-wrap text-center md:hidden text-xl  font-bold drop-shadow-lg text-primary hover:text-primary/80 transition-all duration-300"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
@@ -77,11 +78,7 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            <motion.div
-             
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
               <Link
                 href="/"
                 className="text-base font-semibold text-primary hover:text-primary/80 transition-all duration-300 relative after:content-[''] after:block after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"

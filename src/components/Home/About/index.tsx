@@ -85,7 +85,7 @@ const About = () => {
           >
             <Link
               href="/contact"
-              className="bg-primary text-white px-6 py-3 text-xl font-semibold rounded-lg shadow-md hover:bg-primary-dark transition duration-300"
+              className="bg-primary text-white px-6 py-3 text-xl  rounded-full shadow-md hover:bg-primary-dark transition duration-300"
             >
               Contact Us
             </Link>

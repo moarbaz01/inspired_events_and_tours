@@ -48,6 +48,10 @@ a {
   text-decoration: none;
 }
 
+.swiper-pagination-bullet-active {
+  background-color: #df7234 !important;
+}
+
 section {
   margin-bottom: 2rem;
 }

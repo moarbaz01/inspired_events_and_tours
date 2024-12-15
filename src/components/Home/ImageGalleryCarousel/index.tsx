@@ -37,7 +37,6 @@ function VariableWidth() {
   const mainSliderRef = useRef<Slider | null>(null);
   const thumbnailSliderRef = useRef<Slider | null>(null);
   const [isMounted, setIsMounted] = useState(false);
-
   // Ensure the component is mounted before passing refs to asNavFor
   useEffect(() => {
     setIsMounted(true);
@@ -54,6 +53,7 @@ function VariableWidth() {
     speed: 500,
     variableWidth: true,
     autoplay: true,
+
     autoplaySpeed: 3000,
     beforeChange: (current, next) => setActiveSlide(next),
     nextArrow: <RightArrow onClick />,
@@ -62,16 +62,28 @@ function VariableWidth() {
       isMounted && thumbnailSliderRef.current
         ? thumbnailSliderRef.current
         : undefined,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          variableWidth: true,
+          centerPadding: "20px",
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+    ],
   };
 
   const thumbnailSliderSettings = {
-    slidesToShow: 6,
-    slidesToScroll: 1,
+    slidesToShow: 8,
     focusOnSelect: true,
     infinite: images.length > 12,
     arrows: true,
     nextArrow: <RightArrow onClick />,
     prevArrow: <LeftArrow onClick />,
+    freeMode:true,
     asNavFor:
       isMounted && mainSliderRef.current ? mainSliderRef.current : undefined,
     responsive: [
@@ -97,18 +109,6 @@ function VariableWidth() {
     ],
   };
 
-  const handleSlideClick = (index: number, event: React.MouseEvent) => {
-    event.stopPropagation(); // Prevent the event from bubbling up
-    event.preventDefault(); // Prevent the default behavior (like scrolling)
-    if (mainSliderRef.current) {
-      mainSliderRef.current.slickGoTo(index);
-    }
-    if (thumbnailSliderRef.current) {
-      thumbnailSliderRef.current.slickGoTo(index);
-    }
-    setActiveSlide(index); // Update active slide
-  };
-
   return (
     <div className="w-full px-4 mx-auto my-10">
       <motion.div
@@ -132,14 +132,17 @@ function VariableWidth() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className=" mt-12"
+        className=" mt-12 slider-container"
       >
-        <Slider ref={mainSliderRef} {...mainSliderSettings} className="overflow-hidden">
+        <Slider
+          ref={mainSliderRef}
+          {...mainSliderSettings}
+          className="overflow-hidden h-[300px] sm:h-auto"
+        >
           {images.map((image, index) => (
             <div
               key={index}
-              onClick={(e) => handleSlideClick(index, e)}
-              className={`w-auto h-[300px] md:h-[600px]  cursor-pointer ${
+              className={`w-full  h-[300px] md:h-[500px]   ${
                 index === activeSlide ? "opacity-100" : "opacity-70"
               }`}
             >
@@ -148,7 +151,7 @@ function VariableWidth() {
                 alt={image.alt}
                 width={1000}
                 height={1000}
-                className="w-full sm:w-auto h-full object-cover shadow-md"
+                className="w-full h-full object-cover "
               />
             </div>
           ))}
@@ -166,7 +169,6 @@ function VariableWidth() {
                   ? "border-2 border-blue-500"
                   : "border-2 border-gray-300"
               } m-2`}
-              onClick={(e) => handleSlideClick(index, e)}
             >
               <Image
                 src={image.src}

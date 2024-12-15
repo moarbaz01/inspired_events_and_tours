@@ -25,9 +25,10 @@ const Gallery = () => {
   return (
     <div className="py-12 px-4 md:px-6">
       <div className="w-full">
-        <h1 className="text-4xl font-bold text-center text-primary mb-8">
-          Travel Gallery
+        <h1 className="md:text-3xl text-2xl  font-bold text-center text-primary mb-8">
+          Images From Previous Trips
         </h1>
+       
 
         {/* Tailwind grid layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
