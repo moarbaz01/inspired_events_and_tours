@@ -3,6 +3,16 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { SocialIcon } from "react-social-icons";
+import emailjs from "emailjs-com";
+import SuccessModal from "./SuccessModal";
+
+const Loader = () => {
+  return (
+    <div className="flex items-center justify-center">
+      <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white"></div>
+    </div>
+  );
+};
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +20,8 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -20,24 +32,32 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-    if (res.ok) {
-      toast.success("Message sent successfully!");
+
+    try {
+      setLoading(true);
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID!,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        process.env.NEXT_PUBLIC_PUBLIC_KEY!
+      );
+      setIsSuccessModalOpen(true);
       setFormData({
         name: "",
         email: "",
         message: "",
       });
-    } else {
-      toast.error("Failed to send message. Please try again later.");
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      toast.error("Failed to send message. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -96,9 +116,9 @@ const Contact = () => {
                   id="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full p-4 border-2 border-gray-300 rounded-lg"
+                  className="w-full p-4 border-2 resize-none border-gray-300 rounded-lg"
                   placeholder="Your message"
-                  rows={6}
+                  rows={7}
                   required
                 />
               </div>
@@ -106,7 +126,7 @@ const Contact = () => {
                 type="submit"
                 className="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all"
               >
-                Submit
+                {loading ? <Loader /> : "Submit"}
               </button>
             </form>
           </div>
@@ -177,6 +197,10 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <SuccessModal
+        isOpen={isSuccessModalOpen}
+        onClose={() => setIsSuccessModalOpen(false)}
+      />
     </div>
   );
 };

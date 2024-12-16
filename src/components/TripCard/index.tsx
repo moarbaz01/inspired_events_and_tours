@@ -24,7 +24,7 @@ const TripCard: React.FC<TripCardProps> = ({
           {title}
         </p>
         <p className="text-lg md:text-xl font-bold text-white text-center">
-          {startDate + " - " + endDate}
+          ({startDate + " - " + endDate})
         </p>
       </div>
 

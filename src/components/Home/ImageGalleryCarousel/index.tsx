@@ -44,17 +44,13 @@ function VariableWidth() {
 
   const mainSliderSettings = {
     className: "slider variable-width",
-    centerPadding: "10px",
+   centerPadding: "20px",
     arrows: true,
     infinite: true,
     centerMode: true,
     slidesToShow: 1,
-    slidesToScroll: 1,
     speed: 500,
     variableWidth: true,
-    autoplay: true,
-
-    autoplaySpeed: 3000,
     beforeChange: (current, next) => setActiveSlide(next),
     nextArrow: <RightArrow onClick />,
     prevArrow: <LeftArrow onClick />,
@@ -71,6 +67,8 @@ function VariableWidth() {
           slidesToShow: 1,
           slidesToScroll: 1,
           arrows: false,
+          autoplay : true,
+          autoplaySpeed: 2000
         },
       },
     ],
@@ -83,7 +81,7 @@ function VariableWidth() {
     arrows: true,
     nextArrow: <RightArrow onClick />,
     prevArrow: <LeftArrow onClick />,
-    freeMode:true,
+    swipeToSlide: true,
     asNavFor:
       isMounted && mainSliderRef.current ? mainSliderRef.current : undefined,
     responsive: [
@@ -137,12 +135,12 @@ function VariableWidth() {
         <Slider
           ref={mainSliderRef}
           {...mainSliderSettings}
-          className="overflow-hidden h-[300px] sm:h-auto"
+          className="h-[300px] sm:h-auto"
         >
           {images.map((image, index) => (
             <div
               key={index}
-              className={`w-full  h-[300px] md:h-[500px]   ${
+              className={`h-[300px] md:h-[500px]   ${
                 index === activeSlide ? "opacity-100" : "opacity-70"
               }`}
             >

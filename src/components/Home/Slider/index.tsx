@@ -32,9 +32,9 @@ const slides = [
     link: "/trips/european-car-trips-2025",
   },
   {
-    title: "Morocco Overlanding Trip 2025",
+    title: "Morocco Motorcycle Overlanding Trip 2025",
     desc: "Discover breathtaking destinations across the globe.",
-    imagePath: "/images/slides/morroco_land_rover.png",
+    imagePath: "/images/slides/morocco_motorcycle_overlanding_trip.png",
     link: "/trips/morocco-bike-trips-2025",
   },
 ];

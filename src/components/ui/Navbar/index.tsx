@@ -68,7 +68,7 @@ const Navbar = () => {
 
           {/* Mobile Title */}
           <motion.h1
-            className="md:text-3xl text-wrap text-center md:hidden text-xl  font-bold drop-shadow-lg text-primary hover:text-primary/80 transition-all duration-300"
+            className="md:text-3xl w-1/2 text-center md:hidden text-xl  font-bold drop-shadow-lg text-primary hover:text-primary/80 transition-all duration-300"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
