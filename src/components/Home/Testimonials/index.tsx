@@ -27,28 +27,40 @@ const testimonials = [
     image: "/images/reviews/profile3.png",
   },
   {
+    name: "kyle mx5",
+    date: "20/09/2024",
+    review: "Just Completed the NC500 and it was an am...",
+    image: "/images/reviews/profile4.png",
+  },
+  {
     name: "Kevin Harding",
     date: "07/09/2024",
     review: "Just got home from Our Trip across France, Germ...",
-    image: "/images/reviews/profile4.png",
+    image: "/images/reviews/profile5.png",
   },
   {
     name: "Debbie Rittinghouse",
     date: "27/08/2024",
     review: "What an amazing trip! Everything was more th...",
-    image: "/images/reviews/profile5.png",
+    image: "/images/reviews/profile6.png",
+  },
+  {
+    name: "Gillian Smyth",
+    date: "15/10/2024",
+    review: "What a great trip, beautiful scenery, a grea..",
+    image: "/images/reviews/profile7.png",
   },
   {
     name: "Craig Holland",
     date: "06/10/2024",
     review: "Hi I chose the trip to France Switzerland Austri...",
-    image: "/images/reviews/profile6.png",
+    image: "/images/reviews/profile8.png",
   },
   {
     name: "Mike Jenner",
     date: "05/10/2024",
     review: "Right from the point of receiving detailed and s...",
-    image: "/images/reviews/profile7.png",
+    image: "/images/reviews/profile9.png",
   },
 ];
 
@@ -111,9 +123,7 @@ const GoogleReviews = () => {
                   <h3 className="font-semibold text-gray-800">
                     {testimonial.name}
                   </h3>
-                  <p className="text-sm text-gray-500">
-                    {testimonial.date}
-                  </p>
+                  <p className="text-sm text-gray-500">{testimonial.date}</p>
                 </div>
               </div>
 
