@@ -28,7 +28,8 @@ const TripDetails = () => {
               station which is just after we depart the train. Once everyone is
               there we will have a day’s cross country driving through
               picturesque northern France via Dunkirk Belgium and Luxembourg
-              before reaching our first night&apos;s stop at the capital Luxembourg
+              before reaching our first night&apos;s stop at the capital
+              Luxembourg
             </p>
           </section>
 
@@ -94,11 +95,11 @@ const TripDetails = () => {
             <p className="text-gray-700 mt-2">
               We then leave Zell am See continuing west to the awe inspiring
               Swiss Alps. The Swiss Alps are one of the world’s most famous car
-              drivers&apos; haven and it&apos;s not difficult to see why with endless
-              hairpins and breathtaking beauty they bring drivers back here year
-              on year and on this tour we drive five of the greatest mountain
-              passes in Switzerland. Before spending our 5th night of our epic
-              trip at the bla bla hotel @ Davos.
+              drivers&apos; haven and it&apos;s not difficult to see why with
+              endless hairpins and breathtaking beauty they bring drivers back
+              here year on year and on this tour we drive five of the greatest
+              mountain passes in Switzerland. Before spending our 5th night of
+              our epic trip at the bla bla hotel @ Davos.
             </p>
           </section>
 
@@ -153,9 +154,9 @@ const TripDetails = () => {
               days taking on challenging routes through stunning vistas and
               surroundings. But having completed this trip previously it really
               is worth the journey. As Ralph Waldo Emerson the American
-              philosopher said” It&apos;s not the destination it&apos;s the journey”
-              meaning enjoy the journey to get to the destination. With this
-              amazing trip the journeys are a massive part of the trip.
+              philosopher said” It&apos;s not the destination it&apos;s the
+              journey” meaning enjoy the journey to get to the destination. With
+              this amazing trip the journeys are a massive part of the trip.
             </p>
           </section>
         </div>
@@ -163,14 +164,15 @@ const TripDetails = () => {
         {/* Pricing Section */}
         <section className="mt-12">
           <p className="text-gray-700 mt-2">
-            This is not a guided tour as that really doesn&apos;t work with a group
-            of this size. As lots of people often wish to spend more or less
-            time at certain places, or have other places and places of interest
-            they wish to visit. We are on hand everyday to give guidance and
-            advice. But each day you will travel between hotels at a pace and
-            route that suits you and we will regroup at the evenings hotel and
-            share stories of the day&apos;s journey. Please be aware that the daily
-            approximate mileage is based on riding the most direct route.
+            This is not a guided tour as that really doesn&apos;t work with a
+            group of this size. As lots of people often wish to spend more or
+            less time at certain places, or have other places and places of
+            interest they wish to visit. We are on hand everyday to give
+            guidance and advice. But each day you will travel between hotels at
+            a pace and route that suits you and we will regroup at the evenings
+            hotel and share stories of the day&apos;s journey. Please be aware
+            that the daily approximate mileage is based on riding the most
+            direct route.
           </p>
           <p className="text-gray-700 mt-2">
             And will change depending on the route you ride between A to B. The
@@ -183,7 +185,7 @@ const TripDetails = () => {
             your place with the balance due 8 weeks prior to the trip.
           </p>
 
-          <p className="text-xl font-bold">
+          <p className="text-md mt-2 font-bold">
             Places can be reserved with a £489 deposit. Simply click on the link
             to reserve your place
           </p>

@@ -97,7 +97,7 @@ const MotorcycleRoadTripDetails = () => {
               us. You can secure your place with a <b>£149</b> deposit paid by
               debit or credit card.
             </p>
-            <p className="text-lg font-semibold text-gray-800 mt-4">
+            <p className="text-md font-semibold text-gray-800 mt-4">
               A £149 deposit is required to secure your place.
             </p>
             <a

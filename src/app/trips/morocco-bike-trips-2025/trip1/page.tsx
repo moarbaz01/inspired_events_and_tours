@@ -260,7 +260,7 @@ const TripDetails = () => {
               <li>Meals & Drinks other than those mentioned</li>
             </ul>
           </p>
-          <p className="text-xl font-semibold text-gray-800 mt-4">
+          <p className="text-md font-semibold text-gray-800 mt-4">
             To book your place we require a deposit of £389.00 payable by card
             using the secure link below . Places are limited to 20 and demand
             often out strips availability, so please act fast and secure your

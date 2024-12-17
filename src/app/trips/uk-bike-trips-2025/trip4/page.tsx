@@ -24,23 +24,23 @@ const Page = () => {
               we have limited this trip to 30 bikes to minimize congestion etc,
               and be respectful to the local residents and other road users.
               Each day we will not be traveling in large groups as this really
-              doesn&apos;t work on some of the roads but people tend to do their own
-              thing during the day and meet back up with everyone at the
-              evening&apos;s campsite. At each campsite there will be a 3-man tent
-              for you along with single camp beds with legs that get you off the
-              floor.. You will be expected to help with the putting up and
-              taking down of your tent each day. This takes a couple of minutes
-              as these are easy pop up style tents.You will need to bring your
-              own bedding and pillows etc. But we do also have a postal option
-              explained at the bottom of the email. Max number of people per
-              tent is two but if you travel alone you will be in a tent on your
-              own. Below is the route for the trip, and the daily destinations
-              and mileage. Obviously, this trip is about the experience of
-              driving the NC500 and getting to see as many of the local sites
-              and beauty spots. It is not about getting from start to finish as
-              fast as we can. There will be the opportunity to make stops along
-              the way each day to experience as much as you can of what this
-              epic route and countryside has to offer.
+              doesn&apos;t work on some of the roads but people tend to do their
+              own thing during the day and meet back up with everyone at the
+              evening&apos;s campsite. At each campsite there will be a 3-man
+              tent for you along with single camp beds with legs that get you
+              off the floor.. You will be expected to help with the putting up
+              and taking down of your tent each day. This takes a couple of
+              minutes as these are easy pop up style tents.You will need to
+              bring your own bedding and pillows etc. But we do also have a
+              postal option explained at the bottom of the email. Max number of
+              people per tent is two but if you travel alone you will be in a
+              tent on your own. Below is the route for the trip, and the daily
+              destinations and mileage. Obviously, this trip is about the
+              experience of driving the NC500 and getting to see as many of the
+              local sites and beauty spots. It is not about getting from start
+              to finish as fast as we can. There will be the opportunity to make
+              stops along the way each day to experience as much as you can of
+              what this epic route and countryside has to offer.
             </p>
           </section>
 
@@ -58,8 +58,8 @@ const Page = () => {
             <p className="text-gray-700 mt-2">
               We will meet and camp at Inverness at 5pm on the Saturday evening
               at Brunchcrew camping site. This will give us a chance to meet
-              everyone and have a chat and settle in for a night&apos;s rest before
-              the road trip starts on Monday.
+              everyone and have a chat and settle in for a night&apos;s rest
+              before the road trip starts on Monday.
             </p>
           </section>
           <section>
@@ -142,7 +142,7 @@ const Page = () => {
 
           {/* Pricing Section */}
           <section>
-            <p className="text-gray-700 mt-2 font-bold">
+            <p className="text-gray-700 mt-2 text-md font-bold">
               Place can be reserved with a £99 deposit. Simply click the link to
               book your place
             </p>

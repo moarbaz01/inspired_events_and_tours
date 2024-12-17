@@ -97,7 +97,7 @@ const MotorcycleRoadTripDetails = () => {
               us. You can secure your place with a <b>£99</b> deposit paid by
               debit or credit card. Please let me know your thoughts Regards Ada
             </p>
-            <p className="text-lg font-semibold text-gray-800 mt-4">
+            <p className="text-md font-semibold text-gray-800 mt-4">
               Place can be reserved with a £99 deposit Simply click this link to
               pay your deposit
             </p>

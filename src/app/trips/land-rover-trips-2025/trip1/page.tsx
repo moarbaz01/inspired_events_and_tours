@@ -419,7 +419,7 @@ const TripDetails = () => {
             may have. Ada
           </p>
 
-          <p className="text-xl font-bold">
+          <p className="text-md font-bold">
             Place can be reserved with a £489 deposit Simply click this link to
             pay your deposit
           </p>

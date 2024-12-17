@@ -158,7 +158,7 @@ const Page = () => {
 
           {/* Pricing Section */}
           <section>
-            <p className="text-gray-700 mt-2 font-bold">
+            <p className="text-gray-700 mt-2 text-md font-bold">
               If you are interested in joining us and wish to reserve you place
               please use the link below to pay the £389 deposit t o secure your
               place. The balance will be due 8 weeks before departure.

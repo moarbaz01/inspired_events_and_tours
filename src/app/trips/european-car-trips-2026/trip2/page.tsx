@@ -183,7 +183,7 @@ const TripDetails = () => {
             your place with the balance due 8 weeks prior to the trip.
           </p>
 
-          <p className="text-xl font-bold">
+          <p className="text-md font-bold">
             Places can be reserved with a £489 deposit. Simply click on the link
             to reserve your place
           </p>

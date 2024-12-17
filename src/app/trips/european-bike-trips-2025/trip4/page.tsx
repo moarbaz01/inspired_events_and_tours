@@ -188,11 +188,11 @@ const Page = () => {
 
           {/* Pricing Section */}
           <section>
-            <p className="text-lg font-semibold text-gray-800 mt-4">
+            <p className="text-md font-semibold text-gray-800 mt-4">
               A deposit of £389 is required to book your place with the balance
               due 8 weeks prior to the trip
             </p>
-            <p className="text-sm font-bold">
+            <p className="text-md mt-2 font-bold">
               Place can be reserved with a £389 deposit Simply click this link
               to pay your deposit{" "}
             </p>

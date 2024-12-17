@@ -26,15 +26,15 @@ const RoadTripDetails = () => {
               depending on speeds. From experience most drivers want to make
               their own way to Soissons rather than follow the support vehicle.
               Little boring at 70mph on a motorway. There are route options to
-              Soisson&apos;s and most choose the more exciting route. We give you
-              printed out map instructions if you need them. Once checked in,
-              the rest of the day is your own to spend as you wish, but most
+              Soisson&apos;s and most choose the more exciting route. We give
+              you printed out map instructions if you need them. Once checked
+              in, the rest of the day is your own to spend as you wish, but most
               people seem to just want to relax and have something to eat and a
               couple of drinks before getting an early night ready for the track
-              day. There are a selection of restaurant&apos;s within a 5-minute walk.
-              And a great Chinese buffet next door to the hotel that offers
-              great food and for £20 you get all you can eat and 3 beers. This
-              one seems to be most people&apos;s choice..
+              day. There are a selection of restaurant&apos;s within a 5-minute
+              walk. And a great Chinese buffet next door to the hotel that
+              offers great food and for £20 you get all you can eat and 3 beers.
+              This one seems to be most people&apos;s choice..
             </p>
             <p className="text-gray-700 mt-2">
               Thursday morning there is a continental breakfast on offer at the
@@ -58,10 +58,10 @@ const RoadTripDetails = () => {
               snacks on offer for you to purchase. The track day ends at 5pm and
               we then return to the hotel to freshen up, we try to all go into
               town as a group and have a few drinks and some food and talk about
-              the day&apos;s high and lows. This will mean getting some taxis which
-              are not included in the price. These can be great nights and a
-              great way to make new friends. But people are free to enjoy their
-              evening as they wish.
+              the day&apos;s high and lows. This will mean getting some taxis
+              which are not included in the price. These can be great nights and
+              a great way to make new friends. But people are free to enjoy
+              their evening as they wish.
             </p>
           </section>
 
@@ -104,7 +104,7 @@ const RoadTripDetails = () => {
             secure your place with a <b>£149</b> deposit paid by debit or credit
             card.. Please let me know your thoughts Regards Adam
           </p>
-          <p className="text-lg font-semibold text-gray-800 mt-4">
+          <p className="text-md font-semibold text-gray-800 mt-4">
             A £489 deposit is required to reserve your place. Balance due 8
             weeks prior to departure.
           </p>

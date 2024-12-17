@@ -105,7 +105,7 @@ const Page = () => {
 
           {/* Pricing Section */}
           <section>
-            <p className="text-sm font-bold">
+            <p className="text-md font-bold">
               Place can be reserved with a £149 deposit Simply click this link
               to pay your deposit
             </p>
