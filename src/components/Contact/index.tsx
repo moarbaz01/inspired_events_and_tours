@@ -1,17 +1,31 @@
 "use client";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { motion } from "framer-motion";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { SocialIcon } from "react-social-icons";
 import emailjs from "emailjs-com";
 import SuccessModal from "./SuccessModal";
 
-const Loader = () => {
-  return (
-    <div className="flex items-center justify-center">
-      <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white"></div>
-    </div>
-  );
+const Loader = () => (
+  <div className="flex items-center justify-center">
+    <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white"></div>
+  </div>
+);
+
+// Animation Variants
+const containerVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, staggerChildren: 0.2 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
 const Contact = () => {
@@ -32,9 +46,8 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     try {
       setLoading(true);
       await emailjs.send(
@@ -48,11 +61,7 @@ const Contact = () => {
         process.env.NEXT_PUBLIC_PUBLIC_KEY!
       );
       setIsSuccessModalOpen(true);
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
+      setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       console.error("Failed to send email:", error);
       toast.error("Failed to send message. Please try again.");
@@ -62,11 +71,16 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-gray-50 py-12 px-4 md:px-6">
+    <motion.div
+      className="bg-gray-50 py-12 px-4 md:px-6"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
       <div className="w-full">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="space-y-8">
+          <motion.div variants={itemVariants} className="space-y-8">
             <h2 className="text-3xl font-bold text-primary mb-4">
               Contact Support
             </h2>
@@ -74,7 +88,7 @@ const Contact = () => {
               Request Information on our Events
             </p>
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
+              <motion.div variants={itemVariants}>
                 <label htmlFor="name" className="block text-lg text-gray-700">
                   Full Name
                 </label>
@@ -88,8 +102,8 @@ const Contact = () => {
                   placeholder="Your name"
                   required
                 />
-              </div>
-              <div>
+              </motion.div>
+              <motion.div variants={itemVariants}>
                 <label htmlFor="email" className="block text-lg text-gray-700">
                   Email Address
                 </label>
@@ -103,8 +117,8 @@ const Contact = () => {
                   placeholder="Your email"
                   required
                 />
-              </div>
-              <div>
+              </motion.div>
+              <motion.div variants={itemVariants}>
                 <label
                   htmlFor="message"
                   className="block text-lg text-gray-700"
@@ -121,18 +135,19 @@ const Contact = () => {
                   rows={7}
                   required
                 />
-              </div>
-              <button
+              </motion.div>
+              <motion.button
+                variants={itemVariants}
                 type="submit"
                 className="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all"
               >
                 {loading ? <Loader /> : "Submit"}
-              </button>
+              </motion.button>
             </form>
-          </div>
+          </motion.div>
 
           {/* Contact Details and Map */}
-          <div className="space-y-8">
+          <motion.div variants={itemVariants} className="space-y-8">
             <h1 className="text-2xl font-semibold text-primary">
               Contact Details
             </h1>
@@ -152,18 +167,14 @@ const Contact = () => {
               }
               className="bg-white flex cursor-pointer justify-center md:mx-0 mx-auto items-center gap-4 w-fit py-2 px-4 shadow-sm rounded-full"
             >
-              <div className="text-sm">
-                <SocialIcon style={{ height: 30, width: 30 }} url="whatsapp" />
-              </div>
+              <SocialIcon style={{ height: 30, width: 30 }} url="whatsapp" />
               <p className="font-bold text-lg text-gray-500">
-                Message us on whatsapp
+                Message us on WhatsApp
               </p>
             </div>
-            <div className="space-y-6">
+            <motion.div variants={itemVariants} className="space-y-6">
               <div className="flex items-center space-x-3">
-                <div>
-                  <FaPhoneAlt className="text-primary text-2xl" />
-                </div>
+                <FaPhoneAlt className="text-primary text-2xl" />
                 <p className="text-lg text-gray-700">Phone: 07895 961091</p>
               </div>
               <div className="flex items-center space-x-3">
@@ -173,18 +184,13 @@ const Contact = () => {
                 </p>
               </div>
               <div className="flex items-center space-x-3">
-                <div>
-                  <FaMapMarkerAlt className="text-primary text-2xl" />
-                </div>
+                <FaMapMarkerAlt className="text-primary text-2xl" />
                 <p className="text-lg text-gray-700">
                   Address: 14 Hints Road, Hopwas, Tamworth, B78 3AA, United
                   Kingdom
                 </p>
               </div>
-            </div>
-
-            {/* Map */}
-
+            </motion.div>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2420.9727892815326!2d-1.7384648236535147!3d52.6424046271603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870a9017b428535%3A0x6f71cffa5dbed7cd!2s14%20Hints%20Rd%2C%20Hopwas%2C%20Tamworth%20B78%203AE%2C%20UK!5e0!3m2!1sen!2sin!4v1733570583254!5m2!1sen!2sin"
               width="600"
@@ -194,14 +200,14 @@ const Contact = () => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
-          </div>
+          </motion.div>
         </div>
       </div>
       <SuccessModal
         isOpen={isSuccessModalOpen}
         onClose={() => setIsSuccessModalOpen(false)}
       />
-    </div>
+    </motion.div>
   );
 };
 

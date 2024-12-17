@@ -53,7 +53,7 @@ const Hero = () => {
           href="#trips"
           {...fadeUp}
           transition={{ duration: 1, delay: 0.4 }}
-          className="inline-block bg-primary text-white text-sm sm:text-lg py-4 px-6 sm:py-3 sm:px-8 rounded-full shadow-lg transform hover:scale-105 hover:bg-opacity-90 transition-all duration-300"
+          className="inline-block bg-primary text-white text-sm  py-3 px-6  rounded-full shadow-lg transform hover:scale-105 hover:bg-opacity-90 transition-all duration-300"
         >
           Start Your Adventure
         </motion.a>

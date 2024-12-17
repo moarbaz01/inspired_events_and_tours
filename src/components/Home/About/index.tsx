@@ -27,10 +27,10 @@ const About = () => {
         </motion.div>
 
         {/* Mission Text Section */}
-        <div className="w-full lg:w-1/2 text-center lg:text-left">
+        <div className="w-full lg:w-1/2 ">
           {/* Heading Section */}
           <motion.h1
-            className="md:text-3xl text-3xl font-bold text-gray-800 mb-4 lg:mb-6 leading-tight"
+            className="md:text-3xl text-2xl font-bold text-gray-800 mb-4 text-center lg:mb-6 leading-tight"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -41,7 +41,7 @@ const About = () => {
 
           {/* Mission Description Section */}
           <motion.p
-            className="text-lg text-gray-600 mb-4 lg:mb-6"
+            className="md:text-lg text-sm text-gray-600 mb-4 text-justify lg:mb-6"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -54,7 +54,7 @@ const About = () => {
           </motion.p>
 
           <motion.p
-            className="text-lg text-gray-600 mb-8 lg:mb-10"
+            className="md:text-lg text-sm text-gray-600 mb-8 text-justify lg:mb-10"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -85,7 +85,7 @@ const About = () => {
           >
             <Link
               href="/contact"
-              className="bg-primary text-white px-6 py-3 text-xl  rounded-full shadow-md hover:bg-primary-dark transition duration-300"
+              className="bg-primary text-white px-6 py-3 text-sm  rounded-full shadow-md hover:bg-primary-dark transition duration-300"
             >
               Contact Us
             </Link>

@@ -50,8 +50,10 @@ const Slider = () => {
         viewport={{ once: true }}
         className="px-4 text-center pb-4 md:mt-12"
       >
-        <h1 className="md:text-4xl text-3xl font-bold">Our Trips</h1>
-        <p className="text-xl mt-2">These are trips that we provides</p>
+        <h1 className="md:text-3xl text-2xl font-bold">Our Trips</h1>
+        <p className="md:text-lg text-sm text-gray-600 mt-2">
+          These are trips that we provides
+        </p>
       </motion.div>
 
       <motion.div
@@ -109,10 +111,10 @@ const Slider = () => {
           ))}
 
           {/* Custom Navigation Buttons */}
-          <div className="custom-prev text-white absolute top-1/2 left-4 z-50 hidden sm:flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition">
+          <div className="custom-prev text-white absolute top-[40%] left-4 z-50 hidden sm:flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition">
             <FaChevronLeft className="text-xl" />
           </div>
-          <div className="custom-next text-white absolute top-1/2 right-4 z-50 hidden sm:flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition">
+          <div className="custom-next text-white absolute top-[40%] right-4 z-50 hidden sm:flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition">
             <FaChevronRight className="text-xl" />
           </div>
         </Swiper>

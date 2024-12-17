@@ -1,114 +1,40 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Thumbs, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
 import Image from "next/image";
 import { motion } from "framer-motion";
-// Dynamically import images from the `public/images` folder
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
+// Dynamically import images
 const images = Array.from({ length: 92 }, (_, i) => ({
   src: `/images/trips/trip${i + 1}.jpg`,
   alt: `Image ${i + 1}`,
 }));
 
-// Custom Arrow Components
-// Custom Arrow Components
-const RightArrow = ({ onClick }) => (
-  <div
-    onClick={onClick}
-    className="custom-next text-white absolute top-1/2 md:right-4 right-2 z-50 flex items-center justify-center md:w-12 md:h-12 h-8 w-8 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition transform -translate-y-1/2"
-  >
-    <FaChevronRight className="md:text-xl text-sm" />
+// Custom Arrow Components for Main Slider
+const RightArrow = () => (
+  <div className="custom-next text-white absolute top-1/2 right-4 z-50 hidden md:flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition transform -translate-y-1/2">
+    <FaChevronRight className="text-xl" />
   </div>
 );
 
-const LeftArrow = ({ onClick }) => (
-  <div
-    onClick={onClick}
-    className="custom-prev text-white absolute top-1/2 md:left-4 left-2 z-50 flex items-center justify-center md:w-12 md:h-12 w-8 h-8 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition transform -translate-y-1/2"
-  >
-    <FaChevronLeft className="md:text-xl text-sm" />
+const LeftArrow = () => (
+  <div className="custom-prev text-white absolute top-1/2 left-4 z-50 hidden  md:flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition transform -translate-y-1/2">
+    <FaChevronLeft className="text-xl" />
   </div>
 );
 
-function VariableWidth() {
-  const [activeSlide, setActiveSlide] = useState(0);
-  const mainSliderRef = useRef<Slider | null>(null);
-  const thumbnailSliderRef = useRef<Slider | null>(null);
-  const [isMounted, setIsMounted] = useState(false);
-  // Ensure the component is mounted before passing refs to asNavFor
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  const mainSliderSettings = {
-    className: "slider variable-width",
-   centerPadding: "20px",
-    arrows: true,
-    infinite: true,
-    centerMode: true,
-    slidesToShow: 1,
-    speed: 500,
-    variableWidth: true,
-    beforeChange: (current, next) => setActiveSlide(next),
-    nextArrow: <RightArrow onClick />,
-    prevArrow: <LeftArrow onClick />,
-    asNavFor:
-      isMounted && thumbnailSliderRef.current
-        ? thumbnailSliderRef.current
-        : undefined,
-    responsive: [
-      {
-        breakpoint: 480,
-        settings: {
-          variableWidth: true,
-          centerPadding: "20px",
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-          autoplay : true,
-          autoplaySpeed: 2000
-        },
-      },
-    ],
-  };
-
-  const thumbnailSliderSettings = {
-    slidesToShow: 8,
-    focusOnSelect: true,
-    infinite: images.length > 12,
-    arrows: true,
-    nextArrow: <RightArrow onClick />,
-    prevArrow: <LeftArrow onClick />,
-    swipeToSlide: true,
-    asNavFor:
-      isMounted && mainSliderRef.current ? mainSliderRef.current : undefined,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 5,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 3,
-          arrows: false,
-        },
-      },
-    ],
-  };
+function VariableWidthSwiper() {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
     <div className="w-full px-4 mx-auto my-10">
+      {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -119,7 +45,7 @@ function VariableWidth() {
         <h1 className="md:text-3xl text-2xl font-bold">
           Images From Previous Trips
         </h1>
-        <p className="text-lg mt-2 text-gray-600">
+        <p className="md:text-lg text-sm mt-2 text-gray-600">
           Explore the beauty of our previous trips through our image gallery.
         </p>
       </motion.div>
@@ -130,57 +56,105 @@ function VariableWidth() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className=" mt-12 slider-container"
+        className="mt-12 relative"
       >
-        <Slider
-          ref={mainSliderRef}
-          {...mainSliderSettings}
-          className="h-[300px] sm:h-auto"
+        <Swiper
+          modules={[Navigation, Thumbs, Autoplay]}
+          thumbs={{ swiper: thumbsSwiper }}
+          navigation={{
+            nextEl: ".custom-next",
+            prevEl: ".custom-prev",
+          }}
+          centeredSlides={true}
+          slidesPerView="auto"
+          spaceBetween={30}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{}}
+          loop={true}
+          className="h-[300px] md:h-[500px] w-full"
         >
           {images.map((image, index) => (
-            <div
+            <SwiperSlide
               key={index}
-              className={`h-[300px] md:h-[500px]   ${
-                index === activeSlide ? "opacity-100" : "opacity-70"
-              }`}
+              style={{ width: "auto" }}
+              className="flex items-center justify-center"
             >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={1000}
-                height={1000}
-                className="w-full h-full object-cover "
-              />
-            </div>
+              <div className="h-full w-auto">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={800}
+                  height={500}
+                  className="object-cover h-full w-auto rounded-lg"
+                />
+              </div>
+            </SwiperSlide>
           ))}
-        </Slider>
+
+          {/* Custom Navigation Buttons */}
+          <LeftArrow />
+          <RightArrow />
+        </Swiper>
       </motion.div>
 
       {/* Thumbnail Slider */}
-      <div className="mt-8 md:block hidden">
-        <Slider ref={thumbnailSliderRef} {...thumbnailSliderSettings}>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        viewport={{ once: true }}
+        className="mt-8 relative hidden sm:block"
+      >
+        <Swiper
+          onSwiper={() => setThumbsSwiper}
+          modules={[Thumbs, Navigation]}
+          slidesPerView={6}
+          spaceBetween={10}
+          freeMode={true}
+          watchSlidesProgress={true}
+          loop={false}
+          navigation={{
+            nextEl: ".custom-next",
+            prevEl: ".custom-prev",
+          }}
+          breakpoints={{
+            320: {
+              slidesPerView: 3,
+            },
+            640: {
+              slidesPerView: 4,
+            },
+            768: {
+              slidesPerView: 5,
+            },
+            1024: {
+              slidesPerView: 6,
+            },
+          }}
+          className="h-24 md:h-24"
+        >
           {images.map((image, index) => (
-            <div
-              key={index}
-              className={`relative w-[100px] h-[100px] cursor-pointer overflow-hidden border-2 rounded-md ${
-                index === activeSlide
-                  ? "border-2 border-blue-500"
-                  : "border-2 border-gray-300"
-              } m-2`}
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={500}
-                height={500}
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-              />
-            </div>
+            <SwiperSlide key={index} className="cursor-pointer">
+              <div className="w-full h-full overflow-hidden rounded-md border-2 border-transparent hover:border-primary transition">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={150}
+                  height={150}
+                  className="object-cover w-full h-full hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+            </SwiperSlide>
           ))}
-        </Slider>
-      </div>
+          <LeftArrow />
+          <RightArrow />
+        </Swiper>
+      </motion.div>
     </div>
   );
 }
 
-export default VariableWidth;
+export default VariableWidthSwiper;

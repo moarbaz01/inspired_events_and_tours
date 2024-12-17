@@ -44,7 +44,7 @@ const WhyChooseUs = () => {
         <h2 className="md:text-3xl text-2xl font-bold text-gray-800">
           Why Choose Us?
         </h2>
-        <p className="text-lg text-gray-600 mt-2">
+        <p className="md:text-lg text-sm text-gray-600 mt-2">
           Discovery what makes us your best choice for your next adventure.
         </p>
       </motion.div>

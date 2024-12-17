@@ -38,10 +38,10 @@ const Footer = () => {
         {/* Footer Left - Logo and Short Description */}
         <div className="flex flex-col justify-between">
           <div>
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-2xl font-bold mb-4">
               Inspired Events and Tours
             </h2>
-            <p className="text-lg mb-6">
+            <p className="text-sm mb-6">
               Explore unforgettable journeys, hidden gems, and the adventure of
               a lifetime with us. Join us to make your dream trip come true!
               making memories one trip at a time

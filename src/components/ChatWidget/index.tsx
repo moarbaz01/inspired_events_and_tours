@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 const ChatWidget = () => {
   useEffect(() => {
-    Crisp.configure("d6aa439f-4e32-44da-a439-1fb8ad6005c7");
+    Crisp.configure(process.env.NEXT_PUBLIC_WEBSITE_ID!);
   }, []);
 
   return null;
