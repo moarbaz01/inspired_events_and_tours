@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -30,7 +30,8 @@ const LeftArrow = () => (
 );
 
 function VariableWidthSwiper() {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null);
+
 
   return (
     <div className="w-full px-4 mx-auto my-10">
@@ -109,7 +110,7 @@ function VariableWidthSwiper() {
         className="mt-8 relative hidden sm:block"
       >
         <Swiper
-          onSwiper={() => setThumbsSwiper}
+          onSwiper={(swiper) => setThumbsSwiper(swiper)}
           modules={[Thumbs, Navigation]}
           slidesPerView={6}
           spaceBetween={10}

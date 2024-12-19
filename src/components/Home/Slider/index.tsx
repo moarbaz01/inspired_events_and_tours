@@ -37,6 +37,12 @@ const slides = [
     imagePath: "/images/slides/morocco_motorcycle_overlanding_trip.png",
     link: "/trips/morocco-bike-trips-2025",
   },
+  {
+    title: "NC500 Motorcycle Road Trip 2025",
+    desc: "Discover breathtaking destinations across the globe.",
+    imagePath: "/images/slides/nc500.png",
+    link: "/trips/uk-bike-trips-2025",
+  },
 ];
 
 const Slider = () => {
@@ -81,17 +87,16 @@ const Slider = () => {
             <SwiperSlide key={i} className="flex justify-center pb-6">
               <div
                 onClick={() => router.push(item.link)}
-                className="group relative w-full cursor-pointer overflow-hidden rounded-lg border border-gray-200"
+                className="group   cursor-pointer overflow-hidden rounded-lg border border-gray-200"
               >
                 {/* Image Section */}
-                <div className="relative aspect-[4/3] w-full">
+                <div className="relative md:h-[350px] h-[300px] w-full">
                   {" "}
                   {/* Fixed aspect ratio */}
                   <Image
                     src={item.imagePath}
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-500 group-hover:scale-105"
+                    fill={true}
+                    className="transition-transform  duration-500 group-hover:scale-105"
                     priority={true}
                     alt={`card ${i + 1}`}
                   />
@@ -99,7 +104,7 @@ const Slider = () => {
 
                 {/* Content Section */}
                 <div className="p-4 flex flex-col gap-2 ">
-                  <h1 className="text-lg font-bold text-center text-gray-800">
+                  <h1 className="text-md font-bold text-center text-gray-800">
                     {item.title}
                   </h1>
                 </div>

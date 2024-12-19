@@ -12,7 +12,7 @@ const Hero = () => {
     <div className="relative w-full md:h-screen h-[80vh]">
       {/* Background Image with Parallax Effect */}
       <div className="absolute inset-0 z-0">
-        <motion.div className="w-full h-full">
+        <motion.div className="w-full h-full relative">
           <Image
             src="/images/hero.webp" // Your Hero image
             alt="Travel Hero"

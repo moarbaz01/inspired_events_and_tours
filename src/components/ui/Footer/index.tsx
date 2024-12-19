@@ -99,14 +99,6 @@ const Footer = () => {
                 FAQ
               </Link>
             </li>
-            <li>
-              <Link
-                href="/about"
-                className="text-white hover:opacity-80 transition-all"
-              >
-                About Us
-              </Link>
-            </li>
           </ul>
         </div>
 
@@ -143,7 +135,7 @@ const Footer = () => {
       {/* Footer Bottom - Copyright */}
       <div className="text-center mt-12 border-t border-white pt-6">
         <p className="text-lg">
-          &copy; 2021 Inspired Events and Tours. All Rights Reserved.
+          &copy; 2022 Inspired Events and Tours. All Rights Reserved.
         </p>
       </div>
     </div>

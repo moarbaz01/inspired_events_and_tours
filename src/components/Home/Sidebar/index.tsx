@@ -38,8 +38,8 @@ const menuItems = [
       },
     ],
   },
-  { name: "About Us", path: "/about" },
   { name: "Contact", path: "/contact" },
+  { name: "Gallery", path: "/gallery" },
 ];
 
 const Sidebar = ({

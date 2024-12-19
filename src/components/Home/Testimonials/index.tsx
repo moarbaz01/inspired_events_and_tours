@@ -107,7 +107,7 @@ const GoogleReviews = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              transition={{ duration: 0.2}}
               className="relative bg-white border p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
             >
               {/* Profile Section */}

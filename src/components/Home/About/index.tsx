@@ -19,10 +19,9 @@ const About = () => {
           <Image
             src="/images/team.jpg" // Replace with your actual image
             alt="Our Team"
-            layout="fill"
+            fill
             priority={true}
-            objectFit="cover"
-            className="rounded-xl shadow-lg transform transition duration-500 hover:scale-110"
+            className="rounded-xl  object-cover shadow-lg transform transition duration-500 hover:scale-110"
           />
         </motion.div>
 
