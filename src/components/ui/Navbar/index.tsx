@@ -46,7 +46,7 @@ const Navbar = () => {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="h-20 w-20 aspect-square md:ml-0 -ml-4"
+              className="h-20 w-20 aspect-square "
             >
               <Image
                 src="/images/logo.png"
@@ -68,7 +68,7 @@ const Navbar = () => {
 
           {/* Mobile Title */}
           <motion.h1
-            className="md:text-3xl w-1/2 text-center md:hidden text-xl  font-bold drop-shadow-lg text-primary hover:text-primary/80 transition-all duration-300"
+            className="md:text-3xl px-8 text-center md:hidden text-xl  font-bold drop-shadow-lg text-primary hover:text-primary/80 transition-all duration-300"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}

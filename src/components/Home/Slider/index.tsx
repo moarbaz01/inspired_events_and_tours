@@ -8,12 +8,12 @@ import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 
 const slides = [
-  {
-    title: "European Motorcycle Trips 2025",
-    desc: "Discover breathtaking destinations across the globe.",
-    imagePath: "/images/slides/european_motorcycle.png",
-    link: "/trips/european-bike-trips-2025",
-  },
+  // {
+  //   title: "European Motorcycle Trips 2025",
+  //   desc: "Discover breathtaking destinations across the globe.",
+  //   imagePath: "/images/slides/european_motorcycle.png",
+  //   link: "/trips/european-bike-trips-2025",
+  // },
   {
     title: "European Car Trips 2025",
     desc: "Discover breathtaking destinations across the globe.",
@@ -23,7 +23,7 @@ const slides = [
   {
     title: "European Motorcycle Track days 2025",
     desc: "Discover breathtaking destinations across the globe.",
-    imagePath: "/images/slides/morroco_land_rover.png",
+    imagePath: "/images/slides/european_bike_track.png",
     link: "/trips/european-bike-trips-2025",
   },
   {
@@ -42,6 +42,18 @@ const slides = [
     desc: "Discover breathtaking destinations across the globe.",
     imagePath: "/images/slides/nc500.png",
     link: "/trips/uk-bike-trips-2025",
+  },
+  {
+    title: "Morocco 4X4 Overloading Trip 2025",
+    desc: "Discover breathtaking destinations across the globe.",
+    imagePath: "/images/slides/nc500.png",
+    link: "/trips/uk-bike-trips-2025",
+  },
+  {
+    title: "Morocco Land Rover Trip 2025",
+    desc: "Discover breathtaking destinations across the globe.",
+    imagePath: "/images/slides/morroco_land_rover.png",
+    link: "/trips/land-rover-trips-2025",
   },
 ];
 

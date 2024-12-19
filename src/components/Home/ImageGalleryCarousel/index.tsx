@@ -32,7 +32,6 @@ const LeftArrow = () => (
 function VariableWidthSwiper() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null);
 
-
   return (
     <div className="w-full px-4 mx-auto my-10">
       {/* Section Header */}
