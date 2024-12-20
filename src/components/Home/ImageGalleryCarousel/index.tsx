@@ -18,13 +18,13 @@ const images = Array.from({ length: 92 }, (_, i) => ({
 
 // Custom Arrow Components for Main Slider
 const RightArrow = () => (
-  <div className="custom-next text-white absolute top-1/2 right-4 z-50 hidden md:flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition transform -translate-y-1/2">
+  <div className="custom-next text-white absolute top-1/2 right-4 z-50 flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition transform -translate-y-1/2">
     <FaChevronRight className="text-xl" />
   </div>
 );
 
 const LeftArrow = () => (
-  <div className="custom-prev text-white absolute top-1/2 left-4 z-50 hidden  md:flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition transform -translate-y-1/2">
+  <div className="custom-prev text-white absolute top-1/2 left-4 z-50 flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition transform -translate-y-1/2">
     <FaChevronLeft className="text-xl" />
   </div>
 );
@@ -34,7 +34,7 @@ function VariableWidthSwiper() {
   const [activeSlide, setActiveSlide] = React.useState(0);
 
   const handleSlideChange = (swiper: SwiperClass) => {
-    setActiveSlide(swiper.realIndex); 
+    setActiveSlide(swiper.realIndex);
   };
 
   return (
