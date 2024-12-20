@@ -9,7 +9,7 @@ const trips = [
     location: "Folembray, France",
     description:
       "We all meet at Folkestone at 11.30 am on May 21st and sort out all the tickets and paperwork ready to board the 1.20 train to Calais...",
-    link: "/trips/european-track-days-2025/trip1",
+    link: "/trips/european-motorcycle-track-days-2025/trip1",
   },
 
   {
@@ -20,7 +20,7 @@ const trips = [
     location: "Folembray, France",
     description:
       "We all meet at Folkestone at 11.30 am on August 13th and sort out all the tickets and paperwork ready to board the 1.20 train to Calais...",
-    link: "/trips/european-track-days-2025/trip2",
+    link: "/trips/european-motorcycle-track-days-2025/trip2",
   },
 
   {
@@ -31,7 +31,7 @@ const trips = [
     location: "Folembray, France",
     description:
       "We all meet at Folkestone at 11.30 am on September 17th and sort out all the tickets and paperwork ready to board the 1.20 train to Calais...",
-    link: "/trips/european-track-days-2025/trip3",
+    link: "/trips/european-motorcycle-track-days-2025/trip3",
   },
 ];
 
