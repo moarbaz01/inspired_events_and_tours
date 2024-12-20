@@ -17,8 +17,8 @@ const tripsLinks = [
   },
   { name: "2025 Land Rover Trips", link: "/trips/land-rover-trips-2025" },
   {
-    name: "2025 European Track Days Trips",
-    link: "/trips/european-track-days-2025",
+    name: "2025 European Motorcycle Track Days Trips",
+    link: "/trips/european-motorcycle-track-days-2025",
   },
   {
     name: "2025 European Motorcycle Road Trips",
