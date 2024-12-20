@@ -14,9 +14,20 @@ const trips = [
     name: "2025 Morocco Bike Trip",
     link: "/trips/morocco-bike-trips-2025",
   },
-  { name: "2025 Car Trips", link: "/trips/car-trips-2025" },
+  { name: "2025 Car Road Trips", link: "/trips/european-car-road-trips-2025" },
+  {
+    name: "2025 Car Track Days Trips",
+    link: "/trips/european-car-track-days-2025",
+  },
   { name: "2025 Land Rover Trips", link: "/trips/land-rover-trips-2025" },
-  { name: "2025 European Bike Trips", link: "/trips/european-bike-trips-2025" },
+  {
+    name: "2025 European Track Days Trips",
+    link: "/trips/european-track-days-2025",
+  },
+  {
+    name: "2025 European Motorcycle Road Trips",
+    link: "/trips/european-motorcycle-road-trips-2025",
+  },
   { name: "2025 UK Bike Trips", link: "/trips/uk-bike-trips-2025" },
   { name: "2026 European Bike Trips", link: "/trips/european-bike-trips-2026" },
   { name: "2026 Morocco Bike Trips", link: "/trips/morocco-bike-trips-2026" },
@@ -51,8 +62,8 @@ const Navbar = () => {
               <Image
                 src="/images/logo.png"
                 alt="Logo Image"
-                height={400}
-                width={400}
+                height={100}
+                width={100}
                 className="h-full w-full transform transition-transform duration-300 hover:scale-110"
               />
             </motion.div>
@@ -99,6 +110,7 @@ const Navbar = () => {
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.7 }}
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                aria-label="Toggle Trips Dropdown"
                 className="text-base font-semibold text-primary hover:text-primary/80 transition-all duration-300 flex items-center relative"
               >
                 Trips

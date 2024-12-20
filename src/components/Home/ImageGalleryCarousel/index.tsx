@@ -31,6 +31,11 @@ const LeftArrow = () => (
 
 function VariableWidthSwiper() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null);
+  const [activeSlide, setActiveSlide] = React.useState(0);
+
+  const handleSlideChange = (swiper: SwiperClass) => {
+    setActiveSlide(swiper.realIndex); 
+  };
 
   return (
     <div className="w-full px-4 mx-auto my-10">
@@ -46,7 +51,7 @@ function VariableWidthSwiper() {
           Images From Previous Trips
         </h1>
         <p className="md:text-lg text-sm mt-2 text-gray-600">
-          Explore the beauty of our previous trips through our image gallery.
+          Explore the excitement of our previous trips through our photo gallery
         </p>
       </motion.div>
 
@@ -59,6 +64,7 @@ function VariableWidthSwiper() {
         className="mt-12 relative"
       >
         <Swiper
+          onSlideChange={handleSlideChange}
           modules={[Navigation, Thumbs, Autoplay]}
           thumbs={{ swiper: thumbsSwiper }}
           navigation={{
@@ -138,7 +144,13 @@ function VariableWidthSwiper() {
         >
           {images.map((image, index) => (
             <SwiperSlide key={index} className="cursor-pointer">
-              <div className="w-full h-full overflow-hidden rounded-md border-2 border-transparent hover:border-primary transition">
+              <div
+                className={`w-full h-full overflow-hidden rounded-md border-2 ${
+                  activeSlide === index
+                    ? "border-primary"
+                    : "border-transparent"
+                } hover:border-primary transition`}
+              >
                 <Image
                   src={image.src}
                   alt={image.alt}

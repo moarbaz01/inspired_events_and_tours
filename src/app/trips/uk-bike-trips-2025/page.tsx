@@ -33,16 +33,16 @@ const trips = [
       "After the amazing success of these trips in 2022/2023 @ 2024 we are excited to be returning for 2025 and give you something positive to loo...",
     link: "/trips/uk-bike-trips-2025/trip3",
   },
-  {
-    id: "4",
-    title: "NC500 Motorcycle Road Trip",
-    startDate: "September 7th 2025",
-    endDate: "September 18th 2025",
-    location: "Start @ Inverness",
-    description:
-      " After the amazing success of these trips in 2022/2023 @ 2024 we are excited to be returning for 2025 and give you something positive to loo...",
-    link: "/trips/uk-bike-trips-2025/trip4",
-  },
+  // {
+  //   id: "4",
+  //   title: "NC500 Motorcycle Road Trip",
+  //   startDate: "September 7th 2025",
+  //   endDate: "September 18th 2025",
+  //   location: "Start @ Inverness",
+  //   description:
+  //     " After the amazing success of these trips in 2022/2023 @ 2024 we are excited to be returning for 2025 and give you something positive to loo...",
+  //   link: "/trips/uk-bike-trips-2025/trip4",
+  // },
 ];
 
 const Page = () => {

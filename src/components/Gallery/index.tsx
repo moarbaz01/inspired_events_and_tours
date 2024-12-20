@@ -34,16 +34,17 @@ const Gallery = () => {
           {images.map((image, index) => (
             <div
               key={index}
-              className="cursor-pointer overflow-hidden relative"
+              className="cursor-pointer overflow-hidden h-[400px] "
               onClick={() => handleImageClick(index)}
             >
-              <div className="relative pt-[75%] bg-gray-200">
+              <div className="bg-gray-200 relative h-full">
                 <Image
                   src={image.src}
                   alt={image.alt}
+                  loading={index < 10 ? "eager" : "lazy"}
                   width={400}
                   height={300}
-                  className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-105"
+                  className=" w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-105"
                 />
               </div>
             </div>

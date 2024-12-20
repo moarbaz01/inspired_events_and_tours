@@ -4,7 +4,9 @@ import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 import NextTopLoader from "nextjs-toploader";
-import {Toaster} from "react-hot-toast"
+import { Toaster } from "react-hot-toast";
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 // Google Fonts Integration
 const poppins = Poppins({
   subsets: ["latin"],
@@ -42,10 +44,11 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${playfairDisplay.variable} ${dancingScript.variable} antialiased`}
       >
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID!} />
+        <NextTopLoader color="white" />
         {/* Announcement Component */}
         <main className="pt-32">
           <Toaster />
-          <NextTopLoader color="white" />
           <Navbar />
           {children}
           <Footer />

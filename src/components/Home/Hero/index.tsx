@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+
 const Hero = () => {
   const fadeUp = {
     initial: { opacity: 0, y: 50 },
@@ -53,12 +54,25 @@ const Hero = () => {
           href="#trips"
           {...fadeUp}
           transition={{ duration: 1, delay: 0.4 }}
-          className="inline-block bg-primary text-white text-sm  py-3 px-6  rounded-full shadow-lg transform hover:scale-105 hover:bg-opacity-90 transition-all duration-300"
+          className="inline-block bg-primary text-white text-sm py-3 px-6 rounded-full shadow-lg transform hover:scale-105 hover:bg-opacity-90 transition-all duration-300"
         >
           Start Your Adventure
         </motion.a>
+        {/* Scroll Indicator */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          className=" absolute bottom-5 flex flex-col items-center"
+        >
+          <span className="text-white text-sm md:text-base mb-2">
+            Scroll to view trips
+          </span>
+          <div className="w-6 h-6 border-2 border-white rounded-full flex justify-center items-center animate-bounce">
+            <div className="w-2 h-2 bg-white rounded-full"></div>
+          </div>
+        </motion.div>
       </div>
-
     </div>
   );
 };

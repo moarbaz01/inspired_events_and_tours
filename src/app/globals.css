@@ -12,6 +12,10 @@
   --font-playfair_display: "Playfair Display", serif;
   --font-dancing_script: "Dancing Script", cursive;
 }
+*{
+  scroll-behavior: smooth;
+
+}
 
 /* Body text */
 body {
@@ -21,6 +25,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 
 p {
   font-family: var(--font-poppins), sans-serif; /* Poppins for paragraphs */

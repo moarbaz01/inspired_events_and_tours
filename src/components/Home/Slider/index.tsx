@@ -6,6 +6,7 @@ import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import React from "react";
 
 const slides = [
   // {
@@ -15,21 +16,21 @@ const slides = [
   //   link: "/trips/european-bike-trips-2025",
   // },
   {
-    title: "European Car Trips 2025",
+    title: "European Car Road Trips 2025",
     desc: "Discover breathtaking destinations across the globe.",
     imagePath: "/images/slides/car_trips.png",
-    link: "/trips/car-trips-2025",
+    link: "/trips/european-car-road-trips-2025",
   },
   {
     title: "European Motorcycle Track days 2025",
     desc: "Discover breathtaking destinations across the globe.",
     imagePath: "/images/slides/european_bike_track.png",
-    link: "/trips/european-bike-trips-2025",
+    link: "/trips/european-motorcycle-track-days-2025",
   },
   {
     title: "European Car Track Days 2025",
     imagePath: "/images/slides/european_car_track.png",
-    link: "/trips/european-car-trips-2025",
+    link: "/trips/european-car-track-days-2025",
   },
   {
     title: "Morocco Motorcycle Overlanding Trip 2025",
@@ -44,10 +45,10 @@ const slides = [
     link: "/trips/uk-bike-trips-2025",
   },
   {
-    title: "Morocco 4X4 Overloading Trip 2025",
+    title: "European Motorcycle Road Trips 2025",
     desc: "Discover breathtaking destinations across the globe.",
-    imagePath: "/images/slides/nc500.png",
-    link: "/trips/uk-bike-trips-2025",
+    imagePath: "/images/slides/european_motorcycle_road_trips.png",
+    link: "/trips/european-motorcycle-road-trips-2025",
   },
   {
     title: "Morocco Land Rover Trip 2025",
@@ -59,8 +60,9 @@ const slides = [
 
 const Slider = () => {
   const router = useRouter();
+
   return (
-    <div className="w-full py-12 md:px-6 px-4">
+    <div id="trips" className="w-full py-12 md:px-6 px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -99,7 +101,7 @@ const Slider = () => {
             <SwiperSlide key={i} className="flex justify-center pb-6">
               <div
                 onClick={() => router.push(item.link)}
-                className="group   cursor-pointer overflow-hidden rounded-lg border border-gray-200"
+                className="group  cursor-pointer overflow-hidden rounded-lg border border-gray-200"
               >
                 {/* Image Section */}
                 <div className="relative md:h-[350px] h-[300px] w-full">
@@ -108,7 +110,7 @@ const Slider = () => {
                   <Image
                     src={item.imagePath}
                     fill={true}
-                    className="transition-transform  duration-500 group-hover:scale-105"
+                    className="transition-transform w-full h-full  duration-500 group-hover:scale-105"
                     priority={true}
                     alt={`card ${i + 1}`}
                   />

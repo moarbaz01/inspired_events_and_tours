@@ -3,7 +3,7 @@ import React from "react";
 const Page = () => {
   return (
     <div className="py-8 px-4 sm:px-6 lg:px-8 bg-gray-50 min-h-screen">
-      <div className="bg-white rounded-lg shadow-lg p-6">
+      <div className=" p-6">
         <h1 className="text-3xl font-semibold text-center text-primary mb-4">
           France Austria & Switzerland Motorcycle Road Trip
         </h1>
