@@ -5,31 +5,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import Link from "next/link";
-const tripsLinks = [
-  {
-    name: "2025 Morocco Bike Trip",
-    link: "/trips/morocco-bike-trips-2025",
-  },
-  { name: "2025 Car Road Trips", link: "/trips/european-car-road-trips-2025" },
-  {
-    name: "2025 Car Track Days Trips",
-    link: "/trips/european-car-track-days-2025",
-  },
-  { name: "2025 Land Rover Trips", link: "/trips/land-rover-trips-2025" },
-  {
-    name: "2025 European Motorcycle Track Days Trips",
-    link: "/trips/european-motorcycle-track-days-2025",
-  },
-  {
-    name: "2025 European Motorcycle Road Trips",
-    link: "/trips/european-motorcycle-road-trips-2025",
-  },
-  { name: "2025 UK Bike Trips", link: "/trips/uk-bike-trips-2025" },
-  { name: "2026 European Bike Trips", link: "/trips/european-bike-trips-2026" },
-  { name: "2026 Morocco Bike Trips", link: "/trips/morocco-bike-trips-2026" },
-  { name: "2026 European Car Trips", link: "/trips/european-car-trips-2026" },
-];
-
+import { tripsLinks } from "@/data";
 
 const Footer = () => {
   return (
@@ -109,6 +85,7 @@ const Footer = () => {
             {tripsLinks.map((link, i) => (
               <li key={i}>
                 <Link
+                  aria-label={link.name}
                   href={link.link}
                   className="text-white hover:opacity-80 transition-all"
                 >

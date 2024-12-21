@@ -8,26 +8,13 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { LeftArrow, RightArrow } from "@/components/NavigationArrows";
 
 // Dynamically import images
 const images = Array.from({ length: 92 }, (_, i) => ({
   src: `/images/trips/trip${i + 1}.jpg`,
   alt: `Image ${i + 1}`,
 }));
-
-// Custom Arrow Components for Main Slider
-const RightArrow = () => (
-  <div className="custom-next text-white absolute top-1/2 right-4 z-50 flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition transform -translate-y-1/2">
-    <FaChevronRight className="text-xl" />
-  </div>
-);
-
-const LeftArrow = () => (
-  <div className="custom-prev text-white absolute top-1/2 left-4 z-50 flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg cursor-pointer hover:bg-black/70 transition transform -translate-y-1/2">
-    <FaChevronLeft className="text-xl" />
-  </div>
-);
 
 function VariableWidthSwiper() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null);

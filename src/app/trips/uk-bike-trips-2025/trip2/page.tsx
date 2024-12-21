@@ -1,9 +1,25 @@
 import React from "react";
+import { trips } from "../data";
 
+export async function generateMetadata() {
+  const trip = trips.find((t) => t.id === "2");
+
+  if (!trip) {
+    return {
+      title: "Trip Not Found | Inspired Events and Tours",
+      description: "The trip you are looking for does not exist.",
+    };
+  }
+
+  return {
+    title: `${trip.title} | Inspired Events and Tours`,
+    description: `${trip.description}`,
+    keywords: `${trip.title}, ${trip.location}, travel, tours, bike trips`,
+  };
+}
 const Page = () => {
   return (
-    <div className="py-8 px-4 sm:px-6 lg:px-8  min-h-screen">
-      <div className=" p-6">
+    <div>
         <h1 className="text-3xl font-semibold text-center text-primary mb-4">
           NC500 Motorcycle Road Trip
         </h1>
@@ -149,7 +165,6 @@ const Page = () => {
           </section>
         </div>
       </div>
-    </div>
   );
 };
 

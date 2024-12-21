@@ -19,9 +19,9 @@ const About = () => {
           <Image
             src="/images/team.jpg" // Replace with your actual image
             alt="Our Team"
-            fill
-            priority={true}
-            className="rounded-xl  object-cover shadow-lg transform transition duration-500 hover:scale-110"
+            fill={true}
+            loading="lazy"
+            className="rounded-xl h-full w-full  object-cover shadow-lg transform transition duration-500 hover:scale-110"
           />
         </motion.div>
 
@@ -81,6 +81,7 @@ const About = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.8 }}
+            
           >
             <Link
               href="/contact"

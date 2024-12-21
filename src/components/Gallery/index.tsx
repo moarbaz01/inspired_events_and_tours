@@ -5,7 +5,6 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import Image from "next/image";
 
-// Dynamically import images from the `public/images` folder
 const images = Array.from({ length: 92 }, (_, i) => ({
   src: `/images/trips/trip${i + 1}.jpg`,
   alt: `Image ${i + 1}`,

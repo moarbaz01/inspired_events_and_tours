@@ -8,31 +8,7 @@ import Link from "next/link"; // Import Link component from Next.js
 import { usePathname } from "next/navigation"; // Import useRouter
 import Announcement from "../Announcement";
 import { motion } from "framer-motion";
-
-const trips = [
-  {
-    name: "2025 Morocco Bike Trip",
-    link: "/trips/morocco-bike-trips-2025",
-  },
-  { name: "2025 Car Road Trips", link: "/trips/european-car-road-trips-2025" },
-  {
-    name: "2025 Car Track Days Trips",
-    link: "/trips/european-car-track-days-2025",
-  },
-  { name: "2025 Land Rover Trips", link: "/trips/land-rover-trips-2025" },
-  {
-    name: "2025 European Motorcycle Track Days Trips",
-    link: "/trips/european-motorcycle-track-days-2025",
-  },
-  {
-    name: "2025 European Motorcycle Road Trips",
-    link: "/trips/european-motorcycle-road-trips-2025",
-  },
-  { name: "2025 UK Bike Trips", link: "/trips/uk-bike-trips-2025" },
-  { name: "2026 European Bike Trips", link: "/trips/european-bike-trips-2026" },
-  { name: "2026 Morocco Bike Trips", link: "/trips/morocco-bike-trips-2026" },
-  { name: "2026 European Car Trips", link: "/trips/european-car-trips-2026" },
-];
+import { tripsLinks } from "@/data";
 
 const Navbar = () => {
   const [isSidebar, setIsSidebar] = useState(false);
@@ -52,7 +28,11 @@ const Navbar = () => {
       <Announcement />
       <div className="py-2 md:px-6 px-4 bg-white shadow-sm border-b border-gray-200 transition-all duration-300">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center cursor-pointer gap-2">
+          <Link
+            href="/"
+            className="flex items-center cursor-pointer gap-2"
+            aria-label="Go to home page"
+          >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -64,6 +44,7 @@ const Navbar = () => {
                 alt="Logo Image"
                 height={100}
                 width={100}
+                priority={true}
                 className="h-full w-full transform transition-transform duration-300 hover:scale-110"
               />
             </motion.div>
@@ -99,6 +80,7 @@ const Navbar = () => {
               <Link
                 href="/"
                 className="text-base font-semibold text-primary hover:text-primary/80 transition-all duration-300 relative after:content-[''] after:block after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+                aria-label="Go to home page"
               >
                 Home
               </Link>
@@ -121,7 +103,7 @@ const Navbar = () => {
               {/* Animated Dropdown */}
               {isDropdownOpen && (
                 <motion.div
-                  className="absolute bg-white shadow-lg rounded-lg p-4 top-full left-0 w-56 z-20"
+                  className="absolute bg-white shadow-lg rounded-lg p-4 top-full left-0 w-60 z-20"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
@@ -141,15 +123,19 @@ const Navbar = () => {
                       },
                     }}
                   >
-                    {trips.map((trip, index) => (
-                      <Link href={trip.link} key={index}>
+                    {tripsLinks.map((trip, index) => (
+                      <Link
+                        href={trip.link}
+                        key={index}
+                        aria-label={`Go to ${trip.name} page`}
+                      >
                         <motion.div
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.3, delay: index * 0.1 }}
-                          className="block py-2 text-primary hover:bg-primary/10 transition-all duration-300 rounded-md"
+                          className="block py-2 text-sm text-primary hover:bg-primary/10 transition-all duration-300 rounded-md"
                         >
                           {trip.name}
                         </motion.div>
@@ -170,6 +156,7 @@ const Navbar = () => {
               <Link
                 href="/contact"
                 className="text-base font-semibold text-primary hover:text-primary/80 transition-all duration-300 relative after:content-[''] after:block after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+                aria-label="Go to Contact page"
               >
                 Contact
               </Link>
@@ -184,6 +171,7 @@ const Navbar = () => {
               <Link
                 href="/gallery"
                 className="text-base font-semibold text-primary hover:text-primary/80 transition-all duration-300 relative after:content-[''] after:block after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+                aria-label="Go to Gallery page"
               >
                 Gallery
               </Link>
@@ -197,7 +185,10 @@ const Navbar = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <CgMenuRight className="md:text-3xl text-xl text-white" />
+            <CgMenuRight
+              className="md:text-3xl text-xl text-white"
+              aria-label="Open mobile menu"
+            />
           </motion.div>
         </div>
       </div>

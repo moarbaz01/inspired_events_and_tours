@@ -51,6 +51,9 @@ const TripCard: React.FC<TripCardProps> = ({
         </div>
         <Link
           href={link}
+          aria-label={
+            "View all details about " + title + " trip from " + startDate
+          }
           className="mt-6 w-fit bg-primary hover:bg-primary-dark text-white font-bold text-sm py-3 px-6 rounded-lg transition"
         >
           All Details

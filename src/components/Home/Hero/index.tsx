@@ -3,75 +3,80 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const Hero = () => {
+  // Reduced animation complexity
   const fadeUp = {
-    initial: { opacity: 0, y: 50 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true },
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
   };
 
   return (
-    <div className="relative w-full md:h-screen h-[80vh]">
-      {/* Background Image with Parallax Effect */}
+    <div className="relative w-full md:h-screen h-[80vh] overflow-hidden">
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <motion.div className="w-full h-full relative">
-          <Image
-            src="/images/hero.webp" // Your Hero image
-            alt="Travel Hero"
-            fill
-            priority
-            className="object-cover"
-          />
-        </motion.div>
+        <Image
+          src="/images/hero.webp" // Ensure the image is optimized
+          alt="Travel Hero"
+          fill={true}
+          priority={true}
+          className="object-cover"
+        />
       </div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60 z-10"></div>
+      <div className="absolute inset-0 bg-black/50 z-10"></div>
 
       {/* Hero Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center z-20 px-4 sm:px-6 md:px-16">
+        {/* Heading */}
         <motion.h1
-          {...fadeUp}
-          transition={{ duration: 1 }}
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
           className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight text-center"
           style={{
-            textShadow: "4px 4px 6px rgba(0, 0, 0, 0.5)", // Stroke effect
+            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.4)", // Subtle shadow for better readability
           }}
         >
           Are You Looking For An Amazing Adventure?
         </motion.h1>
 
+        {/* Subtitle */}
         <motion.p
-          {...fadeUp}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="text-base sm:text-lg md:text-2xl text-white mb-6 sm:mb-8 text-center md:w-2/3 "
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          className="text-base sm:text-lg md:text-2xl text-white mb-6 sm:mb-8 text-center md:w-2/3"
         >
-          Are you ready to embark on a road trip of a lifetime, come and join us
-          on an unforgettable journey. At <b>Inspired Events</b> we believe in{" "}
-          <b>Making Memories One Trip At A Time</b>
+          Embark on a road trip of a lifetime and join us on an unforgettable
+          journey. At <b>Inspired Events</b>, we believe in{" "}
+          <b>Making Memories One Trip At A Time</b>.
         </motion.p>
 
+        {/* Call-to-Action */}
         <motion.a
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          aria-label="Start Your Adventure"
+          className="inline-block bg-primary text-white text-sm py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition-transform duration-200"
           href="#trips"
-          {...fadeUp}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="inline-block bg-primary text-white text-sm py-3 px-6 rounded-full shadow-lg transform hover:scale-105 hover:bg-opacity-90 transition-all duration-300"
         >
           Start Your Adventure
         </motion.a>
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className=" absolute bottom-5 flex flex-col items-center"
-        >
-          <span className="text-white text-sm md:text-base mb-2">
-            Scroll to view trips
-          </span>
-          <div className="w-6 h-6 border-2 border-white rounded-full flex justify-center items-center animate-bounce">
-            <div className="w-2 h-2 bg-white rounded-full"></div>
-          </div>
-        </motion.div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-5 flex flex-col z-[10] items-center w-full">
+        <span className="text-white text-sm md:text-base mb-2">
+          Scroll to view trips
+        </span>
+        <div className="w-6 h-6 border-2 border-white rounded-full flex justify-center items-center animate-bounce">
+          <div className="w-2 h-2 bg-white rounded-full"></div>
+        </div>
       </div>
     </div>
   );

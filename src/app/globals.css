@@ -57,6 +57,12 @@ a {
   background-color: #df7234 !important;
 }
 
+/* .swiper-pagination {
+  bottom: -0px !important;
+  transform: translateY(-50%);
+} */
+
+
 section {
   margin-bottom: 2rem;
 }

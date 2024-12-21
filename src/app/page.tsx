@@ -1,4 +1,3 @@
-import ChatWidget from "@/components/ChatWidget";
 import About from "@/components/Home/About";
 import Hero from "@/components/Home/Hero";
 import ImageGalleryCarousel from "@/components/Home/ImageGalleryCarousel";
@@ -7,14 +6,12 @@ import Testimonials from "@/components/Home/Testimonials";
 import WhyChooseUs from "@/components/Home/WhyChooseUs";
 
 export default function Home() {
-  
   return (
     <div>
-      <ChatWidget />
       <Hero />
       <About />
       <Slider />
-      <ImageGalleryCarousel  />
+      <ImageGalleryCarousel />
       <WhyChooseUs />
       <Testimonials />
     </div>

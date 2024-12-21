@@ -6,48 +6,14 @@ import Link from "next/link";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import { usePathname } from "next/navigation";
+import { tripsLinks } from "@/data";
 
 // Menu items array with sublinks
 const menuItems = [
   { name: "Home", path: "/" },
   {
     name: "Trips",
-    sublinks: [
-      {
-        name: "2025 Morocco Bike Trip",
-        link: "/trips/morocco-bike-trips-2025",
-      },
-      {
-        name: "2025 Car Road Trips",
-        link: "/trips/european-car-road-trips-2025",
-      },
-      {
-        name: "2025 Car Track Days Trips",
-        link: "/trips/european-car-track-days-2025",
-      },
-      { name: "2025 Land Rover Trips", link: "/trips/land-rover-trips-2025" },
-      {
-        name: "2025 European Motorcycle Track Days Trips",
-        link: "/trips/european-motorcycle-track-days-2025",
-      },
-      {
-        name: "2025 European Motorcycle Road Trips",
-        link: "/trips/european-motorcycle-road-trips-2025",
-      },
-      { name: "2025 UK Bike Trips", link: "/trips/uk-bike-trips-2025" },
-      {
-        name: "2026 European Bike Trips",
-        link: "/trips/european-bike-trips-2026",
-      },
-      {
-        name: "2026 Morocco Bike Trips",
-        link: "/trips/morocco-bike-trips-2026",
-      },
-      {
-        name: "2026 European Car Trips",
-        link: "/trips/european-car-trips-2026",
-      },
-    ],
+    sublinks: tripsLinks,
   },
   { name: "Contact", path: "/contact" },
   { name: "Gallery", path: "/gallery" },
@@ -88,6 +54,7 @@ const Sidebar = ({
         <h2 className="text-3xl font-bold">Menu</h2>
         <button
           onClick={onClose}
+          aria-label="Close menu"
           className="text-white hover:bg-white/20 rounded-full p-2 transition"
         >
           <AiOutlineClose className="text-3xl" />
@@ -119,7 +86,11 @@ const Sidebar = ({
                   >
                     {item.sublinks.map((sublink, subIndex) => (
                       <li key={subIndex}>
-                        <Link href={sublink.link} className="block  transition">
+                        <Link
+                          aria-label={sublink.name}
+                          href={sublink.link}
+                          className="block  transition"
+                        >
                           {sublink.name}
                         </Link>
                       </li>
@@ -130,6 +101,7 @@ const Sidebar = ({
             ) : (
               <Link
                 href={item.path}
+                aria-label={item.name}
                 className="block text-xl font-medium transition"
               >
                 {item.name}
