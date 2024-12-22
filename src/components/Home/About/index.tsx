@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const About = () => {
   return (
-    <div className="bg-primary/10 pt-20 pb-20 px-4 md:px-6">
+    <div className="bg-primary/10 pt-12 pb-12 px-4 md:px-6">
       {/* Team Image & Mission Section */}
       <div className="flex flex-col lg:flex-row  justify-between md:gap-12 gap-6">
         {/* Image Section with Floating Overlay */}
