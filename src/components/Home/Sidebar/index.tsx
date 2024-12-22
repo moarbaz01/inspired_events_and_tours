@@ -113,7 +113,7 @@ const Sidebar = ({
 
       {/* Footer */}
       <div className="mt-auto pt-8 text-center text-sm text-gray-300">
-        <p>&copy; 2024 Inspired Events and Tours</p>
+        <p>&copy; 2022 Inspired Events and Tours</p>
       </div>
     </motion.div>
   );
