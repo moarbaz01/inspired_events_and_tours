@@ -3,7 +3,10 @@ export const tripsLinks = [
     name: "2025 Morocco Bike Trip",
     link: "/trips/morocco-bike-trips-2025",
   },
-  { name: "2025 European Car Road Trips", link: "/trips/european-car-road-trips-2025" },
+  {
+    name: "2025 European Car Road Trips",
+    link: "/trips/european-car-road-trips-2025",
+  },
   {
     name: "2025 European Car Track Days Trips",
     link: "/trips/european-car-track-days-2025",
