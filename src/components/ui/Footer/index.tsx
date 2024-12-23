@@ -1,9 +1,9 @@
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
+// import {
+//   FaFacebookF,
+//   FaTwitter,
+//   FaInstagram,
+//   FaLinkedinIn,
+// } from "react-icons/fa";
 import Link from "next/link";
 import { tripsLinks } from "@/data";
 
@@ -19,11 +19,11 @@ const Footer = () => {
             </h2>
             <p className="text-sm mb-6">
               Explore unforgettable journeys, hidden gems, and the adventure of
-              a lifetime with us. Join us to make your dream trip come true!
-              making memories one trip at a time
+              a lifetime. Join us to make your dream trip come true! Making
+              Memories One Trip At A Time
             </p>
           </div>
-          <div className="flex space-x-4">
+          {/* <div className="flex space-x-4">
             <a
               href="https://facebook.com"
               target="_blank"
@@ -52,7 +52,7 @@ const Footer = () => {
             >
               <FaLinkedinIn className="text-2xl" />
             </a>
-          </div>
+          </div> */}
         </div>
 
         {/* Footer Middle - Quick Links */}

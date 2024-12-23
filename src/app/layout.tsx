@@ -5,7 +5,7 @@ import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 import NextTopLoader from "nextjs-toploader";
 import { Toaster } from "react-hot-toast";
-// import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import dynamic from "next/dynamic";
 
 const ChatWidget = dynamic(() => import("@/components/ChatWidget"), {
@@ -103,7 +103,11 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${playfairDisplay.variable} ${dancingScript.variable} antialiased`}
       >
-        {/* <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID!}  /> */}
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID && (
+          <GoogleAnalytics
+            gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID!}
+          />
+        )}
         <NextTopLoader color="white" />
         <ChatWidget />
         {/* Announcement Component */}

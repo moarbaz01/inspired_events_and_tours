@@ -12,9 +12,8 @@
   --font-playfair_display: "Playfair Display", serif;
   --font-dancing_script: "Dancing Script", cursive;
 }
-*{
+* {
   scroll-behavior: smooth;
-
 }
 
 /* Body text */
@@ -25,7 +24,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
 
 p {
   font-family: var(--font-poppins), sans-serif; /* Poppins for paragraphs */
@@ -62,7 +60,26 @@ a {
   transform: translateY(-50%);
 } */
 
-
 section {
   margin-bottom: 2rem;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #f0f0f0;
+  border-bottom-color: #df7234;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -1,11 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
-// import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
-import { Navigation, Pagination } from "swiper/modules";
-import { LeftArrow, RightArrow } from "@/components/NavigationArrows";
+import { useEffect, useState } from "react";
 
 declare global {
   interface Window {
@@ -16,74 +11,42 @@ declare global {
       | undefined;
   }
 }
+
 const GoogleReviews = () => {
-  // Dynamically load the Elfsight Google Reviews widget script
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://static.elfsight.com/platform/platform.js";
     script.async = true;
     script.onload = () => {
-      // Initialize the Elfsight widget after the script loads
       if (window.ElfsightPlatform) {
         window.ElfsightPlatform.load();
       }
+      setIsLoading(false); // Set loading state to false once the widget is loaded
     };
     document.body.appendChild(script);
 
     return () => {
-      // Cleanup the script when the component unmounts
       document.body.removeChild(script);
     };
   }, []);
 
   return (
-    <div className="py-12  px-4 md:px-6">
-      {/* Section Header */}
-      {/* <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="text-center pb-4"
-      >
-        <h2 className="md:text-3xl text-2xl font-bold text-gray-800">
-          Google Reviews
-        </h2>
-        <p className="md:text-lg text-sm text-gray-600 mt-2">
-          See what our clients are saying about us!
-        </p>
-      </motion.div> */}
-
-      {/* Embed Elfsight widget */}
+    <div className="py-12 px-4 md:px-6">
+      {isLoading && (
+        <div className="flex justify-center h-[60vh] items-center">
+          <div className="flex flex-col gap-2">
+            <span className="loader"></span>
+            <p className="text-center text-gray-500 mt-4">Reviews Loading...</p>
+          </div>
+        </div>
+      )}
       <div
         className="elfsight-app-80691bc4-d86f-40ea-a48b-b3a6d0f1fabb"
+        style={{ display: isLoading ? "none" : "block" }}
         data-elfsight-app-lazy
       ></div>
-
-      {/* Swiper Slider - Optional if you want to display other testimonials */}
-      <Swiper
-        spaceBetween={30}
-        slidesPerView={1}
-        loop={true}
-        pagination={{ clickable: true }}
-        breakpoints={{
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        }}
-        navigation={{
-          nextEl: ".custom-next",
-          prevEl: ".custom-prev",
-        }}
-        modules={[Navigation, Pagination]}
-        className="mySwiper"
-      >
-        {/* Add custom testimonial slides here if needed */}
-        <SwiperSlide className="pb-12 py-4">
-          {/* Add your custom testimonial component */}
-        </SwiperSlide>
-        <LeftArrow />
-        <RightArrow />
-      </Swiper>
     </div>
   );
 };
