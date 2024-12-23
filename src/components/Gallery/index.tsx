@@ -43,6 +43,7 @@ const Gallery = () => {
                   loading={index < 10 ? "eager" : "lazy"}
                   width={400}
                   height={300}
+                  unoptimized={true}
                   className=" w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-105"
                 />
               </div>

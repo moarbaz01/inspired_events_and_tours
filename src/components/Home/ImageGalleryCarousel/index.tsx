@@ -67,7 +67,7 @@ function VariableWidthSwiper() {
           }}
           breakpoints={{}}
           loop={true}
-          className="h-[300px] md:h-[500px] w-full"
+          className="h-[300px] md:h-[400px] w-full"
         >
           {images.map((image, index) => (
             <SwiperSlide
@@ -80,7 +80,7 @@ function VariableWidthSwiper() {
                   src={image.src}
                   alt={image.alt}
                   width={800}
-                  height={500}
+                  height={400}
                   className="object-cover h-full w-auto rounded-lg"
                 />
               </div>
