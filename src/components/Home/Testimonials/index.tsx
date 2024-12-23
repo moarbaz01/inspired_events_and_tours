@@ -36,7 +36,7 @@ const GoogleReviews = () => {
     <div className="py-12 px-4 md:px-6">
       {isLoading && (
         <div className="flex justify-center h-[60vh] items-center">
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col justify-center items-center gap-2">
             <span className="loader"></span>
             <p className="text-center text-gray-500 mt-4">Reviews Loading...</p>
           </div>
