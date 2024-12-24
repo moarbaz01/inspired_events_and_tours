@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 const Hero = () => {
   // Reduced animation complexity
   const fadeUp = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { duration: 0.5, ease: "easeOut" },
     },
   };
 
@@ -22,7 +22,7 @@ const Hero = () => {
           alt="Travel Hero"
           fill={true}
           priority={true}
-          className="object-cover"
+          className="object-cover h-full w-full"
         />
       </div>
 

@@ -17,6 +17,7 @@ const menuItems = [
   },
   { name: "Contact", path: "/contact" },
   { name: "Gallery", path: "/gallery" },
+  { name: "Faqs", path: "/faqs" },
 ];
 
 const Sidebar = ({

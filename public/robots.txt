@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://inspiredeventsandtours.co.uk
+
+# Sitemaps
+Sitemap: https://inspiredeventsandtours.co.uk/sitemap.xml

@@ -61,6 +61,7 @@ const Slider = () => {
                   <Image
                     src={item.imagePath}
                     fill={true}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="transition-transform w-full h-full  duration-500 group-hover:scale-105"
                     loading="lazy"
                     alt={`card ${i + 1}`}

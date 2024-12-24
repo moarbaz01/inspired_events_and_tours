@@ -43,7 +43,7 @@ const GoogleReviews = () => {
         </div>
       )}
       <div
-        className="elfsight-app-80691bc4-d86f-40ea-a48b-b3a6d0f1fabb"
+        className={process.env.NEXT_PUBLIC_ELFSIGHT_API!}
         style={{ display: isLoading ? "none" : "block" }}
         data-elfsight-app-lazy
       ></div>

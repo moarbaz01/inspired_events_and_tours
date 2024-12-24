@@ -6,7 +6,9 @@ import Footer from "@/components/ui/Footer";
 import NextTopLoader from "nextjs-toploader";
 import { Toaster } from "react-hot-toast";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 import dynamic from "next/dynamic";
+import WhatsappIcon from "@/components/ui/WhatsappIcon";
 
 const ChatWidget = dynamic(() => import("@/components/ChatWidget"), {
   ssr: false,
@@ -108,8 +110,14 @@ export default function RootLayout({
             gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID!}
           />
         )}
+        {process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID && (
+          <GoogleTagManager
+            gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID!}
+          />
+        )}
         <NextTopLoader color="white" />
         <ChatWidget />
+        <WhatsappIcon />
         {/* Announcement Component */}
         <main className="pt-32">
           <Toaster />
