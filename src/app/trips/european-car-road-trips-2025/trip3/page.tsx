@@ -195,12 +195,12 @@ const TripDetails = () => {
           Your accommodation will be double room to yourself unless traveling
           with a passenger, and includes breakfast but evening food is not
           included but is available at the hotels or nearby restaurants.. A
-          deposit of <b>£489</b> is required to book your place with the balance
+          deposit of <b>£389</b> is required to book your place with the balance
           due 8 weeks prior to the trip.
         </p>
 
         <p className="text-md mt-2 font-bold">
-          Places can be reserved with a £489 deposit. Simply click on the link
+          Places can be reserved with a £389 deposit. Simply click on the link
           to reserve your place
         </p>
         <p className="mt-6 ">

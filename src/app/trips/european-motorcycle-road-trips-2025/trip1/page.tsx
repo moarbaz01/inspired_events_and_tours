@@ -167,7 +167,7 @@ const Page = () => {
             place. The balance will be due 8 weeks before departure.
           </p>
           <a
-            href="https://buy.stripe.com/3cs9ARahocD2aE829m"
+            href="https://buy.stripe.com/4gw00hahodH6eUo7u3"
             className="mt-8 block w-fit px-3 py-3 text-center bg-primary text-white rounded-lg"
           >
             Reserve Your Place Now

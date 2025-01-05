@@ -21,9 +21,9 @@ const Slider = () => {
         viewport={{ once: true }}
         className="px-4 text-center pb-4 md:mt-12"
       >
-        <h1 className="md:text-3xl text-2xl font-bold">Our Trips</h1>
+        <h1 className="md:text-3xl text-2xl font-bold">Our Future Trips</h1>
         <p className="md:text-lg text-sm text-gray-600 mt-2">
-          These are trips that we provides
+          Please click below for full details
         </p>
       </motion.div>
 
