@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 import { LeftArrow, RightArrow } from "@/components/NavigationArrows";
 
 // Dynamically import images
-const images = Array.from({ length: 92 }, (_, i) => ({
+const images = Array.from({ length: 88 }, (_, i) => ({
   src: `/images/trips/trip${i + 1}.jpg`,
   alt: `Image ${i + 1}`,
 }));

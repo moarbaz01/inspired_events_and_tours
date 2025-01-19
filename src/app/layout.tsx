@@ -119,7 +119,7 @@ export default function RootLayout({
         <ChatWidget />
         <WhatsappIcon />
         {/* Announcement Component */}
-        <main className="pt-32">
+        <main className="pt-24">
           <Toaster />
           <Navbar />
           {children}

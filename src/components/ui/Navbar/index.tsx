@@ -6,7 +6,6 @@ import { useState, useEffect, useCallback } from "react";
 import { CgMenuRight } from "react-icons/cg";
 import Link from "next/link"; // Import Link component from Next.js
 import { usePathname } from "next/navigation"; // Import useRouter
-import Announcement from "../Announcement";
 import { motion } from "framer-motion";
 import { tripsLinks } from "@/data";
 
@@ -25,7 +24,6 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full z-[999]">
-      <Announcement />
       <div className="py-2 md:px-6 px-4 bg-white shadow-sm border-b border-gray-200 transition-all duration-300">
         <div className="flex items-center justify-between">
           <Link
