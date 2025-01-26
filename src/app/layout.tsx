@@ -9,6 +9,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import dynamic from "next/dynamic";
 import WhatsappIcon from "@/components/ui/WhatsappIcon";
+import Script from "next/script";
 
 const ChatWidget = dynamic(() => import("@/components/ChatWidget"), {
   ssr: false,
@@ -102,6 +103,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Script
+        src="https://cdn.usefathom.com/script.js"
+        data-site="YWKVYYBZ"
+        defer
+      />
       <body
         className={`${poppins.variable} ${playfairDisplay.variable} ${dancingScript.variable} antialiased`}
       >

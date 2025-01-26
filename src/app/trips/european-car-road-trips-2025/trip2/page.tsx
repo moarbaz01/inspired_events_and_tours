@@ -35,40 +35,39 @@ const TripDetails = () => {
         {/* Day 1 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
-            Day 1. Calais(France)-Luxembourg. Approximately 250 Miles.
+            Day 1. Calais(France)-Luxembourg. Approximately 250 Miles.{" "}
           </h2>
           <p className="text-gray-700 mt-2">
-            Our tour starts with us meeting in Folkestone at around 8am on the
-            first day of your chosen trip. The meeting point is the Premier Inn
-            To catch the 09.20 EuroTunnel to Calais.From experience from
-            previous trips lots of people have stopped here the night before
-            their trip. Once in France we will regroup in the first petrol
-            station which is just after we depart the train. Once everyone is
-            there we will have a day’s cross country driving through picturesque
-            northern France via Dunkirk Belgium and Luxembourg before reaching
-            our first night&apos;s stop at the capital Luxembourg
+            Our tours start with us meeting in Folkestone at around 8am. The
+            meeting point is the Premier Inn to catch the 09.20 Eurotunnel to
+            Calais. From experience gained from previous trips lots of people
+            have stopped here the night before their trip. Once in France we
+            will regroup in the first petrol station which is just after we
+            disembark the train. When everyone is there we will have a day’s
+            cross country driving through picturesque northern France via
+            Dunkirk Belgium and Luxembourg before reaching our first night&#39;s
+            stop just a few miles over the Luxemburg border back into France
+            stopping @ B&amp;B Hotel Longwy Porte Du Luxembourg.
           </p>
         </section>
 
-        {/* Day 2 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
-            Day 2. Luxembourg-Baden Baden(Germany), Approximately 220 Miles
+            Day 2. Luxembourg-Baden Baden(Germany), Approximately 220 Miles{" "}
           </h2>
           <p className="text-gray-700 mt-2">
             We then continue our drive into eastern France before crossing the
             border into Germany via the beautiful Vosges mountains. The
-            afternoon’s drive brings us into the Black Forest region and to our
-            second night’s stop near Baden Baden @ Badischer Hof Hotel, we rest
-            up and get ready for the first famous part of the road trip in the
+            afternoon’s ride brings us into the Black Forest region and to our
+            second night’s stop near Baden Baden @ Hotel Rebstock , we rest up
+            and get ready for the first famous part of the road trip in the
             shape of the B500, this stretch of tarmac has long been coveted by
             car drivers looking for long sweeping roads that run from bend to
-            bend. Sure not to disappoint, it will have you wanting to drive it
+            bend. Sure not to disappoint, it will have you wanting to ride it
             over and over again.
           </p>
         </section>
 
-        {/* Day 3 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
             Day 3 Baden Baden(Germany)-Zell Am See(Austria) Approximately 300
@@ -76,54 +75,49 @@ const TripDetails = () => {
           </h2>
           <p className="text-gray-700 mt-2">
             Today sees us join the B500 at Baden Baden and wind our way along
-            this epic piece of road tats sees us leave Germany and head into
+            this epic piece of road that sees us leave Germany and head into
             Austria through the foothills of the beautiful mountains of Tyrol to
-            our base for 2 nights near the historic town of Zell am
-            See.Approximately 20 km away. We will be stopping at Gasthof
-            Geronimo Hotel, nestled in the idyllic foothills giving you a real
-            feel of Austria.
+            our base for 2 nights in the historic town of Zell am See. We will
+            be stopping @ Hotel Glaserhaus, nestled in the idyllic town of Zell
+            Am See giving you a real feel of Austria.
           </p>
         </section>
-
-        {/* Day 4 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
             Day 4 Rest Day(Zell Am See)
           </h2>
           <p className="text-gray-700 mt-2">
-            Here we take a well deserved rest day, Giving you time for some
-            leisure time or traditional tourist activities. Which could include
-            a drive out to the famous Grossglockner high alpine road, the
-            highest surfaced mountain pass in Austria or a trip to the Eagle’s
-            nest- Hitler’s summer retreat in Berchtesgaden. Or you could spend
-            some time in historic Salzburg, a beautiful city and birthplace of
-            Beethoven.On previous trips we have known people visit all three in
-            the same day. Before returning to the hotel for our second night at
-            the hotel Gasthof Geronimo Hotel.
+            Here we take a well-deserved rest day, Giving you time for some
+            R&amp;R spending day relaxing in Zell Am See or taking part in some
+            traditional tourist activities. Which could include a drive out to
+            the famous Grossglockner high alpine road, the highest surfaced
+            mountain pass in Austria or a trip to the Eagle’s nest- Hitler’s
+            summer retreat in Berchtesgaden. Or you could spend some time in
+            historic Salzburg, a beautiful city and birthplace of Beethoven. On
+            previous trips we have known people visit all three in the same day.
+            Before returning to the hotel for our second night @ Hotel
+            Glaserhaus.
           </p>
         </section>
-
-        {/* Day 5 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
             Day 5. Zell Am See(Switzerland)-Davos(Switzerland) Approximately 200
             Miles
           </h2>
           <p className="text-gray-700 mt-2">
-            We then leave Zell am See continuing west to the awe inspiring Swiss
-            Alps. The Swiss Alps are one of the world’s most famous car
-            drivers&apos; haven and it&apos;s not difficult to see why with
-            endless hairpins and breathtaking beauty they bring drivers back
-            here year on year and on this tour we drive five of the greatest
-            mountain passes in Switzerland. Before spending our 5th night of our
-            epic trip at the bla bla hotel @ Davos.
+            We then leave Zell am See continuing west to the awe-inspiring Swiss
+            Alps. The Swiss Alps are one of the world’s most famous car drivers
+            haven and it&#39;s not difficult to see why with endless hairpins
+            and breathtaking beauty they bring drivers back here year on year
+            and on this tour we can ride five of the greatest mountain passes in
+            Switzerland. Before spending our 5th night of our epic trip @
+            B&amp;B Hotel St Gallen Switzerland.
           </p>
         </section>
-
-        {/* Day 6 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
-            Day 6 Davos(Switzerland) - Belfort (France) Approximately 200 Miles
+            Day 6 St Gallen (Switzerland) – Furka (Switzerland) Approximately
+            200 Miles
           </h2>
           <p className="text-gray-700 mt-2">
             From here we head for the Alpe Di Sorecia to take on the world
@@ -131,33 +125,30 @@ const TripDetails = () => {
             with your inner 007 on the nearby Furka pass immortalized by the car
             chase in Goldfinger then drive the giddy heights of the Grimsel pass
             at an elevation of 7,100 feet and the Nufenen at 8,130 feet. Then
-            after taking on these amazing passes we wind our way towards Belfort
-            for our evening stay.
+            after taking on these amazing passes, we wind our way towards our
+            evening stay @ Hotel Alpenblick Fieschertal. The unique location of
+            our accommodations allows you to take on the collection of epic
+            passes on its door step.
           </p>
         </section>
-
-        {/* Day 7 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
-            Day 7 Belfort(France) - Reims(France) Approximately 250 Miles
+            Day 7 Furka (Switzerland) – Nancy (France) Approximately 200 Miles
           </h2>
           <p className="text-gray-700 mt-2">
-            As we start heading back up through France the traditional small
-            French villages are a real feature of the back roads along our route
-            that takes you through stunning towns like Chaumont and Troyes, a
-            medieval town that is really a great place for a food stop and
-            refreshment before heading to our evening stop in Reims. A town in
-            the heart of the Champagne district and one that you will enjoy your
-            evening in with a real cosmopolitan feel. With a vast selection of
-            bars and restaurants with something on offer for everyone&apos;s
-            pallet.
+            As we start heading back up through Switzerland towards France the
+            traditional small French villages are a real feature of the back
+            roads along our route that takes you through stunning medieval towns
+            that are really great places for a food stop and refreshment before
+            heading to our evening stop in Nancy. A vibrant French town in the
+            heart of France and one that you will enjoy your evening in with a
+            real cosmopolitan feel. With a vast selection of bars and
+            restaurants with something on offer for everyone&#39;s pallet.
           </p>
         </section>
-
-        {/* Day 8 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
-            Day 8 Reims(France)- Calais(France) Approximately 190 Miles
+            Day 8 Nancy (France)- Calais(France) Approximately 300 Miles.
           </h2>
           <p className="text-gray-700 mt-2">
             Our last adventure on this tour comes with a visit to the GP track
@@ -165,14 +156,7 @@ const TripDetails = () => {
             Prix, several Formula one races and the MotoGP. Our route takes us
             on the old track riding past the old pits and grandstand. Giving us
             a unique photograph opportunity, we will then head back towards
-            Calais to catch our return EuroTunnel crossing to the UK. Please
-            understand that this is a real drivers trip with some long days
-            taking on challenging routes through stunning vistas and
-            surroundings. But having completed this trip previously it really is
-            worth the journey. As Ralph Waldo Emerson the American philosopher
-            said” It&apos;s not the destination it&apos;s the journey” meaning
-            enjoy the journey to get to the destination. With this amazing trip
-            the journeys are a massive part of the trip.
+            Calais to catch our return Eurotunnel crossing to the UK.
           </p>
         </section>
       </div>
