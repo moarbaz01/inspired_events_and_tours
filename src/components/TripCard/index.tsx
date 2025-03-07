@@ -16,7 +16,7 @@ const TripCard: React.FC<TripCardProps> = ({
   location,
   description,
   link,
-  status = "Available",
+  status,
 }) => {
   return (
     <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
@@ -52,10 +52,12 @@ const TripCard: React.FC<TripCardProps> = ({
               <span className="font-bold text-primary">Location:</span>{" "}
               {location}
             </p>
-            <p>
-              <span className="font-bold text-primary">Status:</span>{" "}
-              {status }
-            </p>
+            {status && (
+              <p>
+                <span className="font-bold text-primary">Status:</span>{" "}
+                {status || "Available"}
+              </p>
+            )}
           </div>
         </div>
         <Link
