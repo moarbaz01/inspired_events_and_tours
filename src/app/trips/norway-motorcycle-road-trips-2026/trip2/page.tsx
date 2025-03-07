@@ -197,7 +197,7 @@ const TripDetails = () => {
             sites Copenhagen has to offer, Ang get the must have photo with the
             famous little mermaid. Copenhagen, Denmark’s capital, sits on the
             coastal islands of Zealand and Amager. It’s linked to Malmo in
-            southern Sweden by the Öresund Bridge. Indre By, the city's historic
+            southern Sweden by the Öresund Bridge. Indre By, the city&apos;s historic
             center, contains Frederiksstaden, an 18th-century rococo district.
             Then after a full day of site seeing we will meet back up at our
             hotel for the evening stopping @ Hotel Tiffany Copenhagen.
