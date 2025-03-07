@@ -37,7 +37,7 @@ const TripDetails = () => {
             Day 1 11/05/2026 Calais-Antwerp
           </h2>
           <p className="text-gray-700 mt-2">
-            our epic overlanding trip will start on the 21th May 2026 when we
+            Our epic overlanding trip will start on the 21th May 2026 when we
             meet around 9am Folkestone in Kent. We will board the Eurotunnel @
             11.20 for our 35 minute crossing to Calais France. We will regroup
             in Calais before our road trip really starts, we will be are heading
@@ -197,10 +197,10 @@ const TripDetails = () => {
             sites Copenhagen has to offer, Ang get the must have photo with the
             famous little mermaid. Copenhagen, Denmark’s capital, sits on the
             coastal islands of Zealand and Amager. It’s linked to Malmo in
-            southern Sweden by the Öresund Bridge. Indre By, the city&apos;s historic
-            center, contains Frederiksstaden, an 18th-century rococo district.
-            Then after a full day of site seeing we will meet back up at our
-            hotel for the evening stopping @ Hotel Tiffany Copenhagen.
+            southern Sweden by the Öresund Bridge. Indre By, the city&apos;s
+            historic center, contains Frederiksstaden, an 18th-century rococo
+            district. Then after a full day of site seeing we will meet back up
+            at our hotel for the evening stopping @ Hotel Tiffany Copenhagen.
             <br />
             <br />
             We are now in Denmark starting to head home and what a journey we
@@ -292,9 +292,9 @@ const TripDetails = () => {
           Are you liking the sound of this epic road trip? Has it been on your
           bucket list or in your head for a while.
           <br />
-          Then please let us know your thoughts and any question&apos;s you may have,
-          as I am sure we can answer them for you and hope you decide to join
-          us.
+          Then please let us know your thoughts and any question&apos;s you may
+          have, as I am sure we can answer them for you and hope you decide to
+          join us.
         </p>
 
         <p className="text-md font-bold mt-2">

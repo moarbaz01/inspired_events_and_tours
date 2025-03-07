@@ -34,11 +34,12 @@ const TripDetails = () => {
         {/* Day 1 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
-            Day 1 11/05/2026 Calais-Antwerp
+            Day 1 03/08/2026 Calais-Antwerp
           </h2>
           <p className="text-gray-700 mt-2">
-            We meet around 9am Folkestone in Kent. We will board the Eurotunnel
-            @ 11.20 for our 35 minute crossing to Calais France. We will regroup
+            Our epic overlanding trip will start on the 3rd August 2026 when we
+            meet around 9am Folkestone in Kent. We will board the Eurotunnel @
+            11.20 for our 35 minute crossing to Calais France. We will regroup
             in Calais before our road trip really starts, we will be are heading
             up past Dunkirk then north towards Bruges then skirt round Ghent
             before Stopping in Antwerp for the night @ Park Inn by Radisson. In
@@ -49,7 +50,7 @@ const TripDetails = () => {
         {/* Day 2 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
-            Day 2 12/05/2026 Antwerp-Tecklenberg 195 Miles
+            Day 2 04/08/2026 Antwerp-Tecklenberg 195 Miles
           </h2>
           <p className="text-gray-700 mt-2">
             After breakfast at the hotel we will aim to depart by around 9am and
@@ -64,7 +65,7 @@ const TripDetails = () => {
         {/* Day 3 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
-            Day 3 13/05/2026 Tecklenberg-Padborg 250 Miles
+            Day 3 05/08/2026 Tecklenberg-Padborg 250 Miles
           </h2>
           <p className="text-gray-700 mt-2">
             Again after our breakfast we will start to wind the miles on as we
@@ -78,7 +79,7 @@ const TripDetails = () => {
         {/* Day 4 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
-            Day 4 14/05/2026 Padborg-Kristiansand 250 Miles ~Inc Ferry
+            Day 4 06/08/2026 Padborg-Kristiansand 250 Miles ~Inc Ferry
           </h2>
           <p className="text-gray-700 mt-2">
             After a good nights rest and our breakfast we will aim to depart by
@@ -91,7 +92,7 @@ const TripDetails = () => {
         {/* Day 5 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
-            Day 5 15/05/2026 Kristiansand-Stavanger 150 Miles
+            Day 5 07/08/2026 Kristiansand-Stavanger 150 Miles
           </h2>
           <p className="text-gray-700 mt-2">
             Having spent our first night in Norway we no start to ride the epic
@@ -107,7 +108,7 @@ const TripDetails = () => {
         {/* Day 6 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
-            Day 6 16/05/2026 Stavanger-Bergen 140 Miles
+            Day 6 08/08/2026 Stavanger-Bergen 140 Miles
           </h2>
           <p className="text-gray-700 mt-2">
             Same format as previous day we will be looking to depart at around
@@ -126,7 +127,7 @@ const TripDetails = () => {
         {/* Day 7 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
-            Day 7 17/05/2026 Bergen-Tyinkryset 170 Miles
+            Day 7 09/08/2026 Bergen-Tyinkryset 170 Miles
           </h2>
           <p className="text-gray-700 mt-2">
             Today we will as previous days enjoy a breakfast together before
@@ -140,7 +141,7 @@ const TripDetails = () => {
         {/* Day 8 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
-            Day 8 18/05/2026 Tyinkryset-Oslo 190 Miles
+            Day 8 10/08/2026 Tyinkryset-Oslo 190 Miles
           </h2>
           <p className="text-gray-700 mt-2">
             After breakfast we will head towards Norway’s Capital Oslo.
@@ -156,7 +157,7 @@ const TripDetails = () => {
         {/* Day 9 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
-            Day 9 19/05/2026 Oslo Rest Day
+            Day 9 11/08/2026 Oslo Rest Day
           </h2>
           <p className="text-gray-700 mt-2">
             Today is a well deserved rest day. Oslo is a great place to spend a
@@ -172,7 +173,7 @@ const TripDetails = () => {
         {/* Day 10 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
-            Day 10 20/05/2026 Oslo-Copenhagen Crossing By Ferry Overnight.
+            Day 10 12/08/2026 Oslo-Copenhagen Crossing By Ferry Overnight.
           </h2>
           <p className="text-gray-700 mt-2">
             We will have the chance today to spend part of today enjoying Oslo
@@ -181,14 +182,14 @@ const TripDetails = () => {
             catch a glimpse of the famous Northern Lights as we sail away from
             the Norwegian capital and start our homeward journey. We all have a
             private cabin aboard our DFDS Seaways ship. We will arrive in
-            Copenhagen by 10am on the 19th.
+            Copenhagen by 10am on the 13th.
           </p>
         </section>
 
         {/* Day 11 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
-            Day 11 21/05/2026 Copenhagen-Tourist Day
+            Day 11 13/08/2026 Copenhagen-Tourist Day
           </h2>
           <p className="text-gray-700 mt-2">
             Arriving in Copenhagen around 10am, disembark from our crossing and
@@ -196,7 +197,7 @@ const TripDetails = () => {
             sites Copenhagen has to offer, Ang get the must have photo with the
             famous little mermaid. Copenhagen, Denmark’s capital, sits on the
             coastal islands of Zealand and Amager. It’s linked to Malmo in
-            southern Sweden by the Öresund Bridge. Indre By, the city&apos;s historic
+            southern Sweden by the Öresund Bridge. Indre By, the city's historic
             center, contains Frederiksstaden, an 18th-century rococo district.
             Then after a full day of site seeing we will meet back up at our
             hotel for the evening stopping @ Hotel Tiffany Copenhagen.
@@ -219,7 +220,7 @@ const TripDetails = () => {
         {/* Day 12 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
-            Day 12 22/05/2026 Copenhagen-Lubeck 180 Miles
+            Day 12 14/08/2026 Copenhagen-Lubeck 180 Miles
           </h2>
           <p className="text-gray-700 mt-2">
             Departing Copenhagen by 9am after our breakfast we will head for
@@ -233,7 +234,7 @@ const TripDetails = () => {
         {/* Day 13 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
-            Day 13 23/05/2026 Lubeck-Dortmund 250 Miles
+            Day 13 15/08/2026 Lubeck-Dortmund 250 Miles
           </h2>
           <p className="text-gray-700 mt-2">
             Depart Lubeck after breakfast we will make our way South heading
@@ -248,7 +249,7 @@ const TripDetails = () => {
         {/* Day 14 */}
         <section>
           <h2 className="text-2xl font-bold text-primary">
-            Day 14 24/05/2026 Dortmund-Calais 270 Miles
+            Day 14 16/08/2026 Dortmund-Calais 270 Miles
           </h2>
           <p className="text-gray-700 mt-2">
             You know the drill now, Breakfast then depart by 9am. Today sees us
@@ -291,9 +292,9 @@ const TripDetails = () => {
           Are you liking the sound of this epic road trip? Has it been on your
           bucket list or in your head for a while.
           <br />
-          Then please let us know your thoughts and any question&apos;s you may have,
-          as I am sure we can answer them for you and hope you decide to join
-          us.
+          Then please let us know your thoughts and any question&apos;s you may
+          have, as I am sure we can answer them for you and hope you decide to
+          join us.
         </p>
 
         <p className="text-md font-bold mt-2">

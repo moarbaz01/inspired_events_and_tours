@@ -1,10 +1,9 @@
 import TripCard from "@/components/TripCard";
 import { trips } from "./data";
 
-
 const Page = () => {
   return (
-    <div >
+    <div>
       <h1 className="text-4xl font-extrabold text-center text-gray-800 mb-12">
         Norway Trips 2026
       </h1>

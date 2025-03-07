@@ -36,7 +36,7 @@ export const tripsLinks = [
     link: "/trips/european-car-road-trips-2026",
   },
   {
-    name: "Norway Motorcycle Road Trip 2026",
+    name: "2026 Norway Motorcycle Road Trip",
     link: "/trips/norway-motorcycle-road-trips-2026",
   },
 ];
