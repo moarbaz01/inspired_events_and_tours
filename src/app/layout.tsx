@@ -66,6 +66,8 @@ export const metadata: Metadata = {
     "Land Rover expeditions",
     "track days tours",
     "unforgettable travel experiences",
+    "2025 tours",
+    "2026 tours",
   ].join(", "),
   applicationName: "Inspired Events And Tours",
   authors: {

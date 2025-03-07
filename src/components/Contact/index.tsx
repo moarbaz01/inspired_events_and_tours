@@ -58,7 +58,7 @@ const Contact = () => {
           email: formData.email,
           message: formData.message,
         },
-        process.env.NEXT_PUBLIC_PUBLIC_KEY!
+        process.env.PUBLIC_KEY!
       );
       setIsSuccessModalOpen(true);
       setFormData({ name: "", email: "", message: "" });

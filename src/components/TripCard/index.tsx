@@ -7,6 +7,7 @@ interface TripCardProps {
   location: string;
   description: string;
   link: string;
+  status?: string;
 }
 const TripCard: React.FC<TripCardProps> = ({
   title,
@@ -15,6 +16,7 @@ const TripCard: React.FC<TripCardProps> = ({
   location,
   description,
   link,
+  status,
 }) => {
   return (
     <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
@@ -25,6 +27,9 @@ const TripCard: React.FC<TripCardProps> = ({
         </p>
         <p className="text-lg md:text-xl font-bold text-white text-center">
           ({startDate + " - " + endDate})
+        </p>
+        <p className="text-lg md:text-xl font-bold text-white text-center">
+          {status}
         </p>
       </div>
 
@@ -46,6 +51,9 @@ const TripCard: React.FC<TripCardProps> = ({
             <p>
               <span className="font-bold text-primary">Location:</span>{" "}
               {location}
+            </p>
+            <p>
+              <span className="font-bold text-primary">Status:</span> {status}
             </p>
           </div>
         </div>
